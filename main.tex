@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}  % Clase de documento
+
+% Paquetes esenciales
+\usepackage[utf8]{inputenc}  % Codificación UTF-8
+\usepackage[T1]{fontenc}     % Soporte para caracteres en PDF
+\usepackage[main=spanish]{babel}  % Traducir a español
+\usepackage{amsmath, amssymb} % Matemáticas avanzadas
+\usepackage{graphicx}        % Para incluir imágenes
+\usepackage{xcolor}          % Colores
+\usepackage{hyperref}        % Enlaces internos y externos
+\usepackage{siunitx}         % Unidades SI
+\usepackage{physics}         % Notación de física
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+
+% Configuración de formato
+\input{styles/general_styles.tex}   % Archivo de estilos personalizados (opcional)
+
+\begin{document}
+
+\title{Física II}
+\author{Elio Valentino Anci}
+\date{\today}
+\maketitle
+
+\newpage
+
+\tableofcontents  % Genera tabla de contenidos automáticamente
+
+\newpage
+
+% Inclusión de capítulos
+\input{chapters/1_electrostatic.tex}
+\input{chapters/2_direct_current.tex}
+\input{chapters/3_electromagnetism.tex}
+\input{chapters/4_waves_and_vibrations.tex}
+\input{chapters/5_optics.tex}
+\input{chapters/6_intro_of_fluids.tex}
+\input{chapters/7_dynamic_of_fluids.tex}
+\input{chapters/8_heat_and_temperature.tex}
+
+\end{document}
