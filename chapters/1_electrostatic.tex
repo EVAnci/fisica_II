@@ -1,17 +1,82 @@
 \section{Electrostática}
 
-La electrostática estudia las cargas eléctricas en reposo. La ley de Coulomb establece que la fuerza entre dos cargas puntuales es:
+\subsection{Fuerza y campo eléctrico}
+
+La electrostática estudia las cargas eléctricas en \colorbox{highlight}{\textbf{reposo}}. La ley de Coulomb establece que la fuerza entre dos cargas puntuales es:
 
 \begin{equation}
-    F = k_e \frac{q_1 q_2}{r^2}
+    F = k_e \frac{\abs{q_1} \cdot \abs{q_2}}{r^2}
 \end{equation}
 
-donde \( k_e \) es la constante de Coulomb \( 8.99 \times 10^9 \,\si{\newton\meter\squared\per\coulomb\squared} \).
+donde:
+
+\begin{itemize}
+    \item \( k_e \) es la constante de Coulomb: \( 8.9876 \times 10^9 \, \frac{\si{\newton\meter\squared}}{\si{\coulomb\squared}} \).
+    \begin{itemize}
+        \item \( k_e \) se obtiene de  \( \frac{1}{4\pi\epsilon_0} \) y,
+        \item \( \epsilon_0 \) es la permitividad del vacío: \( 8.85 \times 10^{-12} \,\frac{\si{\coulomb\squared}}{\si{\newton\meter\squared}} \)
+    \end{itemize}
+    \item \( q_1 \) y \( q_2 \) son las cargas.
+    \item \( r \) es la distancia entre las cargas.
+\end{itemize}
+
+\subsubsection{Cargas eléctricas}
+
+En el contexto de la \textbf{electroestática}, la \textbf{carga eléctrica} es una propiedad fundamental de la materia que determina la interacción electromagnética entre partículas. Se trata de una magnitud escalar que puede ser de dos tipos: \textbf{positiva} o \textbf{negativa}. Las partículas con carga del mismo signo se repelen, mientras que las de signo opuesto se atraen.
+
+La unidad de carga eléctrica en el \textbf{Sistema Internacional (SI)} es el \textbf{coulomb (\( \si{coulomb} \))}. La carga elemental está representada por la carga del electrón (\( e = -1.602 \times 10^{-19} \si{coulomb} \)) y la del protón (\( e = +1.602 \times 10^{-19} \si{coulomb} \)).
+
+
+\begin{center}
+    \begin{tabular}{ l c c }
+        \hline
+        \rowcolor{blue!10}
+        Partícula       & Carga (\( \si{coulomb} \))      & Masa (\( \si{kg} \))          \\ \hline
+        Electrón (e)    & \( -1.602 \times 10^{-19} \)    & \( 9.109 \times 10^{-31} \)   \\
+        Protón (p)      & \( +1.602 \times 10^{-19} \)    & \( 1.672 \times 10^{-27} \)   \\
+        Neutrón (n)     & \( 0 \)                         & \( 1.672 \times 10^{-27} \)   \\ \hline
+    \end{tabular}
+\end{center}
+
+
+
+El campo eléctrico \( \vec{E} \) es una propiedad del espacio que rodea a una carga y se define como:
+
+\begin{equation}
+    \vec{E} = \frac{\vec{F}}{q}
+\end{equation}
 
 % Puedes incluir imágenes
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     % \includegraphics[width=0.5\textwidth]{images/campo_electrico.png}
     \caption{Campo eléctrico de una carga puntual.}
     \label{fig:campo_electrico}
 \end{figure}
+
+
+% \documentclass{article}
+% \usepackage[table]{xcolor}
+% \setlength{\arrayrulewidth}{1mm}
+% \setlength{\tabcolsep}{18pt}
+% \renewcommand{\arraystretch}{2.5}
+% \newcolumntype{s}{>{\columncolor[HTML]{AAACED}} p{3cm}}
+% \arrayrulecolor[HTML]{DB5800}
+% \begin{document}
+%     \begin{tabular}{ |s|p{3cm}|p{3cm}| }
+%         \hline
+%         \rowcolor{lightgray} \multicolumn{3}{|c|}{Country List} \\
+%         \hline
+%         Country Name or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 \\
+%         \hline
+%         Afghanistan & AF &AFG \\
+%         \rowcolor{gray}
+%         Aland Islands & AX & ALA \\
+%         Albania   &AL & ALB \\
+%         Algeria  &DZ & DZA \\
+%         American Samoa & AS & ASM \\
+%         Andorra & AD & \cellcolor[HTML]{AA0044} AND    \\
+%         Angola & AO & AGO \\
+%         \hline
+%     \end{tabular}
+% \end{document}

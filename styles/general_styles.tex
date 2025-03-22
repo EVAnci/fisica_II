@@ -1,15 +1,36 @@
+\usepackage{xcolor}
+\usepackage{titlesec}
+
 % Definir colores personalizados
-\definecolor{myblue}{RGB}{30, 144, 255}
+\definecolor{dark_blue}{RGB}{0, 102, 204}
+\definecolor{dark_red}{RGB}{204, 0, 0}
+\definecolor{soft_green}{RGB}{0, 153, 0}
+\definecolor{intense_blue}{RGB}{30, 144, 255}
+\definecolor{highlight}{RGB}{255, 230, 153}
+
+% Cambiar el color de los títulos
+\titleformat{\section}
+  {\color{dark_blue}\normalfont\Large\bfseries} % Estilo del título de sección
+  {\thesection}{1em}{} % Numeración y espacio
+
+\titleformat{\subsection}
+  {\color{dark_red}\normalfont\large\bfseries} % Estilo del título de subsección
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\color{soft_green}\normalfont\normalsize\bfseries} % Estilo del título de subsubsección
+  {\thesubsubsection}{1em}{}
+
 
 % Definir comandos personalizados
 \newcommand{\vect}[1]{\mathbf{#1}} % Vectores en negrita
 \newcommand{\diff}[2]{\frac{d#1}{d#2}} % Derivada
 \newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}} % Derivada parcial
 
-% Cambiar estilo de hipervínculos
+
 \hypersetup{
     colorlinks=true,
-    linkcolor=myblue,
-    urlcolor=myblue,
-    citecolor=myblue
+    linkcolor=black,
+    urlcolor=intense_blue,
+    citecolor=black
 }

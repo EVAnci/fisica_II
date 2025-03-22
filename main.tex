@@ -1,17 +1,19 @@
 \documentclass[a4paper,12pt]{article}  % Clase de documento
 
 % Paquetes esenciales
-\usepackage[utf8]{inputenc}  % Codificación UTF-8
-\usepackage[T1]{fontenc}     % Soporte para caracteres en PDF
-\usepackage[main=spanish]{babel}  % Traducir a español
-\usepackage{amsmath, amssymb} % Matemáticas avanzadas
-\usepackage{graphicx}        % Para incluir imágenes
-\usepackage{xcolor}          % Colores
-\usepackage{hyperref}        % Enlaces internos y externos
-\usepackage{siunitx}         % Unidades SI
-\usepackage{physics}         % Notación de física
+\usepackage[utf8]{inputenc}         % Codificación UTF-8
+\usepackage[T1]{fontenc}            % Soporte para caracteres en PDF
+\usepackage[main=spanish]{babel}    % Traducir a español
+\usepackage{amsmath, amssymb}       % Matemáticas avanzadas
+\usepackage{graphicx}               % Para incluir imágenes
+\usepackage[table]{xcolor}          % Colores
+\usepackage{hyperref}               % Enlaces internos y externos
+\usepackage{siunitx}                % Unidades SI
+\usepackage{physics}               % Notación de física
 
-\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn{siunitx}{physics-pkg}{none}
+\ExplSyntaxOff
 
 % Configuración de formato
 \input{styles/general_styles.tex}   % Archivo de estilos personalizados (opcional)
@@ -22,7 +24,10 @@
 \author{Elio Valentino Anci}
 \date{\today}
 \maketitle
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/cover.png}
+\end{figure}
 \newpage
 
 \tableofcontents  % Genera tabla de contenidos automáticamente
