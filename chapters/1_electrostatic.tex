@@ -1,5 +1,41 @@
 \section{Electrostática}
 
+La teoría electromagnética clásica estudia los fenómenos eléctricos y magnéticos, \colorbox{highlight}{describiendo} sus características y las \colorbox{highlight}{leyes} que los gobiernan.  
+
+Cuando hablamos de \textbf{teoría clásica}, nos referimos a que se basa en la mecánica clásica de Isaac Newton. En esta mecánica se utilizan conceptos como partículas, trayectorias y las leyes del movimiento de Newton. De manera similar, en la teoría electromagnética se aplican estos conceptos a las cargas eléctricas y a los campos eléctricos y magnéticos. Es decir, en lugar de hablar solo de partículas y fuerzas mecánicas, hablaremos de \textbf{partículas cargadas, fuerzas eléctricas y campos electromagnéticos}.  
+
+El electromagnetismo es una \colorbox{highlight}{teoría de campos}. Por ejemplo, una \textbf{carga eléctrica} genera un \textbf{campo eléctrico} a su alrededor, mientras que un \textbf{imán} produce un \textbf{campo magnético} en el espacio que lo rodea. Estos campos son \colorbox{highlight}{perturbaciones en el espacio} que afectan a otras cargas o imanes cercanos y pueden describirse matemáticamente.  
+
+A lo largo de la historia, se ha comprobado que existen dos tipos de carga eléctrica: \textbf{positiva} y \textbf{negativa}. Las cargas del mismo tipo se repelen, mientras que las de signos opuestos se atraen.  
+
+\subsection{Carga y Materia}
+
+Todo lo que nos rodea, como una pelota, el aire, una planta o nuestro propio cuerpo, está formado por \textbf{átomos}. Los átomos, a su vez, están compuestos por tres tipos de partículas: \textbf{protones, neutrones y electrones}. Los protones y neutrones se encuentran en el núcleo del átomo, mientras que los electrones se mueven alrededor en la corteza. Los protones tienen \colorbox{highlight}{carga positiva}, los electrones \colorbox{highlight}{carga negativa}, y los neutrones no tienen carga. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/atom_struct.jpg}
+    \caption{Estructura básica de un átomo.}
+    \label{fig:atom_struct}
+\end{figure}
+
+Esta estructura corresponde a un \textbf{modelo atómico}, que es una representación que nos ayuda a entender cómo está compuesto un átomo y cómo se comporta. A lo largo del tiempo han existido distintos modelos atómicos, pero uno de los más conocidos es el \textbf{modelo de Bohr}. Según este modelo, los electrones giran alrededor del núcleo en \textbf{órbitas circulares}, cada una con un nivel de energía específico. Cuando un electrón cambia de órbita, absorbe o emite energía en forma de luz.
+
+La carga elemental \colorbox{highlight}{\( e \)} es la \textbf{cantidad más pequeña de carga eléctrica libre que se conoce en la naturaleza}. Es la carga que poseen los protones y electrones, pero con signo opuesto:
+
+\begin{itemize}
+    \item \textbf{Electrón}: \( -e = -1.602 \times 10^{-19} \) C (coulombs)
+    \item \textbf{Protón}: \( +e = 1.602 \times 10^{-19} \) C
+\end{itemize}
+
+La carga elemental es fundamental porque todas las cargas eléctricas observadas en la naturaleza son \textbf{múltiplos enteros de \( e \)}. Es decir, cualquier carga presente en un objeto es el resultado de un exceso o déficit de electrones. Este principio se conoce como la \textbf{ley de conservación de la carga eléctrica}, y establece que la carga eléctrica \textbf{no se crea ni se destruye}, solo se transfiere de un cuerpo a otro.  
+
+Los objetos tienen carga debido a la presencia de \textbf{electrones y protones}. Un objeto es eléctricamente neutro cuando tiene igual número de ambos. Si un objeto adquiere carga negativa, significa que ha \textbf{ganado electrones}, y si adquiere carga positiva, significa que ha \textbf{perdido electrones}. Cuando un objeto se carga, no se están creando nuevas cargas, sino que \textbf{se están moviendo electrones} de un cuerpo a otro. Por ejemplo: en la \textbf{electrización por frotamiento}, un material transfiere electrones a otro, dejando uno cargado positivamente y el otro negativamente. En la \textbf{inducción}, un objeto cargado puede redistribuir las cargas en otro sin tocarlo, pero sin cambiar la cantidad total de carga en el sistema.
+
+En otras palabras, la carga eléctrica siempre se conserva porque \textbf{los electrones y protones no se destruyen en procesos normales}, solo cambian de ubicación dentro de un sistema. La única forma de convertir energía en partículas con carga sería en interacciones de alta energía, como en la creación de pares electrón-positrón en física cuántica, pero incluso en esos casos, la cantidad total de carga antes y después sigue siendo la misma.  
+
+\colorbox{highlight}{Denominaremos con la letra \( Q \) o \( q \) a la carga eléctrica de un objeto.} La carga se mide en \textbf{coulombs (C)}. Un coulomb es una cantidad de carga muy grande, por lo que en la práctica se utilizan submúltiplos como el \textbf{millicoulomb (mC)} o el \textbf{microcoulomb (\( \mu \text{C} \))}.
+
 \subsection{Fuerza y campo eléctrico}
 
 La electrostática estudia las cargas eléctricas en \colorbox{highlight}{\textbf{reposo}}. La ley de Coulomb establece que la fuerza entre dos cargas puntuales es:
@@ -26,15 +62,18 @@ En el contexto de la \textbf{electroestática}, la \textbf{carga eléctrica} es 
 
 La unidad de carga eléctrica en el \textbf{Sistema Internacional (SI)} es el \textbf{coulomb (\( \si{coulomb} \))}. La carga elemental está representada por la carga del electrón (\( e = -1.602 \times 10^{-19} \si{coulomb} \)) y la del protón (\( e = +1.602 \times 10^{-19} \si{coulomb} \)).
 
-
 \begin{center}
-    \begin{tabular}{ l c c }
-        \hline
-        \rowcolor{blue!10}
-        Partícula       & Carga (\( \si{coulomb} \))      & Masa (\( \si{kg} \))          \\ \hline
-        Electrón (e)    & \( -1.602 \times 10^{-19} \)    & \( 9.109 \times 10^{-31} \)   \\
-        Protón (p)      & \( +1.602 \times 10^{-19} \)    & \( 1.672 \times 10^{-27} \)   \\
-        Neutrón (n)     & \( 0 \)                         & \( 1.672 \times 10^{-27} \)   \\ \hline
+    \setlength{\arrayrulewidth}{1pt}  % Grosor de líneas
+    \renewcommand{\arraystretch}{1.3} % Espaciado vertical
+    \arrayrulecolor{gray} % Color de líneas
+
+    \begin{tabular}{ c c c }
+        \hline\hline
+        \rowcolor{asparagus!30}
+        \textbf{Partícula} & \textbf{Carga (\si{C})} & \textbf{Masa (\si{kg})} \\ \hline
+        Electrón (e)  & \(-e = -1.602 \times 10^{-19}\)  & \(9.109 \times 10^{-31}\) \\
+        Protón (p)    & \(+e = +1.602 \times 10^{-19}\)  & \(1.672 \times 10^{-27}\) \\
+        Neutrón (n)   & \(0\)                           & \(1.675 \times 10^{-27}\) \\ \hline\hline
     \end{tabular}
 \end{center}
 
