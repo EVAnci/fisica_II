@@ -11,6 +11,8 @@
 \definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
 \definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
 
+
+\sethlcolor{highlight}
 % Cambiar el color de los títulos
 \titleformat{\section}
   {\color{dark_blue}\normalfont\Large\bfseries} % Estilo del título de sección
@@ -23,6 +25,15 @@
 \titleformat{\subsubsection}
   {\color{soft_green}\normalfont\normalsize\bfseries} % Estilo del título de subsubsección
   {\thesubsubsection}{1em}{}
+
+\renewcommand{\paragraph}[1]{%
+  \noindent\textcolor{orange!70!black}{\textbf{#1}}%
+  \hspace{1.2em}%
+}
+
+% Configuración de las listas
+\setlist{noitemsep} % Eliminar espacio entre elementos de las listas
+\setlist[itemize]{label=\textbullet} % Cambiar el símbolo de las listas itemize
 
 
 % Definir comandos personalizados

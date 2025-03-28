@@ -3,7 +3,7 @@
 % Paquetes esenciales
 \usepackage[utf8]{inputenc}         % Codificación UTF-8
 \usepackage[T1]{fontenc}            % Soporte para caracteres en PDF
-\usepackage[main=spanish]{babel}    % Traducir a español
+\usepackage[main=spanish]{babel}    % Traducir a español titulos y otros elementos
 \usepackage{amsmath, amssymb}       % Matemáticas avanzadas
 \usepackage{graphicx}               % Para incluir imágenes
 \usepackage[table]{xcolor}          % Colores
@@ -11,8 +11,10 @@
 \usepackage{siunitx}                % Unidades SI
 \usepackage{physics}                % Notación de física
 \usepackage{array, colortbl}        % Tablas
+\usepackage{soul}                   % Resaltado de texto
+\usepackage{enumitem}               % Listas personalizadas (itemize, enumerate)
 
-
+% Configuración de siunitx para evitar conflictos con physics
 \ExplSyntaxOn
 \msg_redirect_name:nnn{siunitx}{physics-pkg}{none}
 \ExplSyntaxOff
