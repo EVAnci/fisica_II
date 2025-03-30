@@ -1,0 +1,163 @@
+Empecemos por lo básico: si algo te está
+empujando es porque está ejerciendo sobre
+ti una fuerza.
+
+En este caso es la fuerza eléctrica: cuanto
+más cargado estés más te afecta, cuanto
+más alejado estés menos te afecta.
+
+Aquí tenemos tres cargas aplicando tres fuerzas
+distintas, ¿qué hacemos?
+Sumar todos los tirones.
+
+Algunos se van a contrarrestar un poco al
+estar en direcciones opuestas, pero otros
+se va reforzar al tirar en el mismo sentido.
+
+La combinación de todas estas fuerzas nos
+está apuntando hacia dónde va ir la carga
+y la intensidad del empujón.
+Convoca a la segunda ley de newton y ya tienes
+su aceleración.
+
+Pero, espera: al haberse movido la carga de
+su lugar original ahora está a unas distancias
+distintas de las cargas y las direcciones
+tampoco son iguales.
+Así que si quiero saber como va acelerar
+la carga a partir de ahora tengo que volver
+a calcular la fuerza en esta situación.
+Y me va a aparecer este problema a cada paso
+que de, por lo que es difícil ver de primeras
+cuál va a ser el recorrido de la carga.
+
+¿Solución?
+
+Los físicos idearon el Campo.
+Imaginate que un equipo de personas (con mucho
+tiempo) se encargan de ir por ahí colocando
+una pequeña carga en cada punto del espacio,
+sumando sus fuerzas y anotando la fuerza resultante
+en ese mismo punto.
+
+Con el tiempo acabarían llenando el lugar
+de todo un “mapa de flechas”.
+Este es el campo eléctrico.
+Visualizar la interacción eléctrica de esta
+manera tiene ventajas: la primera es que puedes
+saber de un plumazo la fuerza que va experimentar
+una carga si la pones en cualquier lugar,
+solo tienes que escalar el valor.
+
+Como esta flecha refleja la fuerza que siente
+una unidad de carga, si tu bicho tiene tres
+culombios de carga tendrás que multiplicar
+el valor de la fuerza por tres.
+
+Es decir, que campo te está diciendo la fuerza
+por unidad de carga, obteniendo así la relación
+entre campo y fuerza.
+
+¡Además ahora queda super clara cuál va
+a ser la trayectoria que va a seguir nuestra
+carga!
+Con el campo eléctrico ya casi que podemos
+olvidarnos de las cargas.
+Aquí ya está toda la información física
+que necesitamos.
+
+Eso hizo pensar a los físicos que el campo
+no es una mera tabla de flechas, si no que
+es algo muy real; un objeto que llena el espacio
+y que funciona como un medio que permite a
+las distintas cargas influirse.
+
+¡Incluso sabemos que se propagan ondas a
+través de él!
+Pero este campo también puede ser visualizado
+de otra manera: a través del potencial.
+Al igual que en el vídeo sobre gravedad ya
+hablé sobre como la Tierra le confiere a
+los objetos una una energía potencial gravitatoria,
+estas cargas le están confiriendo a la nuestra
+una energía potencial eléctrica, un número
+que refleja la energía cinética que puede
+ganar o perder un objeto si se la lleva a
+un cierto lugar que se elige de manera caprichosa
+(recomiendo mucho ver el vídeo de gravedad
+para entender esto bien, es importante).
+
+Bien, aquí tenemos el mismo problema que
+antes: una vez mueva la carga las distancias
+cambiaran lo que cambiara el valor de cada
+contribución de energía potencial, por lo
+que si quiero saber cuánta energía cinética
+ganaría la carga si la muevo hasta un cierto
+lugar, voy a tener que hacer un montón de
+sumas a cada paso que doy.
+
+¿Solución?
+
+Convocas al equipo de antes para que calculen
+en cada lugar del espacio cuánta energía
+potencial tiene una carga unidad si la dejan
+allí.
+
+El resultado es otro mapa, pero esta vez de
+números: este es el Potencial Eléctrico;
+cuánta energía potencial eléctrica adquiriría
+un objeto por unidad de carga si lo pusieramos
+allí.
+
+Fijaos que tanto el potencial eléctrico como
+el campo eléctrico son propiedades de las
+cargas originales, no depende de que hayamos
+añadido la cuarta carga.
+lo que sí son propiedades de la cuarta carga
+son la fuerza que siente por estar en el campo
+o, equivalentemente, la energía potencial
+que gana por estar en el potencial.
+
+Pero cuidado, como también dije en el vídeo
+de gravedad, los valores tal cual del potencial
+en general no te dan ninguna información,
+son las diferencias de potencial las que te
+dicen cuánta energía cinética vas a ganar
+por unidad de carga, cuanto vas a acelerar.
+
+Es decir que si en una cierta dirección el
+potencial aumenta quiere decir que si vas
+allí vas a ganar energía potencial por lo
+que tiene que haber una fuerza en contra de
+ti.
+
+Si por el contrario vas en una dirección
+en el que el potencial desciende quiere decir
+que está perdiendo energía potencial, por
+lo que tiene que haber una fuerza a tu favor.
+
+Aquí está la conexión.
+
+El campo con sus flecha está apuntando hacia
+dónde el potencial eléctrica cambia; en
+concreto, hacia dónde disminuye.
+Y ¿cómo se mide con matemáticas como cambia
+algo?
+
+Utilizando la derivada.
+El campo eléctrico es la derivada espacial
+(normalmente llamada gradiente) del potencial
+eléctrico (el menos es por lo de la disminución).
+
+Y esta propiedad matemática (que le campo
+sea el gradiente de un campo escalar, al menos
+mientras las cargas están quietas) nos quita
+de rollos con la energía.
+
+Si quiere mover tu carga del punto A al punto
+B, no tienes por qué preocuparte por el camino
+que estás tomando: hay un teorema que te
+garantiza que el cambio de energía es el
+mismo en todos ellos.
+Solo importa dónde empiezas y dónde acabas.
+

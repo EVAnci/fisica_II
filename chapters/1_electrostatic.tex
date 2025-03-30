@@ -104,7 +104,7 @@ La unidad de carga eléctrica en el \textbf{Sistema Internacional (SI)} es el \t
 
 Para entender la definición del campo eléctrico desde el principio, debemos pensar en cómo se conceptualiza la interacción entre cargas eléctricas y en la necesidad de definir una propiedad del espacio que describa esta interacción.
 
-Sabemos que las cargas eléctricas ejercen fuerzas unas sobre otras. Experimentalmente, se observa que cargas del mismo signo se repelen y cargas de signo opuesto se atraen. Esta interacción fue formulada matemáticamente por la Ley de Coulomb \eqref{eq:ley_coulomb_vectorial}, sin embargo, esta ley solo nos dice cómo una carga afecta a otra en particular, pero no describe una propiedad del espacio en sí. Aquí es donde se introduce el concepto de \textbf{campo eléctrico}.
+Sabemos que las cargas eléctricas ejercen fuerzas unas sobre otras. Experimentalmente, se observa que cargas del mismo signo se repelen y cargas de signo opuesto se atraen. Esta interacción fue formulada matemáticamente por la Ley de Coulomb \eqref{eq:ley_coulomb_vectorial}, sin embargo, esta ley solo nos dice cómo una carga afecta a otra en particular, \hl{pero no describe una propiedad del espacio en sí}. Aquí es donde se introduce el concepto de \textbf{campo eléctrico}.
 
 \begin{figure}[ht]
     \centering
@@ -123,9 +123,9 @@ En lugar de pensar que una carga actúa instantáneamente sobre otra, se puede i
 
 \paragraph{Idea conceptual del campo eléctrico}
 
-Bueno, ¿qué es el campo eléctrico? Según la descripción previa, el campo eléctrico es una propiedad del espacio que rodea a una carga eléctrica capaz de interactuar con otras cargas. Veamos un ejemplo de esto para entenderlo mejor.
+Si te preguntas qué es el campo eléctrico, puedes responder según la descripción previa: ``el campo eléctrico es una propiedad del espacio que rodea a una carga eléctrica capaz de interactuar con otras cargas''. Sin embargo la idea es entender qué significa que una carga eléctrica modifique las propiedades del espacio que la rodea. Veamos un ejemplo de esto para entenderlo mejor.
 
-Supongamos que tenemos tres cargas eléctricas de distinto valor ubicadas en tres lugares distintos. Todas estas cargas están fijas en su posición y no pueden moverse. 
+Supongamos que tenemos tres cargas eléctricas de distinto valor ubicadas en tres lugares distintos. Todas estas cargas están fijas en su posición y no pueden moverse (ver figura \ref{fig:campo_electrico_ejemplo_1}). 
 
 \begin{figure}[ht]
     \centering
@@ -134,7 +134,9 @@ Supongamos que tenemos tres cargas eléctricas de distinto valor ubicadas en tre
     \label{fig:campo_electrico_ejemplo_1}
 \end{figure}
 
-Ahora tomamos una cuarta carga, la colocamos en el centro de las tres cargas y la soltamos ¿Qué le pasaría? La carga sería empujada hacia algún lugar, ya que, experimentará una fuerza debido a la interacción con las otras cargas. Ya sabemos que las cargas del mismo signo se repelen y las de signo opuesto se atraen. Sin embargo, ¿Cómo sería el movimiento exactamente? ¿Hacia dónde se movería la carga? ¿Con qué intensidad? Para responder a estas preguntas debemos tener en cuenta que la fuerza que siente la carga cambiará en el instante en que se mueva, ya que la distancia entre las cargas cambiará. Por lo tanto, necesitamos una forma de describir la fuerza que siente la carga en cualquier punto del espacio.
+Ahora tomamos una cuarta carga, la colocamos en el centro de las tres cargas y la soltamos (ver figura \ref{fig:campo_electrico_ejemplo_2}) ¿Qué le pasaría? 
+
+Seguro tu respuesta sería que la carga sería empujada hacia algún lugar, ya que, experimentará una fuerza debido a la interacción con las otras cargas. Ya sabemos que las cargas del mismo signo se repelen y las de signo opuesto se atraen.
 
 \begin{figure}[ht]
     \centering
@@ -143,6 +145,20 @@ Ahora tomamos una cuarta carga, la colocamos en el centro de las tres cargas y l
     \label{fig:campo_electrico_ejemplo_2}
 \end{figure}
 
+Entonces aquí tenemos tres cargas aplicando tres fuerzas distintas, ¿qué hacemos? Sumar todas las fuerzas. Algunas se van a contrarrestar un poco al estar en direcciones opuestas, pero otras se van reforzar al tirar en el mismo sentido.
+
+La suma de todas estas fuerzas (fuerza resultante) nos indica hacia dónde va ir la carga y la intensidad del empujón que sentirá (magnitud de la fuerza). Luego para encontrar la aceleración usamos la segunda ley de Newton. 
+
+\textbf{Pero, espera}: al haberse movido la carga de su lugar original ahora está a unas distancias distintas de las cargas y las direcciones tampoco son iguales. Así que si quiero saber como va acelerar la carga a partir de ahora tengo que volver a calcular la fuerza en esta situación. Y me va a aparecer este problema a cada paso que de, por lo que es difícil ver de primeras cuál va a ser el recorrido de la carga.
+
+¿Cómo solucionamos este problema? Bueno, imaginemos que nos armamos de paciencia y nos encargamos de colocar la cuarta carga en cada punto del espacio y calcular la fuerza resultante. Con el tiempo habremos llenando el lugar de flechas que representan la fuerza en cada punto. Habremos construido todo un ``mapa de flechas''.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/field_example.png}
+    \caption{mapa de la fuerza que siente la carga en cada punto.}
+    \label{fig:campo_electrico_ejemplo_3}
+\end{figure}
 
 Para medir esta propiedad del espacio, imaginamos colocar una \hl{\textbf{carga de prueba positiva}} \( q^{+} \) en un punto del espacio y medir la fuerza que experimenta. Definimos el campo eléctrico como:
 
