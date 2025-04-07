@@ -138,7 +138,7 @@ Como nuestras incógnitas son \( Q \) y \( r \) vamos a tener infinitas posibili
 
 Todas las soluciones están ocacionando el mismo efecto en el protón, una fuerza vertical y hacia arriba (en sentido opuesto al peso). Podriamos expresar esto diciendo: ``todas las soluciones generan una perturbación identica en el punto del espacio donde se encuentra el protón''. O, en otras palabras, todas las soluciones generan un campo eléctrico de las mismas características en donde está el protón.
 
-Es más, cualquier partícula que coloquemos en el lugar del protón, con cualquier carga, por ejemplo una partícula con tres veces la carga del protón pero negativa, sentirá una fuerza proporcional a la que sentía el protón. En el caso de este ejemlo sería una fuerza igual a tres veces el peso del protón en el mimo sentido al peso.
+Es más, cualquier partícula que coloquemos en el lugar del protón, con cualquier carga, por ejemplo una partícula con tres veces la carga del protón pero negativa, sentirá una fuerza proporcional a la que sentía el protón. En el caso de este ejemlo sería una fuerza igual a tres veces el peso del protón en el mimo sentido al peso (por ser negativa).
 
 \paragraph{Formulando el Campo Eléctrico}
 
@@ -157,14 +157,68 @@ donde:
 En caso de que exista más de una carga que genera el campo, se aplica \textbf{el principio de superposición} que consiste en sumar todos todos los campos vectorialmente.
 
 \[
-\vec{E} = \sum{\vec{E}_i} = k \cdot \sum{\frac{Q_i}{r^2_i}}
+\vec{E} = \sum{\vec{E}_i} = k \cdot \sum{\frac{Q_i}{r^2_i}} \hat{r}
 \]
 
 Si las cargas siguen una distribución continua dada por una densidad de carga \( \lambda \) se sigue aplicando el principio de superposición, pero en este caso se resuelve mediante una integral. Pero ¿Qué es la densidad de carga?
 
-La densidad de carga \( \lambda \) es la cantidad de carga por unidad de 
+La \textbf{densidad de carga} es una \textit{medida de cuánta carga eléctrica hay distribuida} sobre una determinada región del espacio. Se utiliza cuando las cargas no están concentradas en puntos, sino \textbf{distribuidas} sobre líneas, superficies o volúmenes.
 
-Para entender el concepto de superposición songamos que tenemos tres cargas eléctricas de distinto valor ubicadas en tres lugares distintos. Todas estas cargas están fijas en su posición y no pueden moverse (ver figura \ref{fig:campo_electrico_ejemplo_1}). 
+Dependiendo del tipo de distribución, hay tres formas principales:
+
+\subparagraph{1. Densidad lineal de carga:}
+
+Se usa cuando la carga está distribuida a lo largo de una línea (como un alambre).
+
+\[
+\lambda = \frac{dq}{dl}
+\]
+
+\begin{itemize}
+    \item \( \lambda \): densidad lineal (C/m)  
+    \item \( dq \): pequeña cantidad de carga  
+    \item \( dl \): pequeña longitud del alambre  
+\end{itemize}
+
+\subparagraph{2. Densidad superficial de carga:}
+
+Se usa para cargas sobre una superficie (como una lámina metálica cargada).
+
+\[
+\sigma = \frac{dq}{dA}
+\]
+
+\begin{itemize}
+    \item \( \sigma \): densidad superficial (C/m²)  
+    \item \( dq \): carga sobre un área pequeña  
+    \item \( dA \): área considerada  
+\end{itemize}
+
+\subparagraph{3. Densidad volumétrica de carga:}
+
+Se usa cuando la carga ocupa un volumen (como una nube de plasma).
+
+\[
+\rho = \frac{dq}{dV}
+\]
+
+\begin{itemize}
+    \item \( \rho \): densidad volumétrica (C/m³)  
+    \item \( dq \): carga dentro de un pequeño volumen  
+    \item \( dV \): volumen correspondiente  
+\end{itemize}
+
+
+Estas densidades permiten convertir una distribución continua de carga en una integral, y así calcular el campo eléctrico o el potencial.  
+Por ejemplo, si conocés \( \lambda(x) \), podés calcular el campo eléctrico de una varilla cargada mediante:
+
+\[
+\vec{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{\lambda(x)\, dx}{r^2} \hat{r}
+\]
+
+\paragraph{Visualización del campo eléctrico}
+
+Para visualizar el campo eléctrico veamos un ejemplo sencillo. Supongamos que tenemos tres cargas eléctricas de distinto valor ubicadas en tres lugares distintos. Todas estas cargas están fijas en su posición y no pueden moverse (ver figura \ref{fig:campo_electrico_ejemplo_1}). 
 
 \begin{figure}[ht]
     \centering
@@ -173,9 +227,11 @@ Para entender el concepto de superposición songamos que tenemos tres cargas el�
     \label{fig:campo_electrico_ejemplo_1}
 \end{figure}
 
-Ahora tomamos una cuarta carga, la colocamos en el centro de las tres cargas y la soltamos (ver figura \ref{fig:campo_electrico_ejemplo_2}) ¿Qué le pasaría? 
+Estas tres cargas posicionadas en el espacio constituyen lo que llamaremos \textbf{carga fuente}. Estas tres cargas fuente son capaces de generar una fuerza en cualquier partícula con carga que se coloque en este espacio. Podemos decir entonces, que las tres cargas le dan una propiedad eléctrica al espacio que las rodea. A esta propiedad que adquiere el espacio por culpa de las cargas le llamaremos campo eléctrico y existe independientemente de que haya otra cuarta carga presente o no.
 
-Seguro tu respuesta sería que la carga sería empujada hacia algún lugar, ya que, experimentará una fuerza debido a la interacción con las otras cargas. Ya sabemos que las cargas del mismo signo se repelen y las de signo opuesto se atraen.
+Ahora supongamos que queremos jugar con el campo generado, y tomamos una cuarta carga \( q^{+} \), en este caso la carga será positiva, y la llamaremos \textbf{carga de prueba}. Entonces colocamos la carga de prueba en el centro de las tres cargas y la soltamos (ver figura \ref{fig:campo_electrico_ejemplo_2})
+
+Cuando la soltamos, la carga será empujada hacia algún lugar, ya que, experimentará una fuerza debido a la interacción con las otras cargas. Ya sabemos que las cargas del mismo signo se repelen y las de signo opuesto se atraen.
 
 \begin{figure}[ht]
     \centering
@@ -186,43 +242,49 @@ Seguro tu respuesta sería que la carga sería empujada hacia algún lugar, ya q
 
 Entonces aquí tenemos tres cargas aplicando tres fuerzas distintas, ¿qué hacemos? Sumar todas las fuerzas. Algunas se van a contrarrestar un poco al estar en direcciones opuestas, pero otras se van reforzar al tirar en el mismo sentido.
 
-La suma de todas estas fuerzas (fuerza resultante) nos indica hacia dónde va ir la carga y la intensidad del empujón que sentirá (magnitud de la fuerza). Luego para encontrar la aceleración usamos la segunda ley de Newton. 
+La suma de todas estas fuerzas (fuerza resultante) nos indica hacia dónde va ir la carga y la intensidad del empujón que sentirá (magnitud de la fuerza). Si realizamos esto en cada punto del espacio acabaríamos llenando el espacio de vectores de fuerza, esto se vería como un ``mapa de flechas'' que representan la fuerza que siente la carga de prueba en cada punto.
 
-\textbf{Pero, espera}: al haberse movido la carga de su lugar original ahora está a unas distancias distintas de las cargas y las direcciones tampoco son iguales. Así que si quiero saber como va acelerar la carga a partir de ahora tengo que volver a calcular la fuerza en esta situación. Y me va a aparecer este problema a cada paso que de, por lo que es difícil ver de primeras cuál va a ser el recorrido de la carga.
+\textbf{Pero espera:} imaginemos que realizamos todos los cálculos con una carga de prueba de \( 1 \si{\coulomb} \). Y esa carga de prueba en realidad solo la usamos para realizar los cálculos del mapa, pero en realidad no existe. Entonces este mapa lo podemos usar para saber qué fuerza sentiría una carga \( q \) cualquiera.
+Seguro te preguntarás ¿Cómo es eso? Es bien sencillo, presta atención a lo siguiente. Si recordamos la ecuación de la fuerza debido a la interacción entre cargas tenemos:
 
-¿Cómo solucionamos este problema? Bueno, imaginemos que nos armamos de paciencia y nos encargamos de colocar la cuarta carga en cada punto del espacio y calcular la fuerza resultante. Con el tiempo habremos llenando el lugar de flechas que representan la fuerza en cada punto. Habremos construido todo un ``mapa de flechas'' (ver figura \ref{fig:campo_electrico_ejemplo_3}).
+\[
+\vec{F}_e = k\frac{Q\cdot q^{+}}{r^2}\hat{r} 
+\]
+
+Ahora, recordando que \( Q \) era nuestra carga fuente (formada por las tres cargas) y \( q^{+} \) nuestra carga de prueba de \( 1 \si{\coulomb} \) que usamos para hacer todas las cuentas, si quitamos la carga de prueba, como en la ecuación de fuerza es un factor neutro (multiplica por 1), el resultado no cambiaría cuantitativamente, sin embargo cambiarían las unidades. Veamos como queda:
+
+\[
+\vec{F}_e ~ [\si{\newton}] \neq k \frac{Q}{r^2} \hat{r} ~ [\si{\newton\per\coulomb}]
+\]
+
+Vemos que lo que resulta es una desigualdad, ya que las unidades no coinciden. Si bien numericamente es lo mismo, dimensionamente no. Para arreglar este problema entonces, en vez de quitar directamente la carga, podemos dividir ambos miembros por \( q^{+} \), y no romperíamos las unidades:
+
+\[
+\frac{\vec{F}_e}{q^{+}} ~ [\si{\newton\per\coulomb}] = k \frac{Q}{r^2} \hat{r} ~ [\si{\newton\per\coulomb}]
+\]
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{images/field_example.png}
-    \caption{mapa de la fuerza que siente la cuarta carga en cada punto.}
+    \caption{mapa de la fuerza que siente \(q^{+}\) en cada punto.}
     \label{fig:campo_electrico_ejemplo_3}
 \end{figure}
 
-Este ``mapa de flechas'' de fuerza representan el tirón que siente la cuarta carga en cada punto del espacio. Sin embargo, si cambiamos la cuarta carga o agregamos otra carga deberíamos hacer este trabajo otra vez. Esto no es práctico, y aquí es en donde entra en juego el concepto de \textbf{campo eléctrico}
-
-
-Para medir esta propiedad del espacio, imaginamos colocar una \hl{\textbf{carga de prueba positiva}} \( q^{+} \) en un punto del espacio y medir la fuerza que experimenta. Definimos el campo eléctrico como:
+¿Qué nos dice este ``mapa de flechas''? Este mapa de flechas nos dice la \hl{fuerza por unidad de carga} que generan las cargas fuente. Es decir, si colocamos una carga unidad (como \(q^{+}\)), entonces la relación es \(1:1\), pero podemos colocar cualquier carga \(q\) y multiplicarla por el campo.
 
 \begin{equation}
-    \vec{E} = \frac{\vec{F}}{q}
+    \vec{E} = \frac{\vec{F}}{q^{+}}
     \label{eq:campo_electrico}
 \end{equation}
 
 donde:
 \begin{itemize}
     \item \( \vec{E} \) es el campo eléctrico en ese punto,
-    \item \( \vec{F} \) es la fuerza experimentada por la carga de prueba \( q \),
-    \item \( q \) es la carga de prueba (se asume pequeña para no alterar el sistema).
+    \item \( \vec{F} \) es la fuerza experimentada por la carga de prueba \( q^{+} \),
+    \item \( q^{+} \) es la carga de prueba.
 \end{itemize}
 
-\paragraph{¿Qué es la carga de prueba?}
-
-La carga de prueba es una carga hipotética utilizada para medir el campo sin modificarlo. Debe cumplir dos condiciones:
-\begin{enumerate}
-    \item \textbf{Ser suficientemente pequeña} (\( q \to 0 \)): Así evitamos que su presencia afecte el sistema (es decir, que genere su propio campo que altere el original).
-    \item \textbf{Ser positiva} por convención: Esto se hace para que el campo eléctrico tenga una dirección bien definida. Si el campo en un punto tiene dirección \textbf{hacia afuera}, significa que la carga fuente es positiva. Si el campo apunta \textbf{hacia adentro}, la carga fuente es negativa.
-\end{enumerate}
+Ahora, como vimos, la carga de prueba es una carga hipotética utilizada para medir el campo sin modificarlo. Como la carga de prueba es positiva, entonces vemos que una carga \(Q\) cualquiera, respeta la siguiente distribución: si la carga \(Q\) es \textbf{negativa}, las líneas de campo son entrantes, si la carga \(Q\) es \textbf{positiva}, las líneas de campo son salientes:
 
 \begin{figure}[ht]
     \centering
@@ -231,32 +293,13 @@ La carga de prueba es una carga hipotética utilizada para medir el campo sin mo
     \label{fig:campo_electrico}
 \end{figure}
 
-Si tomamos una carga fuente \( Q \) en el vacío, y colocamos una carga de prueba \( q \), respetando la convención anterior, a una distancia \( r \), la Ley de Coulomb nos da la fuerza sobre \( q \):
-
-\[
-\mathbf{F} = k_e \frac{Q \cdot q}{r^2} \hat{\mathbf{r}}
-\]
-
-Para quitar la carga de prueba \( q \) podemos dividir por \( q \). Al hacer esto obtenemos el campo eléctrico generado por \( Q \):
-
-\[
-\mathbf{E} = k_e \frac{Q}{r^2} \hat{\mathbf{r}} = \frac{\mathbf{F}}{q}
-\]
-
 Este resultado nos dice que el campo eléctrico \textbf{se aleja} de cargas positivas y \textbf{se dirige hacia} cargas negativas. Además disminuye con el cuadrado de la distancia y es una propiedad del espacio ya no depende de la carga de prueba \( q \), sino solo de \( Q \).
 
-**6. Premisas clave de la definición**
-1. **La carga modifica el espacio circundante:** El campo eléctrico es una propiedad del espacio, no de la carga de prueba.
-2. **El campo es independiente de la carga de prueba:** La carga de prueba se usa solo como herramienta de medición.
-3. **El campo es un campo vectorial:** Tiene dirección y magnitud en cada punto del espacio.
-4. **El campo sigue el principio de superposición:** Si hay varias cargas, el campo total en un punto es la suma vectorial de los campos generados por cada una.
-
----
-
-Este es el punto de partida. ¿Quieres que exploremos más sobre la deducción de otras ecuaciones o la aplicación a casos específicos?
-
-El campo eléctrico \( \vec{E} \) es una propiedad del espacio que rodea a una carga y se define como:
-
-\begin{equation}
-    \vec{E} = \frac{\vec{F}}{q}
-\end{equation}
+Es muy importante tener en cuenta las premisas usadas para formular el \textbf{campo eléctrico}:
+\begin{itemize}
+    \item \textit{La carga fuente modifica el espacio circundante:} El campo eléctrico es una propiedad del espacio y es generado por una carga fuente.
+    \item \textit{El campo es independiente de la carga de prueba:} La carga de prueba se usa solo como herramienta de medición.
+    \item \textit{El campo es un campo vectorial:} Tiene dirección y magnitud en cada punto del espacio.
+    \item \textit{El campo sigue el principio de superposición:} Si hay varias cargas, el campo total en un punto es la suma vectorial de los campos generados por cada una.
+    \item \textit{La carga de prueba es positiva:} Para determinar el sentido del campo es importante tener en cuenta que la carga de prueba es positiva, esto permite ver con claridad cuando el campo es entrante o saliente para una carga puntual, o poder predecir correctamente el sentido del campo en una distribución de cargas (ya sea discreta o continua).
+\end{itemize}
