@@ -303,3 +303,61 @@ Es muy importante tener en cuenta las premisas usadas para formular el \textbf{c
     \item \textit{El campo sigue el principio de superposición:} Si hay varias cargas, el campo total en un punto es la suma vectorial de los campos generados por cada una.
     \item \textit{La carga de prueba es positiva:} Para determinar el sentido del campo es importante tener en cuenta que la carga de prueba es positiva, esto permite ver con claridad cuando el campo es entrante o saliente para una carga puntual, o poder predecir correctamente el sentido del campo en una distribución de cargas (ya sea discreta o continua).
 \end{itemize}
+
+\subsubsection{Flujo eléctrico: Ley de Gauss}
+
+La ley de Gauss es uno de los principios fundamentales del electromagnetismo y proporciona una forma muy poderosa de calcular el campo eléctrico en situaciones con simetría.
+
+La ley de Gauss dice:
+\begin{equation}
+    \Phi_E = \oint_{\text{superficie cerrada}} \vec{E} \cdot d\vec{A} = \frac{q_{\text{int}}}{\varepsilon_0}
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item \( \Phi_E \) es el flujo de campo eléctrico a través de una superficie cerrada.
+    \item \(E\) es el campo eléctrico en cada punto de esa superficie.
+    \item \(dA\) es un vector diferencial de área que apunta hacia afuera de la superficie.
+    \item \(q_{int}\) es la carga total encerrada dentro de la superficie.
+    \item \(\epsilon_0\) es la permitividad del vacío, una constante del medio.
+\begin{itemize}
+
+\paragraph{¿Qué nos dice esta ley, en términos simples?}
+
+El flujo eléctrico representa la cantidad de ``líneas de campo eléctrico'' que atraviesan una superficie.
+
+Si hay carga dentro de una superficie cerrada, el campo eléctrico "sale" (o "entra") por esa superficie, generando un flujo distinto de cero.
+
+Si no hay carga neta dentro, el flujo eléctrico total es cero, aunque el campo pueda no ser nulo en todos los puntos.
+
+No importa la forma de la superficie: solo importa cuánta carga encierra, no cómo se distribuye el campo en detalle.
+
+\subparagraph{¿Por qué es útil la ley de Gauss?}
+
+La ley de Gauss es útil porque, en situaciones con alta simetría (esférica, cilíndrica, planar), permite calcular el campo eléctrico sin integrar la ley de Coulomb.
+
+Por ejemplo:
+\begin{itemize}
+    \item Una esfera cargada uniformemente
+    \item Un hilo largo con carga lineal uniforme
+    \item Un plano infinito cargado
+\end{itemize}
+
+En estos casos, elegir una superficie cerrada adecuada (llamada superficie gaussiana) permite calcular  de forma directa.
+
+\subparagraph{Ejemplo clásico: esfera cargada}
+
+Supón una carga  distribuida uniformemente en una esfera. Si elegimos una superficie esférica de radio  mayor al de la esfera, por simetría:
+\[
+\vec{E} = \text{constante} \quad \text{y} \quad \vec{E} \parallel d\vec{A}
+\]
+Entonces la integral se simplifica:
+\[
+\oint \vec{E} \cdot d\vec{A} = E \oint dA = E(4\pi r^2)
+\]
+Y por la ley de Gauss:
+\[
+E(4\pi r^2) = \frac{Q}{\varepsilon_0} \quad \Rightarrow \quad E = \frac{1}{4\pi\varepsilon_0} \frac{Q}{r^2}
+\]
+¡Y así recuperamos la fórmula del campo eléctrico de una carga puntual!
+
