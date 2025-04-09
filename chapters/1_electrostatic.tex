@@ -157,10 +157,16 @@ donde:
 En caso de que exista más de una carga que genera el campo, se aplica \textbf{el principio de superposición} que consiste en sumar todos todos los campos vectorialmente.
 
 \[
-\vec{E} = \sum{\vec{E}_i} = k \cdot \sum{\frac{Q_i}{r^2_i}} \hat{r}
+\vec{E} = \sum{\vec{E}_i} = k \cdot \sum{\frac{Q_i}{r^2_i}} \hat{r}_i
 \]
 
-Si las cargas siguen una distribución continua dada por una densidad de carga \( \lambda \) se sigue aplicando el principio de superposición, pero en este caso se resuelve mediante una integral. Pero ¿Qué es la densidad de carga?
+En muchos casos, tenemos una distribución continua de carga en vez de una colección de cargas discretas. En esta situación, la carga puede estar distribuida a lo largo de una recta, sobre alguna superficie, por todo un volumen. Siguiendo el concepto de superposición de cargas tendríamos:
+
+\[
+\vec{E} = k \lim_{\Delta q_i \to 0} \sum_i{\frac{\Delta q_i}{r_i^2}\hat{r}_i} = k \int \frac{dq}{r^2} \hat{r}
+\]
+
+En los casos que debemos calcular el campo de una distribución continua tendremos la \textit{densidad de carga}. Pero ¿Qué es la densidad de carga?
 
 La \textbf{densidad de carga} es una \textit{medida de cuánta carga eléctrica hay distribuida} sobre una determinada región del espacio. Se utiliza cuando las cargas no están concentradas en puntos, sino \textbf{distribuidas} sobre líneas, superficies o volúmenes.
 
@@ -171,13 +177,13 @@ Dependiendo del tipo de distribución, hay tres formas principales:
 Se usa cuando la carga está distribuida a lo largo de una línea (como un alambre).
 
 \[
-\lambda = \frac{dq}{dl}
+\lambda = \frac{Q}{l} ~ ~ \rightarrow ~ ~ dq = \lambda dl
 \]
 
 \begin{itemize}
     \item \( \lambda \): densidad lineal (C/m)  
-    \item \( dq \): pequeña cantidad de carga  
-    \item \( dl \): pequeña longitud del alambre  
+    \item \( Q \): pequeña cantidad de carga  
+    \item \( l \): pequeña longitud del alambre  
 \end{itemize}
 
 \subparagraph{2. Densidad superficial de carga:}
@@ -185,13 +191,13 @@ Se usa cuando la carga está distribuida a lo largo de una línea (como un alamb
 Se usa para cargas sobre una superficie (como una lámina metálica cargada).
 
 \[
-\sigma = \frac{dq}{dA}
+\sigma = \frac{Q}{A} ~ ~ \rightarrow ~ ~ dq = \sigma dA
 \]
 
 \begin{itemize}
     \item \( \sigma \): densidad superficial (C/m²)  
-    \item \( dq \): carga sobre un área pequeña  
-    \item \( dA \): área considerada  
+    \item \( Q \): carga sobre un área pequeña  
+    \item \( A \): área considerada  
 \end{itemize}
 
 \subparagraph{3. Densidad volumétrica de carga:}
@@ -199,13 +205,13 @@ Se usa para cargas sobre una superficie (como una lámina metálica cargada).
 Se usa cuando la carga ocupa un volumen (como una nube de plasma).
 
 \[
-\rho = \frac{dq}{dV}
+\rho = \frac{Q}{V} ~ ~ \rightarrow ~ ~ dq = \rho dV
 \]
 
 \begin{itemize}
     \item \( \rho \): densidad volumétrica (C/m³)  
-    \item \( dq \): carga dentro de un pequeño volumen  
-    \item \( dV \): volumen correspondiente  
+    \item \( Q \): carga dentro de un pequeño volumen  
+    \item \( V \): volumen correspondiente  
 \end{itemize}
 
 
@@ -304,7 +310,33 @@ Es muy importante tener en cuenta las premisas usadas para formular el \textbf{c
     \item \textit{La carga de prueba es positiva:} Para determinar el sentido del campo es importante tener en cuenta que la carga de prueba es positiva, esto permite ver con claridad cuando el campo es entrante o saliente para una carga puntual, o poder predecir correctamente el sentido del campo en una distribución de cargas (ya sea discreta o continua).
 \end{itemize}
 
-\subsubsection{Flujo eléctrico: Ley de Gauss}
+\subsubsection{Lineas de campo eléctrico}
+
+Las líneas de campo no son más que un medio para visualizar el patrón formado por el campo eléctrico a través del trazo de líneas conocidas como \textbf{líneas de campo eléctrico}. Estas líneas relacionan el campo eléctrico con una región del espacio de la siguiente manera:
+\begin{itemize}
+    \item El vector \(\vec{E}\) del campo eléctrico es tangente a la línea del campo eléctrico en cada punto y la dirección de la linea de campo es igual a la del campo eléctrico.
+    \item El número de líneas de campo que pasan por una superficie perpendicular a dichas líneas es proporcional a la magnitud de campo.
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/field-lines.png}
+    \caption{Líneas de campo eléctrico que atraviesan dos superficies}
+    \label{fig:lineas_de_campo}
+\end{figure}
+
+Pongamos este concepto en palabras simples ¿Recuerdas el ejemplo de las tres cargas y el ``mapa de flechas''? Bueno, las líneas de campo nos ayudan a visualizar el ``mapa de flechas'' de una forma más cómoda.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/field_lines_ex.png}
+    \caption{Ejemplo del ``mapa de flechas'' visualizado con líneas de campo}
+    \label{fig:ej_lineas_de_campo}
+\end{figure}
+
+En este caso se puede ver que las líneas de campo están más juntas cuando nos acercamos a las cargas, y se van separando cuando nos alejamos. La proximidad entre líneas de campo nos indica que el campo es intenso. Si las líneas están distantes entre sí indica que el campo es menos intenso. Esto se puede verificar con la ecuación del campo eléctrico, ya que el campo disminuye con el cuadrado de la distancia. Esto significa que según más nos alejamos de las cargas fuente, el campo disminuye.
+
+\subsection{Flujo eléctrico}
 
 La ley de Gauss es uno de los principios fundamentales del electromagnetismo y proporciona una forma muy poderosa de calcular el campo eléctrico en situaciones con simetría.
 
@@ -320,7 +352,7 @@ donde:
     \item \(dA\) es un vector diferencial de área que apunta hacia afuera de la superficie.
     \item \(q_{int}\) es la carga total encerrada dentro de la superficie.
     \item \(\epsilon_0\) es la permitividad del vacío, una constante del medio.
-\begin{itemize}
+\end{itemize}
 
 \paragraph{¿Qué nos dice esta ley, en términos simples?}
 
