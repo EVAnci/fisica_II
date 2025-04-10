@@ -375,9 +375,39 @@ Donde:
     \item \(\theta\) es el ángulo entre la dirección del campo eléctrico y la normal a la superficie.
 \end{itemize}
 
-El flujo eléctrico es importante en el estudio del electromagnetismo porque está relacionado con la ley de Gauss, que establece que el flujo eléctrico a través de una superficie cerrada es proporcional a la carga eléctrica total encerrada dentro de esa superficie. En términos más intuitivos, el flujo eléctrico puede considerarse como una medida de cuántas "líneas de campo eléctrico" atraviesan una superficie, lo que ayuda a entender cómo se distribuye el campo eléctrico en el espacio.
+Otra forma más general de escribir el flujo eléctrico es usando el \hl{producto escalar}. Para poder usar el producto escalar, necesitamos dos vectores, y en este caso solo tenemos el vector de campo. Entonce podemos definir un vector normal a la superficie con igual magnitud al área de la superficie. Entonces el producto escalar entre el vector campo eléctrico (\(\vec{E}\)) y el vector normal al area \(\vec{A}\) es:
 
-La ley de Gauss es uno de los principios fundamentales del electromagnetismo y proporciona una forma muy poderosa de calcular el campo eléctrico en situaciones con simetría.
+\begin{equation}
+    \Phi_E = \vec{E} \cdot \vec{A} = E A \cos \theta
+    \label{eq:flujo_electrico}
+\end{equation}
+
+Hay que tener muy presente que \(\Phi_E\) es un \textbf{ESCALAR} no un vector. Y otro factor a considerar es que la ecuación \eqref{eq:flujo_electrico} solo se puede usar si el campo \(\vec{E}\) es constante. Sin embargo, en general, el campo \(\vec{E}\) no suele ser constante, entonces una forma de conseguir el flujo eléctrico total en una superficie \(S\) donde el campo no es constante es sumando todas las pequeñas contribuciones de flujo eléctrico en pequeñas porciones de area (\(dA\)), resultando en la siguiente integral:
+
+\begin{equation}
+    \Phi_E = \int_{S} \vec{E} \cdot d\vec{A}
+    \label{eq:flujo_electrico_integral}
+\end{equation}
+
+\subsubsection{Ley de Gauss}
+
+El flujo eléctrico es importante en el estudio del electromagnetismo porque está relacionado con la ley de Gauss, que establece que el flujo eléctrico a través de una superficie \textbf{cerrada} (con frecuencia llamada \textit{superficie gaussiana}) es proporcional a la carga eléctrica total encerrada dentro de esa superficie.
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \centering
+    \includegraphics[width=0.33\textwidth]{ley_de_gauss.png}
+    \caption{Superficie gaussiana esférica de radio \(r\) que rodea una carga puntual \(q\).}
+    \label{fig:superficie_gaussiana}
+\end{wrapfigure}
+
+Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de radio \(r\) como se observa en la figura \ref{fig:superficie_gaussiana}. De la ecuación de campo eléctrico (\eqref{eq:campo_electrico}), se sabe que la magnitud del campo eléctrico sobre todos los puntos de la superficie de la esfera es \(\vec{E} = k q/r^2\). Las líneas de campo están dirigidas radialmente hacia afuera y por tanto son perpendiculares a la superficie en todos sus puntos. Es decir, en cada punto de la superficie, \(\vec{E}\) es paralelo al vector \(d\vec{A}\) que representa un elemento de área muy pequeño que rodea al punto en la superficie. Por lo tanto, el flujo neto a través de la superficie gaussiana es igual a:
+
+\begin{align*}
+    \Phi_E =& \oint \vec{E} \cdot d\vec{A} \\
+            =& \oint E \cos(0) ~ dA \\
+            =& \oint E ~ dA \\
+    \Phi_E =& E ~ \oint dA
+\end{align*}    
 
 La ley de Gauss dice:
 \begin{equation}
