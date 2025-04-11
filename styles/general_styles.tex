@@ -7,6 +7,8 @@
 \definecolor{soft_green}{RGB}{0, 153, 0}
 \definecolor{intense_blue}{RGB}{30, 144, 255}
 \definecolor{highlight}{RGB}{255, 230, 153}
+\definecolor{lightyellow}{RGB}{255, 249, 171}
+\definecolor{lightdanger}{RGB}{255, 205, 210}
 % https://latexcolor.com/
 \definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
 \definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
@@ -46,6 +48,37 @@
 \newcommand{\diff}[2]{\frac{d#1}{d#2}} % Derivada
 \newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}} % Derivada parcial
 
+% Sección resaltada para escribir conclusiones bonitas
+\tcbset{
+  myconclusion/.style={
+    enhanced,
+    colback=lightyellow,
+    colframe=white, % blanco hace invisible el borde
+    boxrule=0pt,    % grosor del borde: 0pt = sin borde
+    arc=6pt,        % redondeado de bordes
+    boxsep=5pt,     % separación entre texto y borde
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+  }
+}
+
+% Sección resaltada para escribir conclusiones bonitas
+\tcbset{
+  mydanger/.style={
+    enhanced,
+    colback=lightdanger,
+    colframe=white, % blanco hace invisible el borde
+    boxrule=0pt,    % grosor del borde: 0pt = sin borde
+    arc=6pt,        % redondeado de bordes
+    boxsep=5pt,     % separación entre texto y borde
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+  }
+}
 
 \hypersetup{
     colorlinks=true,
