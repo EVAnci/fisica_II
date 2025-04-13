@@ -364,7 +364,7 @@ El \hl{flujo eléctrico} es una medida de la cantidad de campo eléctrico que at
 \end{figure}
 
 \[
-\Phi_E = E \cdot A \cdot \cos(\theta)
+\Phi_E = E \cdot A \cdot \cos(\theta)  ~~ \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
 \]
 
 Donde:
@@ -412,7 +412,7 @@ Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de r
 aquí tenemos que \(E=kq/r^2\) donde \(r\) es conocido y vale el radio de la esfera, \(q\) es el valor de la carga en el centro de la esfera y \(k = 1/4\pi\epsilon_0\). Luego la integral resulta en la superficie de una esfera que es \(4\pi r^2\). Entonces:
 
 \[
-\Phi_E = E ~ \oint_S dA = \frac{q}{4\pi \epsilon_0 r^2} \cdot 4\pi r^2 = \boxed{\frac{q}{\epsilon_0}}
+\Phi_E = E ~ \oint_S dA = \frac{q}{4\pi \epsilon_0 r^2} \cdot 4\pi r^2 = \boxed{\frac{q}{\epsilon_0}} 
 \]
 
 Este resultado dice muchas cosas:
@@ -453,7 +453,7 @@ Por otro lado, si la carga \(q\) está fuera de la superficie gaussiana entonces
 La forma matemática de ley de Gauss, es una generalización de lo anterior y establece que el flujo neto a través de cualquier superficie cerrada es
 
 \begin{equation}
-    \Phi_E = \oint_{S} \vec{E} \cdot d\vec{A} = \frac{q_{\text{int}}}{\varepsilon_0}
+    \Phi_E = \oint_{S} \vec{E} \cdot d\vec{A} = \frac{q_{\text{int}}}{\varepsilon_0} ~~ \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
 \end{equation}
 
 donde:
@@ -471,30 +471,20 @@ donde:
 
 \paragraph{¿Qué nos dice esta ley, en términos simples?}
 
-El flujo eléctrico representa la cantidad de ``líneas de campo eléctrico'' que atraviesan una superficie.
-
-Si hay carga dentro de una superficie cerrada, el campo eléctrico "sale" (o "entra") por esa superficie, generando un flujo distinto de cero.
-
-Si no hay carga neta dentro, el flujo eléctrico total es cero, aunque el campo pueda no ser nulo en todos los puntos.
-
-No importa la forma de la superficie: solo importa cuánta carga encierra, no cómo se distribuye el campo en detalle.
+El flujo eléctrico representa la cantidad de ``líneas de campo eléctrico'' que atraviesan una superficie. La ley de Gauss nos habla de superficies cerradas, y nos dice que si hay carga dentro de una superficie cerrada, el campo eléctrico ``sale'' (o ``entra'') por esa superficie, generando un flujo distinto de cero. Si no hay carga neta dentro, el flujo eléctrico total es cero, aunque el campo pueda no ser nulo en todos los puntos. No importa la forma de la superficie, solo importa cuánta carga encierra, no cómo se distribuye el campo en detalle.
 
 \subparagraph{¿Por qué es útil la ley de Gauss?}
 
-La ley de Gauss es útil porque, en situaciones con alta simetría (esférica, cilíndrica, planar), permite calcular el campo eléctrico sin integrar la ley de Coulomb.
-
-Por ejemplo:
+La ley de Gauss es útil porque, en situaciones con alta simetría (esférica, cilíndrica, planar), permite calcular el campo eléctrico sin integrar la ley de Coulomb, por ejemplo:
 \begin{itemize}
     \item Una esfera cargada uniformemente
-    \item Un hilo largo con carga lineal uniforme
+    \item Un hilo infinitamente largo con carga lineal uniforme
     \item Un plano infinito cargado
 \end{itemize}
 
-En estos casos, elegir una superficie cerrada adecuada (llamada superficie gaussiana) permite calcular  de forma directa.
-
 \subparagraph{Ejemplo clásico: esfera cargada}
 
-Supón una carga  distribuida uniformemente en una esfera. Si elegimos una superficie esférica de radio  mayor al de la esfera, por simetría:
+Supón una carga distribuida uniformemente en una esfera. Si elegimos una superficie esférica de radio  mayor al de la esfera, por simetría:
 \[
 \vec{E} = \text{constante} \quad \text{y} \quad \vec{E} \parallel d\vec{A}
 \]
