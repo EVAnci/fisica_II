@@ -1,0 +1,68 @@
+Un \textbf{capacitor}, también conocido como \textbf{condensador}, es un componente eléctrico pasivo que tiene la capacidad de \textbf{almacenar energía en forma de un campo eléctrico}. Está compuesto por dos conductores (llamados placas) separados por un material dieléctrico, que actúa como aislante.
+
+Cuando se aplica una diferencia de potencial (voltaje) entre las placas, una de ellas acumula carga positiva y la otra carga negativa, generando así un campo eléctrico entre ellas. La capacidad del capacitor para almacenar carga depende de sus características físicas y del dieléctrico utilizado.
+
+La \textbf{capacitancia} es una medida de esa capacidad de almacenamiento de carga eléctrica. Se define como:
+
+\begin{equation}
+    C = \frac{Q}{V}
+    \label{eq:capacitance}    
+\end{equation}
+
+donde:
+
+\begin{itemize}
+    \item \( C \) es la \textbf{capacitancia} del capacitor, medida en faradios (\(\si{\farad}\)).
+    \item \( Q \) es la \textbf{carga eléctrica} almacenada en el capacitor, medida en coulombs (\(\si{\coulomb}\)).
+    \item \( V \) es la \textbf{diferencia de potencial} entre las placas del capacitor, medida en voltios (\(\si{\volt}\)).
+\end{itemize}
+
+Un faradio es una unidad muy grande, por lo que en la práctica suelen utilizarse submúltiplos como el microfaradio (\(\mu\si{farad}\)), nanofaradio (n\(\si{\farad}\)) o picofaradio (p\(\si{\farad}\)).
+
+La capacitancia depende de factores. Si se tienen placas paralelas de depende de factores como el área de las placas (\(A\)), la distancia entre ellas (\(d\)) y la permitividad del dieléctrico (\( \varepsilon \)) según la siguiente fórmula:
+
+\[
+C = \varepsilon \frac{A}{d}
+\]
+
+Este comportamiento hace que los capacitores sean ampliamente utilizados en circuitos electrónicos para funciones como almacenamiento de energía, filtrado, acoplamiento y desacoplamiento de señales, entre otras.
+
+\subsubsection{Geometría de los conductores}
+
+Cuando la \hl{geometría de los conductores} es distinta a la de un capacitor de placas planas y paralelas, la expresión de la capacitancia cambia, aunque el principio físico fundamental sigue siendo el mismo: almacenar energía en forma de campo eléctrico entre conductores separados por un dieléctrico.
+
+En general, la \hl{capacitancia depende de la geometría de los conductores y del medio dieléctrico entre ellos}. A continuación, se presentan algunos casos comunes:
+
+\paragraph{1. Capacitor esférico}
+
+Consiste en dos esferas concéntricas de radios \( R_1 \) (interna) y \( R_2 \) (externa). Su capacitancia es:
+
+\[
+C = 4\pi \varepsilon_0 \varepsilon_r \frac{R_1 R_2}{R_2 - R_1}
+\]
+
+\paragraph{2. Capacitor cilíndrico}
+
+Está formado por dos cilindros coaxiales, uno de radio interno \( a \) y otro de radio externo \( b \), y de longitud \( L \) (suponiendo \( L \gg b \)). La capacitancia es:
+
+\[
+C = \frac{2\pi \varepsilon_0 \varepsilon_r L}{\ln(b/a)}
+\]
+
+\paragraph{3. Geometrías irregulares o generales}
+
+En geometrías más complejas, la capacitancia no puede obtenerse de forma analítica sencilla. En estos casos se recurre a:
+
+\begin{itemize}
+    \item Métodos numéricos
+    \item Aproximaciones analíticas
+    \item Medición experimental
+\end{itemize}
+
+Cuando se cambia la geometría, ya no es válida la fórmula simple \( C = \varepsilon \frac{A}{d} \). Es necesario **considerar la distribución del campo eléctrico** que surge de la nueva disposición geométrica, y calcular la capacitancia a partir de las definiciones fundamentales, como:
+
+\[
+C = \frac{Q}{V}
+\]
+
+donde \( V \) ahora debe calcularse usando la ley de Gauss o integrando el campo eléctrico apropiado para la geometría dada.
