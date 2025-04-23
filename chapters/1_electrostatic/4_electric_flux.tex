@@ -1,10 +1,12 @@
+\subsection{Flujo eléctrico}
+
 Hasta ahora hemos visto una idea general de las líneas de campo eléctrico. Es decir, vimos una explicación que busca dar una idea general de cómo funcionan las líneas de campo eléctrico, su forma, su dirección y su relación con las cargas, pero sin proporcionar fórmulas o cantidades específicas. En este apartado, vamos a explicar con mayor formalidad este concepto, donde se considerará la magnitud del campo eléctrico y el área a través de la cual se mide el flujo eléctrico, utilizando la relación matemática entre estas variables.
 
 \subsubsection{Definición}
 
 El \hl{flujo eléctrico} es una medida de la cantidad de campo eléctrico que atraviesa una superficie dada. Se define matemáticamente como el producto de la magnitud del campo eléctrico (\(E\)) y el área (\(A\)) de la superficie a través de la cual se mide el flujo, así como el coseno del ángulo (\(\theta\)) entre la dirección del campo eléctrico y la normal (perpendicular) a la superficie. La fórmula para calcular el flujo eléctrico (\(\Phi_E\)) es:
 
-\begin{figure}[ht!]
+\begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
@@ -51,16 +53,15 @@ Hay que tener muy presente que \(\Phi_E\) es un \textbf{ESCALAR} no un vector. Y
 
 \subsubsection{Ley de Gauss}
 
-El flujo eléctrico es importante en el estudio del electromagnetismo porque está relacionado con la ley de Gauss, que establece que el flujo eléctrico a través de una superficie \textbf{cerrada} (con frecuencia llamada \textit{superficie gaussiana}) es proporcional a la carga eléctrica total encerrada dentro de esa superficie.
+El flujo eléctrico es importante en el estudio del electromagnetismo porque está relacionado con la ley de Gauss, que establece que el flujo eléctrico a través de una superficie \textbf{cerrada} (con frecuencia llamada \textit{superficie gaussiana}) es proporcional a la carga eléctrica total encerrada dentro de esa superficie. Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de radio \(r\) como se observa en la figura \ref{fig:superficie_gaussiana}.
 
 \begin{wrapfigure}{r}{0.35\textwidth}
     \centering
-    \includegraphics[width=0.33\textwidth]{ley_de_gauss.png}
+    \includegraphics[width=\linewidth]{ley_de_gauss.png}
     \caption{Superficie gaussiana esférica de radio \(r\) que rodea una carga puntual \(q\).}
     \label{fig:superficie_gaussiana}
 \end{wrapfigure}
-
-Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de radio \(r\) como se observa en la figura \ref{fig:superficie_gaussiana}. De la ecuación de campo eléctrico \eqref{eq:campo_electrico}, se sabe que la magnitud del campo eléctrico sobre todos los puntos de la superficie (\(S\)) de la esfera es \(\vec{E} = k q/r^2\). Las líneas de campo están dirigidas radialmente hacia afuera y por tanto son perpendiculares a la superficie en todos sus puntos. Es decir, en cada punto de la superficie, \(\vec{E}\) es paralelo al vector \(d\vec{A}\) que representa un elemento de área muy pequeño que rodea al punto en la superficie. Por lo tanto, el flujo neto a través de la superficie gaussiana es igual a:
+De la ecuación de campo eléctrico \eqref{eq:campo_electrico}, se sabe que la magnitud del campo eléctrico sobre todos los puntos de la superficie (\(S\)) de la esfera es \(\vec{E} = k q/r^2\). Las líneas de campo están dirigidas radialmente hacia afuera y por tanto son perpendiculares a la superficie en todos sus puntos. Es decir, en cada punto de la superficie, \(\vec{E}\) es paralelo al vector \(d\vec{A}\) que representa un elemento de área muy pequeño que rodea al punto en la superficie. Por lo tanto, el flujo neto a través de la superficie gaussiana es igual a:
 
 \begin{align*}
     \Phi_E =& \oint_S \vec{E} \cdot d\vec{A} \\
@@ -68,7 +69,6 @@ Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de r
             =& \oint_S E ~ dA \\
     \Phi_E =& E ~ \oint_S dA
 \end{align*}
-
 aquí tenemos que \(E=kq/r^2\) donde \(r\) es conocido y vale el radio de la esfera, \(q\) es el valor de la carga en el centro de la esfera y \(k = 1/4\pi\epsilon_0\). Luego la integral resulta en la superficie de una esfera que es \(4\pi r^2\). Entonces:
 
 \[
@@ -115,7 +115,6 @@ La forma matemática de ley de Gauss, es una generalización de lo anterior y es
 \begin{equation}
     \Phi_E = \oint_{S} \vec{E} \cdot d\vec{A} = \frac{q_{\text{int}}}{\varepsilon_0} ~~ \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
 \end{equation}
-
 donde:
 \begin{itemize}
     \item \( \Phi_E \) es el flujo de campo eléctrico a través de una superficie cerrada.
