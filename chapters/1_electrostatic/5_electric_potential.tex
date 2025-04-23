@@ -1,12 +1,12 @@
+\subsection{Potencial eléctrico}
+
 Cuando se coloca una carga \(q\) en un campo eléctrico \(\vec{E}\), la carga experimenta una fuerza \(\vec{F}=q\vec{E}\). Esta fuerza es conservativa, lo que significa que el trabajo realizado por la fuerza al mover la carga entre dos puntos \(A\) y \(B\) no depende de la trayectoria seguida, sino solo de los puntos inicial y final.
 
 El trabajo realizado por la fuerza al mover la carga \(q\) desde el punto \(A\) hasta el punto \(B\) se define como:
 \begin{equation*}
     W_{AB} = \int_A^B \vec{F} \cdot d\vec{s} = \int_A^B q\vec{E} \cdot d\vec{s}
 \end{equation*}
-
 donde \(d\vec{s}\) es un elemento diferencial de desplazamiento a lo largo de la trayectoria. Y como la fuerza eléctrica es conservativa, podemos expresarla en términos de la energía potencial eléctrica \(U\):
-
 \begin{equation*}
     W_{AB} = U_A - U_B = -\Delta U
 \end{equation*}
@@ -52,7 +52,7 @@ El signo negativo indica que el potencial en el punto \(B\) es menor que el pote
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{potential_const_field.png}
+    \includegraphics[width=1\textwidth]{potential_const_field.png}
     \caption{Comparación de la energía potencial eléctrica y gravitatoria.}
     \label{fig:potential_uniform}
 \end{figure}
@@ -65,7 +65,7 @@ El signo negativo indica que el potencial en el punto \(B\) es menor que el pote
 
 \begin{wrapfigure}{l}{0.32\textwidth}
     \centering
-    \includegraphics[width=0.33\textwidth]{puntual_potential_1.png}
+    \includegraphics[width=\linewidth]{puntual_potential_1.png}
     \caption{Potencial en el punto \(P\) debido a \(q_1\).}
     \label{fig:potential_point_charge}
 \end{wrapfigure}
@@ -86,7 +86,6 @@ por ser \(\vec{E}\) y \(\vec{r}_{12}\) paralelos. Entonces el potencial eléctri
     \boxed{V_P = k\frac{q_1}{r_{12}} = E \, r_{12}}
     \label{eq:potential_point_charge}
 \end{equation}
-
 donde \(q_1\) es la carga fuente, \(E\) el campo generado por \(q_1\) y \(r_{12}\) la distancia a un punto en el campo eléctrico.
 
 El potencial eléctrico debido a múltiples cargas puntuales se basa en el principio de superposición, que establece que el potencial eléctrico total en un punto es igual a la suma algebraica de los potenciales individuales producidos por cada carga.
@@ -95,7 +94,7 @@ El potencial eléctrico debido a múltiples cargas puntuales se basa en el princ
     V_{total} = \sum_{i=1}^{n} V_i = k \sum_{i=1}^{n} \frac{q_i}{r_i}
 \end{equation}
 
-\subsubsection{Obtención de \(\vec{E}\) a partir de \(V\)}
+\subsubsection{Obtención de \texorpdfstring{\(\vec{E}\)}{E} a partir de \texorpdfstring{\(V\)}{V}}
 
 El campo eléctrico \(\vec{E}\) y el potencial eléctrico \(V\) están relacionados, como se muestra en la ecuación \eqref{eq:potential_point_charge}, que se usa para encontrar \(V\) en un punto cuando se conoce \(\vec{E}\). Sin embargo, también podemos encontrar \(\vec{E}\) a partir de \(V\) usando la relación:
 
@@ -103,7 +102,6 @@ El campo eléctrico \(\vec{E}\) y el potencial eléctrico \(V\) están relaciona
     dV = -\vec{E} \cdot d\vec{s}
     \label{eq:field_from_potential_differential}
 \end{equation}
-
 y si estamos trabajando con una única coordenada podemos escribir la ecuación \eqref{eq:field_from_potential_differential} como:
 
 \[
@@ -137,4 +135,3 @@ Cuando se aplica el operador nabla a una función escalar \( f(x, y, z) \), prod
 \]
 
 Este vector resultante indica la dirección en la que la función crece más rápidamente y su magnitud corresponde a la tasa de cambio máxima. En el caso de \(\vec{E}\) y \(V\), \(\vec{E}\) es el gradiente de \(V\) representa una función vectorial que apunta en la dirección de mayor aumento del potencial eléctrico.
-

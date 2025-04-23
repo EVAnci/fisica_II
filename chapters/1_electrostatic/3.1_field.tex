@@ -1,11 +1,13 @@
+\subsection{Campo eléctrico}
+
 Para entender la definición del campo eléctrico desde el principio, debemos pensar en cómo se conceptualiza la interacción entre cargas eléctricas y en la necesidad de definir una propiedad del espacio que describa esta interacción.
 
 Sabemos que las cargas eléctricas ejercen fuerzas unas sobre otras. Experimentalmente, se observa que cargas del mismo signo se repelen y cargas de signo opuesto se atraen. Esta interacción fue formulada matemáticamente por la Ley de Coulomb \eqref{eq:ley_coulomb_vectorial}, sin embargo, esta ley solo nos dice cómo una carga afecta a otra en particular, \hl{pero no describe una propiedad del espacio en sí}. Aquí es donde se introduce el concepto de \textbf{campo eléctrico}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.4\textwidth]{field_concept.png}
-    \caption{Se perturba el espacio al rededor de la carga.}
+    \includegraphics[width=0.7\textwidth]{field_concept.jpg}
+    \caption{Se visualiza la perturbación el espacio al generar un campo eléctrico como movimiento de cargas.}
     \label{fig:concepto_campo_electrico}
 \end{figure}
 
@@ -17,7 +19,7 @@ En lugar de pensar que una carga actúa instantáneamente sobre otra, se puede i
     \item Para cuantificar esa modificación, definimos el campo eléctrico como la \textbf{fuerza por unidad de carga de prueba}.
 \end{enumerate}
 
-\paragraph{Idea conceptual del campo eléctrico}
+\subsubsection{Idea conceptual del campo eléctrico}
 
 Si te preguntas qué es el campo eléctrico, puedes responder según la descripción previa: ``el campo eléctrico es una propiedad del espacio que rodea a una carga eléctrica capaz de interactuar con otras cargas''. Sin embargo la idea es entender qué significa que una carga eléctrica modifique las propiedades del espacio que la rodea. Veamos un ejemplo de esto para entenderlo mejor.
 
@@ -36,14 +38,13 @@ Todas las soluciones están ocacionando el mismo efecto en el protón, una fuerz
 
 Es más, cualquier partícula que coloquemos en el lugar del protón, con cualquier carga, por ejemplo una partícula con tres veces la carga del protón pero negativa, sentirá una fuerza proporcional a la que sentía el protón. En el caso de este ejemlo sería una fuerza igual a tres veces el peso del protón en el mimo sentido al peso (por ser negativa).
 
-\paragraph{Formulando el Campo Eléctrico}
+\subsubsection{Formulando el Campo Eléctrico}
 
 El campo eléctrico \( \vec{E} \) se define como la fuerza por unidad de carga de prueba \textbf{positiva} en un punto en el espacio. Esto puede expresarse como:
 
 \begin{equation}
     \vec{E} = \frac{F}{q^{+}} = k_e \frac{Q}{r^2}
 \end{equation}
-
 donde:
 \begin{itemize}
     \item \( Q \) es la carga que genera el campo (puntual).
@@ -85,11 +86,9 @@ Se usa cuando la carga está distribuida a lo largo de una línea (como un alamb
 \subparagraph{2. Densidad superficial de carga:}
 
 Se usa para cargas sobre una superficie (como una lámina metálica cargada).
-
 \[
 \sigma = \frac{Q}{A} ~ ~ \rightarrow ~ ~ dq = \sigma dA
 \]
-
 \begin{itemize}
     \item \( \sigma \): densidad superficial (C/m²)  
     \item \( Q \): carga sobre un área pequeña  
@@ -99,21 +98,16 @@ Se usa para cargas sobre una superficie (como una lámina metálica cargada).
 \subparagraph{3. Densidad volumétrica de carga:}
 
 Se usa cuando la carga ocupa un volumen (como una nube de plasma).
-
 \[
 \rho = \frac{Q}{V} ~ ~ \rightarrow ~ ~ dq = \rho dV
 \]
-
 \begin{itemize}
     \item \( \rho \): densidad volumétrica (C/m³)  
     \item \( Q \): carga dentro de un pequeño volumen  
     \item \( V \): volumen correspondiente  
 \end{itemize}
-
-
 Estas densidades permiten convertir una distribución continua de carga en una integral, y así calcular el campo eléctrico o el potencial.  
 Por ejemplo, si conocés \( \lambda(x) \), podés calcular el campo eléctrico de una varilla cargada mediante:
-
 \[
 \vec{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{\lambda(x)\, dx}{r^2} \hat{r}
 \]
@@ -154,7 +148,6 @@ Seguro te preguntarás ¿Cómo es eso? Es bien sencillo, presta atención a lo s
 \]
 
 Ahora, recordando que \( Q \) era nuestra carga fuente (formada por las tres cargas) y \( q^{+} \) nuestra carga de prueba de \( 1 \si{\coulomb} \) que usamos para hacer todas las cuentas, si quitamos la carga de prueba, como en la ecuación de fuerza es un factor neutro (multiplica por 1), el resultado no cambiaría cuantitativamente, sin embargo cambiarían las unidades. Veamos como queda:
-
 \[
 \vec{F}_e ~ [\si{\newton}] \neq k \frac{Q}{r^2} \hat{r} ~ [\si{\newton\per\coulomb}]
 \]
@@ -178,7 +171,6 @@ Vemos que lo que resulta es una desigualdad, ya que las unidades no coinciden. S
     \vec{E} = \frac{\vec{F}}{q^{+}}
     \label{eq:campo_electrico}
 \end{equation}
-
 donde:
 \begin{itemize}
     \item \( \vec{E} \) es el campo eléctrico en ese punto,
