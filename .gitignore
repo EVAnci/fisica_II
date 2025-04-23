@@ -17,3 +17,4 @@
 *.synctex
 *.synctex.gz
 .vscode
+*/venv*
