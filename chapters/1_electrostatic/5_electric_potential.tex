@@ -70,7 +70,7 @@ El signo negativo indica que el potencial en el punto \(B\) es menor que el pote
     \label{fig:potential_point_charge}
 \end{wrapfigure}
 
-Como se mensiona en la definición, la energía potencial es relativa al punto que se ha definido como ``0''. Con  el potencial eléctrico pasa lo mismo, entonces si queremos saber el potencial en un punto \(P\) del campo eléctrico, sabemos que es igual al trabajo realizado por la fuerza eléctrica al mover una carga de prueba \(q\), pero ¿Desde donde hasta donde? Bueno, podemos definir que nuestro potencial sea cero cuando la carga \(q\) esté infinitamente alejada de la fuente. Entonces el potencial en el punto \(P\) es trabajo para mover la carga de prueba desde el infinito hasta el punto \(P\):
+Como se menciona en la definición, la energía potencial es relativa al punto que se ha definido como ``0''. Con  el potencial eléctrico pasa lo mismo, entonces si queremos saber el potencial en un punto \(P\) del campo eléctrico, sabemos que es igual al trabajo realizado por la fuerza eléctrica al mover una carga de prueba \(q\), pero ¿Desde donde hasta donde? Bueno, podemos definir que nuestro potencial sea cero cuando la carga \(q\) esté infinitamente alejada de la fuente. Entonces el potencial en el punto \(P\) es trabajo para mover la carga de prueba desde el infinito hasta el punto \(P\):
 
 \begin{align*}
     V_P &= - \lim_{a \to \infty}\int_{a}^P \vec{E} \cdot d\vec{r}\\
@@ -110,7 +110,7 @@ y si estamos trabajando con una única coordenada podemos escribir la ecuación 
     dV = -E \, ds \quad \Rightarrow \quad E = -\frac{dV}{ds}
 \]
 
-Sin embargo, en general, el potencial eléctrico es una función de las tres coordenadas espaciales. Si \(V(r)\) se da en coordenadas cartesianas, las componentes \((E_x, E_y, Ez)\) del campo eléctrico pueden ser determinadas fácilmente a partir de \(V(x, y, z)\) como derivadas parciales
+Sin embargo, en general, el potencial eléctrico es una función de las tres coordenadas espaciales. Si \(V(r)\) se da en coordenadas cartesianas, las componentes \((E_x, E_y, E_z)\) del campo eléctrico pueden ser determinadas fácilmente a partir de \(V(x, y, z)\) como derivadas parciales
 
 \begin{equation}
     \vec{E} = -\nabla V
@@ -128,31 +128,13 @@ Formalmente, el operador nabla se define como:
 \nabla = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)
 \]
 
-Es un operador vectorial que, aplicado a diferentes tipos de funciones, da lugar a distintos conceptos:
+Es un operador vectorial que, aplicado a diferentes tipos de funciones, da lugar a distintos conceptos. En nuestro caso solo vamos a repasar el concepto de gradiente.
 
-\subparagraph{Gradiente}
-
-Cuando se aplica a una función escalar \( f(x, y, z) \), produce un \textbf{campo vectorial} que apunta en la dirección de mayor incremento de la función. Se expresa como:
+Cuando se aplica el operador nabla a una función escalar \( f(x, y, z) \), produce un \textbf{campo vectorial} que apunta en la dirección de mayor incremento de la función. Se expresa como:
 
 \[
 \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
 \]
 
 Este vector resultante indica la dirección en la que la función crece más rápidamente y su magnitud corresponde a la tasa de cambio máxima. En el caso de \(\vec{E}\) y \(V\), \(\vec{E}\) es el gradiente de \(V\) representa una función vectorial que apunta en la dirección de mayor aumento del potencial eléctrico.
-
-\subparagraph{Divergencia}
-
-Cuando se aplica a un campo vectorial \( \vec{F} = (F_x, F_y, F_z) \), el operador nabla actúa como un producto escalar:
-
-\[
-\nabla \cdot \vec{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}
-\]
-
-\subparagraph{Rotacional}
-
-Cuando se aplica a un campo vectorial, el operador nabla actúa como un producto cruz:
-
-\[
-\nabla \times \vec{F}
-\]
 
