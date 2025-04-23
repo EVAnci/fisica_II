@@ -1,47 +1,143 @@
-\begin{table}[h]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{|>{\bfseries}l|l|}
-        \hline
-        \textbf{Concepto} & \textbf{Definición Matemática y Explicación} \\ \hline
-        
-        \textbf{Ley de Coulomb} & 
-        $\vec{F} = k \frac{q_1 q_2}{r^2} \hat{r}$ \\
-        & Fuerza entre dos cargas puntuales ($q_1$, $q_2$): \\
-        & - $k = \frac{1}{4\pi\varepsilon_0}$ (Constante de Coulomb) \\
-        & - $r$: Distancia entre cargas, $\hat{r}$: Vector unitario radial. \\ \hline
-        
-        \textbf{Campo Eléctrico} & 
-        $\vec{E} = \frac{\vec{F}}{q_0} = k \frac{Q}{r^2} \hat{r}$ \\
-        & Fuerza por unidad de carga ($q_0$) en un punto: \\
-        & - Dirección: Radial para cargas puntuales. \\ \hline
-        
-        \textbf{Flujo Eléctrico} & 
-        $\Phi_E = \int_S \vec{E} \cdot d\vec{A}$ \\
-        & Medida del "número de líneas de campo" que atraviesan \\
-        & una superficie $S$: \\
-        & - $d\vec{A}$: Vector área (normal a la superficie). \\ \hline
-        
-        \textbf{Ley de Gauss} & 
-        $\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\varepsilon_0}$ \\
-        & Relación entre flujo eléctrico a través de una superficie \\
-        & cerrada y la carga encerrada ($Q_{\text{int}}$). \\ \hline
-        
-        \textbf{Energía Potencial} & 
-        $U = k \frac{q_1 q_2}{r}$ \\
-        & Trabajo para reunir cargas desde el infinito: \\
-        & - $U > 0$ (repulsión), $U < 0$ (atracción). \\ \hline
-        
-        \textbf{Trabajo Eléctrico} & 
-        $W = -\Delta U = q \Delta V$ \\
-        & Trabajo realizado por el campo para mover una carga $q$: \\
-        & - Depende de la diferencia de potencial ($\Delta V$). \\ \hline
-        
-        \textbf{Potencial Eléctrico} & 
-        $V = \frac{U}{q_0} = k \frac{Q}{r}$ \\
-        & Energía potencial por unidad de carga ($q_0$): \\
-        & - Escalar, medido en voltios (V). \\ \hline
-    \end{tabular}
-    \caption{Resumen de conceptos fundamentales de Electroestática.}
-    \label{tab:electrostatica}
-\end{table}
+\begin{tcolorbox}[title=Ley de Coulomb]
+  Fuerza entre dos cargas puntuales $q_1$ y $q_2$:
+  \[
+    \vec{F} = k \frac{q_1 q_2}{r^2} \hat{r}
+  \]
+  \begin{itemize}
+    \item $k = \frac{1}{4\pi\varepsilon_0}$ es la constante de Coulomb.
+    \item $r$ es la distancia entre las cargas.
+    \item $\hat{r}$ es el vector unitario radial.
+  \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Campo Eléctrico]
+  Campo eléctrico $\vec{E}$ en un punto debido a una carga $Q$:
+  \[
+    \vec{E} = \frac{\vec{F}}{q_0} = k \frac{Q}{r^2} \hat{r}
+  \]
+  \begin{itemize}
+    \item $\vec{F}$ es la fuerza sobre una carga de prueba $q_0$.
+    \item Dirección radial para cargas puntuales.
+  \end{itemize}
+
+  Campo eléctrico a partir del potencial eléctrico $V$:
+  \[
+    \vec{E} = -\nabla V
+  \]
+  \begin{itemize}
+    \item $\nabla$ es el operador nabla (gradiente).
+  \end{itemize}
+  Campo eléctrico debido a una distribución de carga continua:
+  \[
+    \vec{E} = k \int \frac{dq}{r^2} \hat{r}
+  \]
+  \begin{itemize}
+    \item $dq$ es un elemento diferencial de carga.
+    \item Integración sobre la distribución de carga (\(\lambda\), \(\sigma\) o \(\rho\)).
+    \item $r$ es la distancia desde el elemento de carga al punto de interés.
+  \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Flujo Eléctrico]
+  Flujo eléctrico $\Phi_E$ a través de una superficie $S$:
+  \[
+    \Phi_E = \int_S \vec{E} \cdot d\vec{A}
+  \]
+  \begin{itemize}
+    \item $d\vec{A}$ es el vector área (normal a la superficie).
+    \item Representa el "número de líneas de campo" que atraviesan $S$.
+  \end{itemize}  
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Ley de Gauss]
+  Ley de Gauss para un campo eléctrico $\vec{E}$:
+  \[
+    \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\varepsilon_0}
+  \]
+  \begin{itemize}
+    \item $Q_{\text{int}}$ es la carga encerrada por la superficie Gaussiana $S$.
+    \item Relaciona el flujo eléctrico con la carga total encerrada.
+  \end{itemize}  
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Trabajo Eléctrico]
+  Trabajo $W$ realizado por el campo eléctrico al mover una carga $q$ desde un punto $A$ a un punto $B$:
+  \[
+    W_{AB} = -\Delta U = q \Delta V = \int_{A}^{B} q\vec{E} \cdot d\vec{s}
+  \]
+  \begin{itemize}
+    \item $\Delta U$ es el cambio en energía potencial.
+    \item $W$ es positivo si el campo realiza trabajo sobre la carga.
+  \end{itemize}
+\end{tcolorbox}
+  
+\begin{tcolorbox}[title=Energía Potencial]
+  Energía potencial eléctrica $U$ de una carga $q$ en un campo eléctrico $\vec{E}$:
+  \[
+    U = qV
+  \]
+  \begin{itemize}
+    \item $V$ es el potencial eléctrico en el punto donde se encuentra la carga.
+  \end{itemize}
+  La energía eléctrica almacenada por un capacitor:
+  \[
+    U = \frac{1}{2} CV^2 = \frac{1}{2} QV = \frac{1}{2} \frac{Q^2}{C}
+  \]
+  \begin{itemize}
+    \item $C$ es la capacitancia del capacitor.
+    \item $V$ es el potencial entre las placas del capacitor.
+    \item $U$ es la energía almacenada en el campo eléctrico entre las placas.
+  \end{itemize}
+\end{tcolorbox}
+  
+\begin{tcolorbox}[title=Potencial Eléctrico]
+  Definición de potencial en un punto \(r\) debido a una carga $Q$:
+  \[
+    V = -\int_{\infty}^{r} \vec{E} \cdot d\vec{s} = k \frac{Q}{r}
+  \]
+  Diferencia de potencial eléctrico $\Delta V$ entre dos puntos $A$ y $B$:
+  \[
+    \Delta V = V_B - V_A = -\int_{A}^{B} \vec{E} \cdot d\vec{s}
+  \]
+  Potencial para un campo constante:
+  \[
+    V = -Ed
+  \]
+  \textbf{Notas:}
+  \begin{itemize}
+    \item Energía potencial por unidad de carga.
+    \item Medido en voltios (V).
+    \item $V$ es escalar, no vectorial.
+  \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Capacitancia]
+  Capacitancia $C$ de un condensador:
+  \[
+    C = \frac{Q}{V}
+  \]
+  \begin{itemize}
+    \item $Q$ es la carga almacenada, $V$ es el potencial.
+    \item Medido en faradios (F).
+  \end{itemize}
+  Capacitancia de un condensador con dieléctrico:
+  \[
+    C = \varepsilon_r C_0
+  \]
+  \begin{itemize}
+    \item $\varepsilon_r$ es la constante dieléctrica.
+    \item $C_0$ es la capacitancia en el vacío.
+    \item Aumenta la capacitancia al introducir un dieléctrico.
+  \end{itemize}
+  Capacitancia equivalente:
+  \begin{itemize}
+    \item En serie:
+      \[
+        \frac{1}{C_{\text{eq}}} = \sum_{i=1}^{n} \frac{1}{C_i}
+      \]
+    \item En paralelo:
+      \[
+        C_{\text{eq}} = \sum_{i=1}^{n} C_i
+      \]
+  \end{itemize}
+\end{tcolorbox}
