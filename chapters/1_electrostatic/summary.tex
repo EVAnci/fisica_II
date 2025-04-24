@@ -12,28 +12,6 @@
   \end{itemize}
 \end{tcolorbox}
 
-\begin{tcolorbox}[title=Flujo Eléctrico]
-  Flujo eléctrico \(\Phi_E\) a través de una superficie \(S\):
-  \[
-    \Phi_E = \int_S \vec{E} \cdot d\vec{A}
-  \]
-  \begin{itemize}
-    \item \(d\vec{A}\) es el vector área (normal a la superficie).
-    \item[\textbf{Idea:}] Representa el ``número de líneas de campo'' que atraviesan \(S\).
-  \end{itemize}  
-\end{tcolorbox}
-
-\begin{tcolorbox}[title=Ley de Gauss]
-  Ley de Gauss para un campo eléctrico \(\vec{E}\):
-  \[
-    \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\varepsilon_0}
-  \]
-  \begin{itemize}
-    \item \(Q_{\text{int}}\) es la carga encerrada por la superficie Gaussiana \(S\).
-    \item[\textbf{Idea:}] Relaciona el flujo eléctrico con la carga total encerrada.
-  \end{itemize}  
-\end{tcolorbox}
-
 \begin{tcolorbox}[title=Campo Eléctrico]
   Campo eléctrico \(\vec{E}\) en un punto debido a una carga \(Q\):
   \[
@@ -59,6 +37,39 @@
     \item \(dq\) es un elemento diferencial de carga.
     \item Integración sobre la distribución de carga (\(\lambda\), \(\sigma\) o \(\rho\)).
     \item \(r\) es la distancia desde el elemento de carga al punto de interés.
+  \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Flujo Eléctrico]
+  Flujo eléctrico \(\Phi_E\) a través de una superficie \(S\):
+  \[
+    \Phi_E = \int_S \vec{E} \cdot d\vec{A}
+  \]
+  \begin{itemize}
+    \item \(d\vec{A}\) es el vector área (normal a la superficie).
+    \item[\textbf{Idea:}] Representa el ``número de líneas de campo'' que atraviesan \(S\).
+  \end{itemize}  
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Ley de Gauss]
+  Ley de Gauss para un campo eléctrico \(\vec{E}\):
+  \[
+    \oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\varepsilon_0}
+  \]
+  \begin{itemize}
+    \item \(Q_{\text{int}}\) es la carga encerrada por la superficie Gaussiana \(S\).
+    \item[\textbf{Idea:}] Relaciona el flujo eléctrico con la carga total encerrada.
+  \end{itemize}  
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Trabajo Eléctrico]
+  Trabajo \(W\) realizado por el campo eléctrico al mover una carga \(q\) desde un punto \(A\) a un punto \(B\):
+  \[
+    W_{AB} = -\Delta U = q \Delta V = \int_{A}^{B} q\vec{E} \cdot d\vec{s}
+  \]
+  \begin{itemize}
+    \item \(\Delta U\) es el cambio en energía potencial.
+    \item \(W\) es positivo si el campo realiza trabajo sobre la carga.
   \end{itemize}
 \end{tcolorbox}
 
@@ -99,17 +110,6 @@
     \item Energía potencial por unidad de carga.
     \item Medido en voltios (V).
     \item \(V\) es escalar, no vectorial.
-  \end{itemize}
-\end{tcolorbox}
-
-\begin{tcolorbox}[title=Trabajo Eléctrico]
-  Trabajo \(W\) realizado por el campo eléctrico al mover una carga \(q\) desde un punto \(A\) a un punto \(B\):
-  \[
-    W_{AB} = -\Delta U = q \Delta V = \int_{A}^{B} q\vec{E} \cdot d\vec{s}
-  \]
-  \begin{itemize}
-    \item \(\Delta U\) es el cambio en energía potencial.
-    \item \(W\) es positivo si el campo realiza trabajo sobre la carga.
   \end{itemize}
 \end{tcolorbox}
 
