@@ -1,55 +1,99 @@
-# Resumen de Fisica II
+# 📘 Resumen de Física II
 
-Este repositorio contiene un resumen de la materia Fisica 2. Para poder compilar el documento necesita instalar algunos paquetes.
+Este repositorio contiene un resumen completo de la materia **Física II**, diseñado para estudiantes de ingeniería. El documento incluye explicaciones teóricas, fórmulas clave y ejemplos prácticos.
 
-## Compilación del documento.
+---
 
-### Instalación de dependencias
+## 🚀 Compilación del Documento
 
-Los paquetes necesarios para poder compilar el documento en Arch Linux son los siguientes:
+### 🛠️ Instalación de Dependencias
+
+Para compilar el documento en **Arch Linux**, instala los siguientes paquetes:
 
 ```sh
 sudo pacman -S texlive texlive-fontsrecommended texlive-langspanish
 ```
 
-Estos paquetes incluyen todas las dependencias necesarias.
+Estos paquetes incluyen todas las dependencias necesarias para trabajar con LaTeX.
 
-### Compilación
+### 📄 Generar el PDF
 
-Para compilar el documento nos situamos en la raiz del repositorio y ejecutamos:
+1. Sitúate en la raíz del repositorio.
+2. Ejecuta el siguiente comando para compilar el documento:
 
-```sh
-make
-```
+   ```sh
+   make
+   ```
 
-Luego para limpiar los archivos generados por la compilación:
+3. Para limpiar los archivos generados durante la compilación, utiliza:
 
-```sh
-make clean
-```
+   ```sh
+   make clean
+   ```
 
-Esto dejará únicamente el documento en formato PDF. 
+   Esto dejará únicamente el documento final en formato PDF.
 
-# Indice de contenidos del resumen
+4. Si deseas explorar otras opciones de compilación, puedes usar:
 
-Este resumen incluye los siguientes contenidos:
+   ```sh
+   make help
+   ```
 
-## Unidad 1: Electrostática
+---
 
-  - Fuerza y campo eléctrico
-  - Energía potencial eléctrica
-  - Capacitores
+## 📑 Índice de Contenidos
 
-## Unidad 2: Corriente Continua
+El resumen incluye los siguientes temas:
 
-## Unidad 3: Electromagnetismo
+### Unidad 1: Electrostática
+- ⚡ Fuerza y campo eléctrico
+- 🔋 Energía potencial eléctrica
+- 🧲 Capacitores
 
-## Unidad 4: Vibraciones y Ondas
+### Unidad 2: Corriente Continua
+- 🔌 Ley de Ohm
+- 🔗 Circuitos serie y paralelo
+- ⚙️ Energía y potencia eléctrica
 
-## Unidad 5: La luz y su naturaleza dual
+### Unidad 3: Electromagnetismo
+- 🌌 Conceptos fundamentales del electromagnetismo
 
-## Unidad 6: Fluidos
+### Unidad 4: Vibraciones y Ondas
+- 🌊 Propiedades de las ondas y vibraciones
 
-## Unidad 7: Fluidos en movimiento
+### Unidad 5: La Luz y su Naturaleza Dual
+- 💡 Óptica y dualidad onda-partícula
 
-## Unidad 8: Calor y temperatura
+### Unidad 6: Fluidos
+- 🌫️ Introducción a los fluidos
+
+### Unidad 7: Fluidos en Movimiento
+- 🌪️ Dinámica de fluidos
+
+### Unidad 8: Calor y Temperatura
+- 🌡️ Termodinámica básica
+
+---
+
+## 📝 Notas Adicionales
+
+- Este resumen está basado en los libros de **Serway** y **Zemansky** (Física para Ciencias e Ingenierías) y adaptado para poder entender la teoría básica detras de los problemas de la asignatura _Física II_ de carreras de ingeniería en la **[Universidad de Mendoza](https://um.edu.ar/)**.
+- Si encuentras algún error o tienes sugerencias, no dudes en abrir un _issue_ o enviar un _pull request_.
+
+---
+
+## 📂 Estructura del Proyecto
+
+- **`main.tex`**: Archivo principal del documento.
+- **`chapters/`**: Contiene los capítulos organizados por temas.
+- **`images/`**: Carpeta con las imágenes utilizadas en el resumen.
+- **`styles/`**: Archivos de estilo personalizados para LaTeX.
+- **`scripts/`**: Scripts auxiliares para cálculos y visualizaciones.
+
+---
+
+## 🛡️ Licencia
+
+Este proyecto está bajo la licencia **[MIT](LICENSE)**. Siéntete libre de usarlo, modificarlo y compartirlo.
+
+---
