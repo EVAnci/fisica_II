@@ -21,3 +21,12 @@ latexmk:
 
 cleanmk:
 	latexmk -c
+
+help:
+	@echo "Opciones disponibles:"
+	@echo "  make all       - Compila el documento (3 pasadas de pdflatex)"
+	@echo "  make once      - Compila el documento (1 pasada de pdflatex)"
+	@echo "  make clean     - Elimina archivos auxiliares"
+	@echo "  make latexmk   - Compila automáticamente usando latexmk en modo silencioso"
+	@echo "  make cleanmk   - Limpia archivos generados por latexmk"
+	@echo "  make help      - Muestra esta ayuda"
