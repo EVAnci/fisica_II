@@ -253,28 +253,32 @@ Tres resistencias: \( R_1 = 4 \, \Omega \), \( R_2 = 6 \, \Omega \), \( R_3 = 12
 
 Ahora abordaremos las expresiones teóricas de energía y potencia eléctrica en un circuito de corriente continua, partiendo de principios fundamentales. Estas magnitudes están directamente relacionadas con el trabajo que realiza el campo eléctrico sobre las cargas en movimiento. 
 
+\subsubsection{Trabajo eléctrico}
+
 Recordando lo que vimos en la unidad de electrostática, cuando una carga eléctrica \( q \) se desplaza entre dos puntos con diferencia de potencial \( \Delta V \), el trabajo realizado por el campo eléctrico es:
 
 \[
 W = q \Delta V
 \]
 
-Este trabajo es la energía transferida al sistema. Si en lugar de una sola carga consideramos una corriente continua \( I \), que representa el flujo de carga por unidad de tiempo, la carga total transferida en un intervalo \( \Delta t \) es:
+Este trabajo es la energía transferida al sistema. Si en lugar de una sola carga \(q\) consideramos una corriente continua \( I \), que representa el flujo de carga por unidad de tiempo podríamos calcular el trabajo realizado por la corriente de cargas, entonces partir de la definición de corriente operamos para obtener una expresión para \(q\):
 
-\[
-q = I \Delta t
-\]
+\begin{align*}
+    I &= \frac{\Delta q}{\Delta t} \\
+    I \Delta t &= \Delta q \\
+    \Delta q &= I \Delta t
+\end{align*}
 
 Entonces, el trabajo realizado en ese intervalo de tiempo es:
 
-\[
-W = I \Delta V \, \Delta t
-\]
+\begin{equation}
+    W = I \Delta V \, \Delta t
+    \label{eq:trabajo_electrico}    
+\end{equation}
 
+\subsubsection{Potencia eléctrica}
 
-2. Potencia eléctrica
-
-La potencia es la tasa de transferencia de energía por unidad de tiempo:
+La potencia es el trabajo realizado en un intervalo de tiempo, entonces la tasa de transferencia de energía (o trabajo realizado) por unidad de tiempo es:
 
 \[
 P = \frac{dW}{dt}
@@ -282,22 +286,14 @@ P = \frac{dW}{dt}
 
 Sustituyendo la expresión anterior para \( W \), obtenemos:
 
-\[
-P = \frac{d}{dt}(I \Delta V \, \Delta t) = I \Delta V
-\]
-
-En notación estándar:
-
-\[
-\boxed{P = V I}
-\]
+\begin{align}
+    P &= \frac{d}{dt}(I \Delta V \, \Delta t) = I \Delta V \notag \\
+    P &= IV
+\end{align}
 
 Esta expresión nos indica la potencia disipada (si \( V \) e \( I \) tienen el mismo signo) o suministrada (si tienen signos opuestos) en un componente del circuito.
 
-
-3. Potencia disipada en una resistencia
-
-Aplicando la ley de Ohm (\( V = IR \)) a la ecuación de potencia:
+Aplicando la ley de Ohm (\( V = IR \)) a la ecuación de potencia podemos encontrar la potencia disipada en una resistencia:
 
 \[
 P = VI = (IR)I = \boxed{P = I^2 R}
@@ -311,14 +307,15 @@ I = \frac{V}{R} \Rightarrow P = V \left( \frac{V}{R} \right) = \boxed{P = \frac{
 
 Estas tres expresiones son equivalentes:
 
-\[
-\boxed{P = VI = I^2 R = \frac{V^2}{R}}
-\]
+\begin{equation}
+    \boxed{P = VI = I^2 R = \frac{V^2}{R}}
+    \label{eq:potencia_electrica}
+\end{equation}
 
 y se usan dependiendo de qué variables sean conocidas en un circuito dado.
 
 
-4. Energía disipada en el tiempo
+\subsubsection{Energía disipada en el tiempo}
 
 Integrando la potencia en el tiempo se obtiene la energía total disipada o entregada:
 
@@ -339,30 +336,14 @@ W = I^2 R \Delta t = \frac{V^2}{R} \Delta t
 \]
 
 
-5. Ejemplo práctico
+\paragraph{Ejemplo sencillo}
 
 Un resistor de \( R = 10 \, \Omega \) conectado a una batería de \( V = 12 \, \text{V} \), durante \( \Delta t = 30 \, \text{s} \).
+\begin{itemize}
+    \item Corriente: \( I = \frac{V}{R} = \frac{12}{10} = 1.2 \, \text{A} \)
+    \item Potencia disipada: \( P = I^2 R = (1.2)^2 \cdot 10 = 14.4 \, \text{W} \)
+    \item Energía disipada: \( W = P \Delta t = 14.4 \cdot 30 = 432 \, \text{J} \)
+\end{itemize}
 
-- Corriente: \( I = \frac{V}{R} = \frac{12}{10} = 1.2 \, \text{A} \)
-- Potencia disipada: \( P = I^2 R = (1.2)^2 \cdot 10 = 14.4 \, \text{W} \)
-- Energía disipada: \( W = P \Delta t = 14.4 \cdot 30 = 432 \, \text{J} \)
-
-
-6. Resumen final
-
-- Potencia general:  
-\[
-\boxed{P = V I}
-\]
-
-- Potencia disipada en resistencias:  
-\[
-\boxed{P = I^2 R = \frac{V^2}{R}}
-\]
-
-- Energía disipada o entregada en el tiempo \( \Delta t \):  
-\[
-\boxed{W = P \Delta t = V I \Delta t = I^2 R \Delta t = \frac{V^2}{R} \Delta t}
-\]
-
-Estas expresiones te permiten analizar cuánta energía consume un componente en un circuito de corriente continua y cómo se relaciona con su resistencia, tensión aplicada y corriente.
+\subsection{Resumen}
+\input{chapters/2_direct_current/summary.tex}

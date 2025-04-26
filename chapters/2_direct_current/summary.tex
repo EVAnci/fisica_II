@@ -1,44 +1,85 @@
 Resumen final de ecuaciones clave
 
-- Ley de Ohm local:  
-\[
-\vec{J} = \sigma \vec{E}
-\]
+\begin{tcolorbox}[title=Corriente Eléctrica]
+  La corriente eléctrica es la tasa a la cual circula la carga a traves de una superficie.
+  \[
+    I_{prom} = \frac{\Delta Q}{\Delta t}
+  \]
+  que puede relacionarse con el movimiento de las cargas:
+  \[
+    I_{prom} = n q v_d A
+  \]
 
-- Ley de Ohm macroscópica:  
-\[
-I = \frac{\sigma A}{L} \Delta V
-\]
+  De esta ecuación se puede obtener la velocidad a la cual circulan los portadores de carga. La velocidad de deriva o arrastre es:
+  \[
+    v_d = \frac{I}{nqA}
+  \]
+  donde:
+  \begin{itemize}
+    \item \(I\) es la corriente que circula por el material
+    \item \(q\) es la carga de los portadores (\(e=1.6\times10^{-19}\) en el caso de los electrones)
+    \item \(A\) es el área transversal del material
+    \item \(n\) es la densidad de portadores (el número de portadores) del el material por unidad de volumen.
+  \end{itemize}
 
-- Definición de resistencia:  
-\[
-R = \frac{\Delta V}{I} = \rho \frac{L}{A}
-\]
+  Para obtener \(n\) para un material dado podemos usar la siguiente aproximación:
+  \[
+    n=\frac{\delta}{m_{molar}} N_A
+  \]
+  donde:
+  \begin{itemize}
+    \item \(\delta\) es la densidad del material
+    \item \(m_{molar}\) es la masa molar del material
+    \item \(N_A = 6.022 \times 10^{23} \, \mathrm{mol}^{-1}\) es el número de Avogadro.
+  \end{itemize}
+\end{tcolorbox}
 
-- Relación entre corriente y densidad de corriente:  
-\[
-I = \int_A \vec{J} \cdot d\vec{A}
-\]
+\begin{tcolorbox}[title=Ley de Ohm]
+  La ley de Ohm establece una relación de proporcionalidad entre la corriente, el potencial y la resistencia:
+  \[
+    V = IR
+  \]
+  \begin{itemize}
+    \item La densidad de corriente es: \(\vec{J} = \sigma \vec{E}\)
+    \item Ley de Ohm macroscópica: \(I = \frac{\sigma A}{L} \Delta V\)
+    \item Definición de resistencia: \(R = \frac{\Delta V}{I} = \rho \frac{L}{A}\)
+    \item Relación entre corriente y densidad de corriente: \(I = \int_A \vec{J} \cdot d\vec{A}\)
+  \end{itemize}
+  Estas ecuaciones permiten modelar y analizar cualquier sistema de corriente continua en conductores ohmicos.
+\end{tcolorbox}
 
-Estas ecuaciones permiten modelar y analizar cualquier sistema de corriente continua en conductores ohmicos.
+
+\begin{tcolorbox}[title=Circuitos]
+  \paragraph{Serie:}
+  \begin{itemize}
+    \item Corriente común: \( I = \text{constante} \)
+    \item Tensión total: \( V = V_1 + V_2 + \cdots + V_n \)
+    \item Resistencia equivalente: \(R_{\text{eq}} = \sum_{i=1}^{n} R_i\)
+  \end{itemize}
+  
+  \paragraph{Paralelo:}
+  \begin{itemize}
+    \item Tensión común: \( V = \text{constante} \)
+    \item Corriente total: \( I = I_1 + I_2 + \cdots + I_n \)
+    \item Resistencia equivalente: \(\frac{1}{R_{\text{eq}}} = \sum_{i=1}^{n} \frac{1}{R_i}\)
+  \end{itemize}
+\end{tcolorbox}
 
 
-
-Resumen final de fórmulas clave
-
-Serie:
-- Corriente común: \( I = \text{constante} \)
-- Tensión total: \( V = V_1 + V_2 + \cdots + V_n \)
-- Resistencia equivalente:  
-\[
-\boxed{R_{\text{eq}} = \sum_{i=1}^{n} R_i}
-\]
-
-Paralelo:
-- Tensión común: \( V = \text{constante} \)
-- Corriente total: \( I = I_1 + I_2 + \cdots + I_n \)
-- Resistencia equivalente:  
-\[
-\boxed{\frac{1}{R_{\text{eq}}} = \sum_{i=1}^{n} \frac{1}{R_i}}
-\]
-
+\begin{tcolorbox}[title=Trabajo y Potencia eléctrica]
+  \paragraph{Potencia general:}  
+  
+  \[
+    P = V I
+  \]
+  
+  \paragraph{Potencia disipada en resistencias:}  
+  \[
+    P = I^2 R = \frac{V^2}{R}
+  \]
+  
+  \paragraph{Energía disipada o entregada en el tiempo \( \Delta t \):}
+  \[
+    W = P \Delta t = V I \Delta t = I^2 R \Delta t = \frac{V^2}{R} \Delta t
+  \]
+\end{tcolorbox}
