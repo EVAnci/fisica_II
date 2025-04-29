@@ -11,7 +11,7 @@ El imán es un cuerpo o dispositivo con un magnetismo significativo, de forma qu
   \label{fig:iman}
 \end{figure}
 
-Como se puede apreciar en la figura \ref{fig:iman}, todos los imanes poseen dos polos, llamados \textit{polo norte} y \textit{polo sur}. Cualquiera de los polos de un imán atrae a un objeto ferromagnético no magnetizado, pero, al igual que pasaba con las cargas eléctricas, los polos iguales se repelen y los polos opuestos se atraen. Es decir polo norte y polo sur se atraen, mientras que polo norte y polo norte (o sur y sur) se repelen.
+Como se puede apreciar en la figura \ref{fig:iman}, todos los imanes poseen dos polos, llamados \textit{polo norte} y \textit{polo sur}. Cualquiera de los polos de un imán atrae a un objeto ferromagnético no magnetizado, y, al igual que pasaba con las cargas eléctricas, los polos iguales se repelen y los polos opuestos se atraen. Es decir polo norte y polo sur se atraen, mientras que polo norte y polo norte (o sur y sur) se repelen.
 
 La relación entre la electricidad y el magnetismo fue descubierta en 1819, cuando en el transcurso de una demostración en una conferencia, el científico danés Hans Christian Oersted descubrió que una corriente eléctrica en un alambre desviaba la aguja de una brújula cercana. Durante 1820, Faraday y Joseph Henry demostraron, de manera independiente relaciones adicionales entre la electricidad y el magnetismo. Mostraron que es posible crear una corriente eléctrica en un circuito ya sea moviendo un imán cerca de él o variando la corriente de algún circuito cercano. Estas observaciones demuestran que una variación en un campo magnético crea un campo eléctrico. Años después, el trabajo teórico de Maxwell demostró que lo contrario también es cierto: un campo eléctrico que varía crea un campo magnético.
 
@@ -25,11 +25,11 @@ Los imanes siempre se encuentran como dipolos magnéticos (norte y sur), y no se
 
 Al igual que el campo eléctrico, el magnético es un \hl{\textit{campo vectorial}}, es decir, una cantidad vectorial asociada con cada punto del espacio. La existencia de un campo magnético en algún punto del espacio puede determinarse midiendo la magnitud de la \textbf{fuerza magnética} que ejerce el campo sobre una partícula de prueba ubicada en ese punto.
 
-El magnetismo es un fenómeno físico asociado al movimiento de cargas eléctricas, que da lugar a fuerzas de atracción o repulsión entre materiales. Se manifiesta principalmente a través de los campos magnéticos, los cuales son representaciones vectoriales que describen la influencia que una corriente eléctrica o un material magnético ejerce en su entorno.
+En esencia el magnetismo es un fenómeno físico asociado al movimiento de cargas eléctricas, que da lugar a fuerzas de atracción o repulsión entre materiales. Se manifiesta principalmente a través de los campos magnéticos, los cuales son representaciones vectoriales que describen la influencia que una corriente eléctrica o un material magnético ejerce en su entorno.
 
 Desde un punto de vista fundamental, \hl{el origen del magnetismo reside en el movimiento de cargas eléctricas} a nivel microscópico, particularmente en el espín y el momento orbital de los electrones en los átomos. En materiales como el hierro, cobalto y níquel, estos momentos magnéticos atómicos se alinean de manera colectiva, generando imanes permanentes.
 
-El campo magnético se representa mediante el vector \(\vec{B}\), cuya unidad en el Sistema Internacional es el tesla (T)\footnote{Un tesla equivale a: \(T=\frac{N}{C\, m/s}\)}. La interacción de una carga en \textbf{movimiento} \(q\) con un campo magnético está regida por la fuerza magnética, expresada como:
+El \textbf{campo magnético} se representa mediante el vector \(\vec{B}\), cuya unidad en el Sistema Internacional es el tesla (T)\footnote{Un tesla equivale a: \(T=\frac{N}{C\, m/s}\)}. La interacción de una carga en \textbf{movimiento} \(q\) con un campo magnético está regida por la fuerza magnética, expresada como:
 \begin{equation}
   \vec{F}_B = q\vec{v} \times \vec{B}
   \label{eq:fuerza_magnética}
@@ -48,7 +48,10 @@ Si se conoce el ángulo \(\theta\) entre el vector velocidad \(\vec{v}\) y el ca
 \]
 donde \(\hat{r}\) es un vector normal al plano formado por los vectores \(\vec{v}\) y \(\vec{B}\). 
 
-Comparando la fuerza magnética con la fuerza eléctrica se puede ver que el vector \(\vec{F}_B\) es perpendicular al campo magnético y a la velocidad y desplazamiento de la partícula, mientras que \(\vec{F}_e\) se ejerce sobre la dirección del campo eléctrico. En base a esto, vemos que \(\vec{F}_B\) no realiza trabajo ni cambia la energía del sistema carga-campo. 
+Comparando la fuerza magnética con la fuerza eléctrica se puede ver que la fuerza \(\vec{F}_B\) es perpendicular al campo magnético y a la velocidad de la partícula, mientras que \(\vec{F}_e\) se ejerce sobre la dirección del campo eléctrico. Además \(\vec{F}_e\) no requiere que la partícula con carga esté en movimiento. 
+
+En la sección \ref{sec:potencial} vimos como una carga que se mueve en un campo eléctrico realiza un trabajo. En esta sección las partículas deben estar si o si en movimiento para verse afectadas por el campo magnético. Entonces ¿Será que están realizando trabajo? La respuesta rápida es que no. Veamos el por qué: recordando que el trabajo es el \textbf{producto escalar} entre la fuerza por la distancia (o desplazamiento), si la fuerza es perpendicular al desplazamiento entonces dará siempre cero.
+En base a esto, vemos que \(\vec{F}_B\) no realiza trabajo ni cambia la energía del sistema carga-campo por ser perpendicular al plano de \(\vec{B}\) y \(\vec{v}\). 
 
 \begin{tcolorbox}[myconclusion]
   Con base en este último enunciado y también con el teorema trabajo-energía cinética, se concluye que la energía cinética de una partícula cargada que se mueve a través de un campo magnético \textbf{no} puede ser modificada sólo por el campo magnético. El campo magnético puede modificar la dirección del vector velocidad, pero no puede cambiar la rapidez ni la energía cinética de la partícula.
@@ -56,7 +59,7 @@ Comparando la fuerza magnética con la fuerza eléctrica se puede ver que el vec
 
 \subparagraph{Pregunta:}
 
-\noindent ¿Qué tipo de fuerza es siempre perpendicular a la trayectoria de una partícula?
+\noindent ¿Qué tipo de fuerza es siempre perpendicular a la trayectoria de una partícula y no modifica la magnitud de la velocidad?
 
 \vspace{3pt}
 
@@ -69,75 +72,7 @@ Comparando la fuerza magnética con la fuerza eléctrica se puede ver que el vec
   \label{fig:centripet_force}
 \end{figure}
 
-\paragraph{Recordatorio de movimiento circular}
-
-\subparagraph{Posición angular (\(\theta\))}
-
-La posición angular indica el ángulo barrido respecto a un eje fijo.
-\[
-\theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2
-\]
-donde:
-\begin{itemize}
-  \item \(\theta_0\) es la posición angular inicial,
-  \item \(\omega_0\) es la velocidad angular inicial,
-  \item \(\alpha\) es la aceleración angular.
-\end{itemize}
-
-\subparagraph{Velocidad angular (\(\omega\))}
-
-La velocidad angular mide el cambio de la posición angular respecto al tiempo.
-\[
-\omega(t) = \omega_0 + \alpha t
-\]
-Y también:
-\[
-\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)
-\]
-Esta última es útil si desea eliminar el tiempo de la ecuación. Si se pide relacionar el tipo de movimiento con la frecuencia:
-\[
-  \omega = 2 \pi f
-\]
-
-\subparagraph{Aceleración angular (\(\alpha\))}  
-
-Es la razón de cambio de la velocidad angular:
-\[
-\alpha = \frac{d\omega}{dt}
-\]
-
-En general en los problemas de magnetismo que aborda la materia la aceleración angular será cero.
-
-\subparagraph{Velocidad tangencial (\(v_t\))}  
-
-La velocidad lineal de un punto situado a una distancia \( r \) del eje de rotación es:
-\[
-v_t = r \, \omega
-\]
-La dirección de \( v_t \) es siempre tangente a la trayectoria circular.
-
-\subparagraph{Aceleración centrípeta (\(a_c\))}
-
-La aceleración centrípeta está directamente relacionada con la velocidad tangencial en el movimiento circular. Su relación es:
-\[
-a_c = \frac{v_t^2}{r}
-\]
-Esta aceleración siempre está presente y se encarga de cambiar la dirección del vector velocidad en cada punto.
-
-\subparagraph{Aceleración tangencial (\(a_t\))}  
-
-La aceleración tangencial está asociada al cambio en el módulo de la velocidad tangencial y por lo tanto, a la aceleración angular:
-\[
-a_t = r \, \alpha
-\]
-
-\subparagraph{Fuerza centrípeta (\(F_c\))}
-
-La fuerza necesaria para mantener un cuerpo en movimiento circular uniforme (o no uniforme) está dirigida hacia el centro de la trayectoria:
-\[
-F_c = m \frac{v_t^2}{r} = m r \omega^2
-\]
-donde \( m \) es la masa del objeto.
+Si no recuerdas bien los temas de dinámica y las ecuaciones del movimiento circular uniforme y no uniforme puedes volver a verlo en la sección \ref{sec:mcu}
 
 \subsection{Fuerza de Lorentz}
 
