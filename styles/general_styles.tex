@@ -13,6 +13,8 @@
 \definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
 \definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
 \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{chamoisee}{rgb}{0.63, 0.47, 0.35}
+\definecolor{champagne}{rgb}{0.97, 0.91, 0.81}
 
 \sethlcolor{highlight}
 % Cambiar el color de los títulos
@@ -21,11 +23,11 @@
   {\thesection}{1em}{} % Numeración y espacio
 
 \titleformat{\subsection}
-  {\color{dark_red}\normalfont\large\bfseries} % Estilo del título de subsección
+  {\color{dark_red}\normalfont\large\bfseries} % Estilo del título de subsection
   {\thesubsection}{1em}{}
 
 \titleformat{\subsubsection}
-  {\color{soft_green}\normalfont\normalsize\bfseries} % Estilo del título de subsubsección
+  {\color{soft_green}\normalfont\normalsize\bfseries} % Estilo del título de subsubsection
   {\thesubsubsection}{1em}{}
 
 \renewcommand{\paragraph}[1]{%
@@ -47,8 +49,18 @@
 \newcommand{\diff}[2]{\frac{d#1}{d#2}} % Derivada
 \newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}} % Derivada parcial
 
-% Tile para resumenes
+% Tile para resúmenes
 \tcbset{colback=blue!5!white, colframe=airforceblue!75!black, fonttitle=\bfseries}
+
+% Tile para cuadros de recordatorio
+\tcbset{
+  remember/.style={
+    colback=chamoisee!5!white,
+    colframe=champagne!75!black,
+    fonttitle=\bfseries,
+    arc=6pt
+  }
+}
 
 % Sección resaltada para escribir conclusiones bonitas
 \tcbset{
