@@ -22,6 +22,9 @@ latexmk:
 cleanmk:
 	latexmk -c
 
+bib:
+	biber main
+
 help:
 	@echo "Opciones disponibles:"
 	@echo "  make all       - Compila el documento (3 pasadas de pdflatex)"
@@ -29,4 +32,5 @@ help:
 	@echo "  make clean     - Elimina archivos auxiliares"
 	@echo "  make latexmk   - Compila automáticamente usando latexmk en modo silencioso"
 	@echo "  make cleanmk   - Limpia archivos generados por latexmk"
+	@echo "  make bib		- Genera las referencias para la bibliografía"
 	@echo "  make help      - Muestra esta ayuda"
