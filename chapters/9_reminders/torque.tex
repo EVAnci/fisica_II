@@ -1,0 +1,42 @@
+\subsection{Torque y Momento de Inercia}
+\label{sec:torque_y_momento_de_inercia}
+
+El torque determina cómo una fuerza causa rotación, mientras que el momento de inercia cuantifica la resistencia a cambios en el movimiento rotacional. Juntos, describen la dinámica angular mediante \( \tau = I\alpha \), similar a \( F = ma \) en movimiento lineal.
+
+\begin{tcolorbox}[remember, title=Torque (\(\tau\))]
+  Es la medida de la capacidad de una fuerza para producir rotación alrededor de un eje. Análogo rotacional de la fuerza en movimiento lineal.  
+  \[
+    \tau = \mathbf{r} \times \mathbf{F} \quad \text{(vectorial)}, \quad \tau = rF\sin\theta \quad \text{(magnitud)}
+  \]  
+  Donde:
+  \begin{itemize}
+    \item \( r \): Brazo de palanca (distancia desde el eje hasta el punto de aplicación de la fuerza).
+    \item \( F \): Magnitud de la fuerza aplicada.
+    \item \( \theta \): Ángulo entre el vector fuerza y el brazo de palanca.
+  \end{itemize}
+  \textbf{Unidad:} Newton-metro (N·m).  
+
+  \noindent\textbf{Factores clave:} Depende de la magnitud de la fuerza, su dirección y el punto de aplicación. El torque máximo se obtiene cuando la fuerza es perpendicular al brazo (\( \theta = 90^\circ \)).
+\end{tcolorbox}
+
+\begin{tcolorbox}[remember, title=Momento de Inercia (\(I\))]
+  Medida de la resistencia de un cuerpo a la aceleración angular. Análogo rotacional de la masa en movimiento lineal.  
+  \[
+    I = \sum m_i r_i^2 \quad \text{(sistema de partículas)}, \quad I = \int r^2 \, dm \quad \text{(cuerpo continuo)}
+  \]  
+  \textbf{Dependencia:} Aumenta con la distancia de la masa al eje de rotación. Ejemplos comunes:
+  \begin{itemize}
+    \item Esfera sólida: \( I = \frac{2}{5} mR^2 \).
+    \item Varilla delgada (eje en centro): \( I = \frac{1}{12} mL^2 \).
+    \item Disco sólido: \( I = \frac{1}{2} mR^2 \).
+  \end{itemize}
+  \textbf{Unidad:} \(kg\cdot m^2\).  
+\end{tcolorbox}
+
+\begin{tcolorbox}[remember, title=Relación Fundamental (Segunda Ley de Newton para Rotación)]
+  Esta relación es como \(F=ma\) pero para las rotaciones. \(I\) equivale a la masa y \(\alpha\) a la aceleración.
+  \[
+  \tau_{\text{neto}} = I \alpha
+  \]  
+  Donde \( \alpha \) es la aceleración angular. Esto implica que, para un torque dado, un mayor momento de inercia resulta en menor aceleración angular.
+\end{tcolorbox}
