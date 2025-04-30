@@ -9,6 +9,8 @@
 *.pdf
 *.fdb_latexmk
 *.fls
+*.bcf
+*.run.xml
 *.synctex.gz
 *.synctex(busy)
 *.synctex(busy)*

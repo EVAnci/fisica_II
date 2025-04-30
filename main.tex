@@ -25,6 +25,10 @@
 \usepackage{soul}                   % Resaltado de texto
 \usepackage{enumitem}               % Listas personalizadas (itemize, enumerate)
 
+% Referencias
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{references.bib}
+
 % Configuración de siunitx para evitar conflictos con physics
 \ExplSyntaxOn
 \msg_redirect_name:nnn{siunitx}{physics-pkg}{none}
@@ -38,58 +42,71 @@
 
 \begin{document}
 
-\begin{titlepage}
-  \centering
-  \vspace*{2cm} % Espacio superior
+  \begin{titlepage}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %                     Portada                  %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \centering
+    \vspace*{2cm} % Espacio superior
 
-  {\scshape\LARGE Universidad de Mendoza\par}
-  \vspace{2cm}
-  {\large Basado en los libros de Física (Vol. 2)\par}
-  {\large de Serway y Sears, Zemansky\par}
-  \vspace{1.5cm}
+    {\scshape\LARGE Universidad de Mendoza\par}
+    \vspace{2cm}
+    {\large Basado en los libros de Física (Vol. 2)\par}
+    {\large de Serway y Sears Zemansky\par}
+    \vspace{1.5cm}
 
-  {\Huge\bfseries Física II\par}
-  \vspace{0.5cm}
-  {\Large\itshape Resumen de la Materia\par} % Subtítulo opcional
+    {\Huge\bfseries Física II\par}
+    \vspace{0.5cm}
+    {\Large\itshape Resumen de la Materia\par} % Subtítulo opcional
 
-  \vspace{1.5cm}
-  \includegraphics[width=0.25\textwidth]{images/cover.png} % Imagen centrada
-  \vspace{1.5cm}
+    \vspace{1.5cm}
+    \includegraphics[width=0.25\textwidth]{images/cover.png} % Imagen centrada
+    \vspace{1.5cm}
 
-  {\Large Elio Valentino Anci\par}
-  {\large Ingeniería en Computación\par}
+    {\Large Elio Valentino Anci\par}
+    {\large Ingeniería en Computación\par}
 
-  \vfill
+    \vfill
 
-  {\large \today\par}
-\end{titlepage}
+    {\large \today\par}
+  \end{titlepage}
 
-\newpage
+  \newpage
 
-\tableofcontents  % Genera tabla de contenidos automáticamente
+  \tableofcontents  % Genera tabla de contenidos automáticamente
 
-\newpage
+  \newpage
 
-% Inclusión de capítulos
-\input{chapters/1_electrostatic/main.tex}
-\newpage
-\input{chapters/2_direct_current/main.tex}
-\newpage
-\input{chapters/3_electromagnetism/main.tex}
-\newpage
-\input{chapters/4_waves_and_vibrations/main.tex}
-\newpage
-\input{chapters/5_optics/main.tex}
-\newpage
-\input{chapters/6_intro_of_fluids/main.tex}
-\newpage
-\input{chapters/7_dynamic_of_fluids/main.tex}
-\newpage
-\input{chapters/8_heat_and_temperature/main.tex}
-\newpage
-\input{chapters/9_reminders/main.tex}
-\newpage
-\section*{Recursos Adicionales}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %                   Capítulos                  %
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \input{chapters/1_electrostatic/main.tex}
+  \newpage
+  \input{chapters/2_direct_current/main.tex}
+  \newpage
+  \input{chapters/3_electromagnetism/main.tex}
+  \newpage
+  \input{chapters/4_waves_and_vibrations/main.tex}
+  \newpage
+  \input{chapters/5_optics/main.tex}
+  \newpage
+  \input{chapters/6_intro_of_fluids/main.tex}
+  \newpage
+  \input{chapters/7_dynamic_of_fluids/main.tex}
+  \newpage
+  \input{chapters/8_heat_and_temperature/main.tex}
+  \newpage
+  \input{chapters/9_reminders/main.tex}
+  \newpage
+  \section*{Recursos Adicionales}
+  El código fuente de este resumen está disponible en el siguiente repositorio de GitHub: \url{https://github.com/EVAnci/fisica_II}
+  \vspace{5pt}
 
-El código fuente de este resumen está disponible en el siguiente repositorio de GitHub: \url{https://github.com/EVAnci/fisica_II}
+  Los libros utilizados fueron:
+  \begin{itemize}
+    \item Libro \cite{Serway}: para electrostática y magnetismo.
+    \item Libro \cite{Sears_Zemansky}: para magnetismo.
+  \end{itemize}
+  \newpage
+  \printbibliography
 \end{document}

@@ -11,7 +11,7 @@ Este repositorio contiene un resumen completo de la materia **Física II**, dise
 Para compilar el documento en **Arch Linux**, instala los siguientes paquetes:
 
 ```sh
-sudo pacman -S texlive texlive-fontsrecommended texlive-langspanish
+sudo pacman -S texlive texlive-fontsrecommended texlive-langspanish biber
 ```
 
 Estos paquetes incluyen todas las dependencias necesarias para trabajar con LaTeX.
