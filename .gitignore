@@ -6,7 +6,6 @@
 *.toc
 *.lof
 *.lot
-*.pdf
 *.fdb_latexmk
 *.fls
 *.bcf
@@ -20,3 +19,4 @@
 *.synctex.gz
 .vscode
 */venv*
+main.pdf

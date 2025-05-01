@@ -3,6 +3,7 @@ MAIN = main
 
 all:
 	pdflatex $(MAIN).tex
+	biber main
 	pdflatex $(MAIN).tex
 	pdflatex $(MAIN).tex
 
