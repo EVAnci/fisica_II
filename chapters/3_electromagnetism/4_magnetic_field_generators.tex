@@ -79,6 +79,7 @@ donde:
 \end{itemize}
 
 \subsubsection{Aplicación de la ley de Biot-Savart}
+\label{sec:aplicacion_de_la_ley_de_biot_savart}
 
 La ley de Biot-Savart es una ecuación general que describe el campo magnético generado por una corriente. Sin embargo, en la práctica, su aplicación puede ser compleja, especialmente cuando se trata de curvas complejas o cuando se requiere resolver integrales complejas.
 
@@ -100,7 +101,86 @@ donde:
   B = \frac{\mu_0 I}{2R}
 \end{equation*}
 
-\noindent Para un solenoide de N espiras de radio \(R\) el campo en el centro es:
+\noindent Para un conjunto de \(N\) espiras de radio \(R\) el campo en el centro es:
 \begin{equation*}
   B = \mu_0 \frac{N I}{2R}
 \end{equation*}
+Este resultado se refiere a \(N\) espiras circulares (o una bobina plana) de radio \(R\), todas concentradas en el mismo plano y con el mismo centro.
+
+\subsubsection{Ley de Ampère}
+
+Hasta el momento, el cálculo del \hl{campo magnético} generado por una corriente ha sido realizado a través de la Ley de Biot-Savart. Sin embargo, esta ley no es la única ecuación que describe el campo magnético generado por una corriente. La Ley de Ampère es una de las ecuaciones fundamentales del electromagnetismo y establece una relación entre el campo magnético \(\vec{B}\) y las corrientes eléctricas que lo generan. 
+
+La Ley de Ampère puede parecer abstracta al principio, pero su lógica es similar a la Ley de Gauss, aunque aplicada al magnetismo. Esta ley establece una relación entre el campo magnético \(\vec{B}\) y las corrientes eléctricas que lo generan. 
+\[
+\oint_{\text{lazo cerrado}} \vec{B} \cdot d\vec{l} = \mu_0 \, I_{\text{enc}}
+\]
+donde:
+\begin{itemize}
+  \item \(\vec{B}\): Campo magnético.
+  \item \(d\vec{l}\): Elemento infinitesimal de un camino cerrado (lazo).
+  \item \(I_{\text{enc}}\): Corriente neta encerrada por el lazo.
+  \item \(\mu_0\): Permeabilidad magnética del vacío (\(4\pi \times 10^{-7} \, \mathrm{T \cdot m/A}\)).
+\end{itemize}
+
+\begin{tcolorbox}[myconclusion]
+\textbf{¿Sobre qué se integra?}
+
+En la Ley de Ampère, no se integra sobre una superficie, sino sobre un camino cerrado (lazo o bucle). Este camino cerrado se llama lazo amperiano, y es análogo a la superficie gaussiana en la Ley de Gauss, pero con diferencias importantes:
+\begin{itemize}
+  \item Ley de Gauss: Integral sobre una superficie cerrada.
+  \subitem Relaciona el flujo eléctrico (\(\oint \vec{E} \cdot d\vec{A}\)) con la carga encerrada.  
+  \item Ley de Ampère: Integral sobre un camino cerrado (una línea).
+  \subitem Relaciona la circulación del campo magnético (\(\oint \vec{B} \cdot d\vec{l}\)) con la corriente encerrada.  
+\end{itemize}
+\end{tcolorbox}
+
+Un camino amperiano es un camino imaginario cerrado que tú defines, al igual que la superficie gaussiana. Debe elegirse estratégicamente para aprovechar la simetría del problema (por ejemplo, círculos concéntricos alrededor de un alambre recto). 
+
+\paragraph{¿Qué representa la integral \(\oint \vec{B} \cdot d\vec{l}\)?}
+
+La integral \(\oint \vec{B} \cdot d\vec{l}\) se llama circulación del campo magnético y representa la suma de las componentes tangenciales de \(\vec{B}\) a lo largo del lazo amperiano. En términos físicos:
+\[
+\oint \vec{B} \cdot d\vec{l} = \mu_0 \, I_{\text{enc}}
+\]
+\begin{itemize}
+  \item Lado izquierdo: Circulación del campo magnético (¿cómo ``rota'' \(\vec{B}\) alrededor del lazo?).  
+  \item Lado derecho: Corriente total de conducción que atraviesa la superficie encerrada por el lazo.  
+\end{itemize}
+
+\paragraph{¿Qué buscamos con la Ley de Ampère?}
+
+El objetivo principal es calcular el \textbf{campo magnético} (\(\vec{B}\)) en situaciones con alta simetría, donde la integral \(\oint \vec{B} \cdot d\vec{l}\) se simplifica. Por ejemplo: En un alambre infinito, un solenoide, o un toroide.  
+
+\begin{itemize}
+  \item Alambre infinito recto:  
+    \[
+    B = \frac{\mu_0 I}{2\pi r} \quad \text{(dirección circular alrededor del alambre)}.
+    \]
+  \item Solenoide ideal:  
+     \[
+     B = \mu_0 n I \quad \text{(campo uniforme en el interior)}.
+     \]
+  \item Toroide:  
+     \[
+     B = \frac{\mu_0 N I}{2\pi r} \quad \text{(campo circular dentro del toroide)}.
+     \]
+\end{itemize}
+Nótese que los resultados son consistentes con la Ley de Biot-Savart. Para el alambre infinito (o largo) y recto se ha obtenido el mismo resultado. Aunque usted tal vez se pregunte ¿Qué paso con el solenoide ideal? Parece que no ha dado lo mismo que el ejemplo del conjunto de espiras. Esto es porque el solenoide tiene la forma de un cilindro, como se vió en la figura \ref{fig:solenoide}. Un solenoide es una bobina alargada con \(N\) espiras distribuidas uniformemente a lo largo de una longitud \(L\). El ejemplo de las espiras en la sección \ref{sec:aplicacion_de_la_ley_de_biot_savart} es un conjunto de espiras que no tiene forma de cilindro, sinó que están todas en el mismo plano.
+
+\paragraph{Ejemplo práctico: Cálculo del campo magnético en un solenoide}
+
+Consideremos un solenoide de \(N\) vueltas, longitud \(L\), y corriente \(I\):
+
+\textbf{Definimos el lazo amperiano}: Rectángulo que abarca parte del solenoide.
+
+\textbf{Aplicación de Ampère}: 
+\[
+  \oint \vec{B} \cdot d\vec{l} = B \cdot L_{\text{interior}} = \mu_0 n I L_{\text{interior}},
+\]
+donde \(n = N/L\) (vueltas por unidad de longitud).  
+
+\textbf{Resultado}: 
+\[
+  B = \mu_0 n I.
+\]
