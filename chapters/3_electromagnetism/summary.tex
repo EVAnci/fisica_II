@@ -1,0 +1,99 @@
+\subsection{Resumen}
+
+\begin{tcolorbox}[title=Campo magnético]
+  La fuerza que siente una carga \(q\) que se mueve a velocidad \(\vec{v}\) en un campo magnético \(\vec{B}\) es:
+  \[
+    \vec{F}_B = q \vec{v} \times \vec{B} = qvB\sin\theta
+  \]
+  La fuerza magnética es perpendicular a la velocidad de la carga y al campo magnético y no cambia la energía cinética de la carga. En un campo magnético uniforme, la fuerza magnética es constante y por lo tanto se puede expresar como fuerza centrípeta:
+  \[
+    F_B = F_c = \frac{mv^2}{r} = qvB
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Fuerza de Lorentz]
+  La fuerza de Lorentz es la fuerza que siente una carga \(q\) que se mueve a velocidad \(\vec{v}\) en presencia de un campo magnético \(\vec{B}\) y un campo eléctrico \(\vec{E}\):
+  \[
+    \vec{F} = q\left(\vec{E} + \vec{v} \times \vec{B}\right)
+  \]
+  De la fuerza \(F_B\) se puede obtener la fuerza magnética en un conductor por el que circula una corriente \(I\):
+  \[
+    \vec{F}_B = I\vec{L} \times \vec{B} \quad \text{donde el módulo es:} ~~ F_B = IBL\sin\theta
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Flujo Magnético]
+  El flujo magnético \(\Phi_B\) es:
+  \[
+    \Phi_B = \oint_S \vec{B} \cdot d\vec{A}
+  \]
+  Si el campo es uniforme, la ecuación se simplifica a:
+  \[
+    \Phi_B = \vec{B}\vec{A}\cos\theta
+  \]
+  Si la superficie es cerrada el flujo magnético es cero:
+  \[
+    \Phi_B = 0
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Inducción magnética]
+  La inducción magnética dada por la Ley de Faraday (\(\mathcal{E}\)) es:
+  \[
+    \mathcal{E} = -\frac{d\Phi_B}{dt}
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Torque sobre una espira]
+  El torque sobre una espira es:
+  \[
+    \vec{\tau} = I\vec{A} \times \vec{B} \quad \text{donde el módulo es:} ~~ \tau = IAB\sin\theta
+  \]
+  En base al momento dipolar magnético se puede escribir el torque sobre una espira como:
+  \[
+    \vec{\tau} = \vec{\mu} \times \vec{B}
+  \]
+  Como el torque se puede escribir como \(\tau = I_m\alpha\), donde \(I_m\) es el momento de inercia y \(\alpha\) es la aceleración angular, se puede obtener la aceleración angular de la espira:
+  \[
+    \alpha = \frac{\tau}{I_m} = \frac{\mu B \sin\theta}{I_m}
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Momento dipolar magnético]
+  El momento dipolar magnético \(\vec{\mu}\) es:
+  \[
+    \vec{\mu} = I\vec{A}
+  \]
+  Si se tienen N espiras, el momento dipolar magnético es la suma de todos los momentos dipolares magnéticos de las espiras:
+  \[
+    \vec{\mu} = NIA
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Fuentes de campo magnético]
+  El campo magnético de una carga puntual es:
+  \[
+    \vec{B} = \frac{\mu_0}{4\pi} \frac{q\vec{v} \times \hat{r}}{r^2}
+  \]
+  donde \(\mu_0 = 4\pi \times 10^{-7} \, \mathrm{N/A^2}\)
+  
+  Al integrar un diferencial de longitud en un conductor resulta la Ley de Biot-Savart:
+  \[
+    d\vec{B} = \frac{\mu_0}{4\pi} \frac{Id\vec{l} \times \hat{r}}{r^2} \Rightarrow \vec{B} = \frac{\mu_0}{4\pi} \int_C \frac{Id\vec{l} \times \hat{r}}{r^2}
+  \]
+  De la Ley de Biot-Savart se obtiene la Ley de Ampère:
+  \[
+    \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc}
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Campo magnético para distintos conductores]
+  De la Ley de Biot-Savart se puede obtener el campo magnético \(\vec{B}\) para distintos tipos de conductores:
+  \begin{itemize}
+    \item \(\vec{B} = \frac{\mu_0}{4\pi} \frac{I}{2\pi r}\) para un conductor recto donde \(r\) es la distancia al punto evaluado.
+    \item \(\vec{B} = \frac{\mu_0}{4\pi} \frac{NI}{2 R}\) para un conjunto de \(N\) espiras de radio \(R\). Si \(N=1\) se tiene una espira circular.
+    \item \(\vec{B} = \mu_0 n I\) para un solenoide, donde \(n\) es el número de espiras por unidad de longitud (\(N/L\)).
+    \item \(\vec{B} = \mu_0 \frac{NI}{2\pi R}\) para un toroide.
+  \end{itemize}
+  Si los conductores tienen suficiente simetría, se puede obtener el campo magnético a través de la Ley de Ampère.
+\end{tcolorbox}
