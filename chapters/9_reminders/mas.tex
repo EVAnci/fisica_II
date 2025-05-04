@@ -1,0 +1,64 @@
+\subsection{Movimiento Armónico Simple}
+\label{sec:mas}
+
+El \textit{movimiento armónico simple} es un tipo de movimiento repetido en el tiempo. Los sucesos que se repiten en el tiempo se les denomina \textbf{periódicos}. Sin embargo no todos los movimientos periódicos son movimientos armónicos simples.
+
+El Movimiento Armónico Simple es un tipo de movimiento oscilatorio que se caracteriza por una fuerza restauradora proporcional y opuesta al desplazamiento respecto a una posición de equilibrio. Es un caso idealizado que modela fenómenos como el movimiento de un resorte o un péndulo (para pequeñas amplitudes).
+
+\begin{tcolorbox}[remember, title=M.A.S. a partir de la Ley de Hooke]
+  De relacionar la Ley de Hooke con la segunda ley de Newton, se puede obtener la ecuación de movimiento armónico simple:
+  \[
+    F = -kx = m a_x
+  \]
+  Con esta relación obtenemos la aceleración de la partícula:
+  \[
+    a = -\frac{k}{m} x 
+  \]
+  A partir de esta relación podemos llamar \(\omega^2 = k/m\). Y por definición \(a = dv/dt = d^2x/dt^2\), entonces:
+  \[
+    \boxed{\frac{d^2x}{dt^2} = -\omega^2 x}
+  \]
+  La solución de esta ecuación diferencial es la ecuación de posición del movimiento armónico simple:
+  \[
+    x(t) = A\cos(\omega t + \phi)
+  \]
+\end{tcolorbox}
+
+\begin{tcolorbox}[remember, title=Cantidades a partir de la definición]
+  La constante de elasticidad de un resorte \(k\) es:
+  \[
+    k = \omega^2 m
+  \]
+  La fuerza máxima del resorte es:
+  \[
+    F_{max} = kA = m \omega^2 A
+  \]
+  Por lo tanto las cantidades energéticas son:
+  \begin{itemize}
+    \item Energía Mecánica: \( E = \frac{1}{2} kA^2 \)
+    \item Energía Potencial: \( U_{pot} = \frac{1}{2} m \omega^2 x^2 = \frac{1}{2} kx^2 \)
+    \item Energía cinética: \( K = \frac{1}{2} m v^2 = \frac{1}{2} m \omega^2 (A^2 - x^2) \)
+  \end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[remember, title=Cantidades Cinemáticas]
+  Las cantidades definidas para un movimiento armónico simple son:
+  \begin{itemize}
+    \item Posición: \( x(t) = A\cos(\omega t + \phi) \)
+    \item Velocidad: \( v(t) = -A\omega\sin(\omega t + \phi) \)
+    \item Aceleración: \( a(t) = -A\omega^2\cos(\omega t + \phi) \)
+  \end{itemize}
+  donde \( A \) es la amplitud, \( \omega \) es la frecuencia angular y \( \phi \) es la fase inicial.
+
+  A la cantidad \(\omega t + \phi\) se le llama \textbf{fase del movimiento}.
+\end{tcolorbox}
+
+\begin{tcolorbox}[remember, title=A partir de las cantidades cinemáticas]
+  Podemos deducir las siguientes cantidades:
+  \begin{itemize}
+    \item Velocidad en función de la posición: \( v(x) = \pm \omega \sqrt{A^2 - x^2} \)
+    \item Aceleración en función de la posición: \( a(x) = -\omega^2 x \)
+    \item Rapidez máxima (cuando \(\left\lvert \cos(\omega t + \phi) \right\rvert=1\)): \( v_{max} = \omega A \)
+    \item Aceleración máxima (cuando \(\left\lvert \sin(\omega t + \phi) \right\rvert=1\)): \( a_{max} = \omega^2 A \)
+  \end{itemize}
+\end{tcolorbox}
