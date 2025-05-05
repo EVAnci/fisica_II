@@ -48,7 +48,7 @@ El resumen incluye los siguientes temas:
 ### Unidad 1: Electrostática
 - ⚡ Fuerza y campo eléctrico
 - 🔋 Energía potencial eléctrica
-- 🧲 Capacitores
+- 🧮 Capacitores
 
 ### Unidad 2: Corriente Continua
 - 🔌 Ley de Ohm
@@ -56,10 +56,13 @@ El resumen incluye los siguientes temas:
 - ⚙️ Energía y potencia eléctrica
 
 ### Unidad 3: Electromagnetismo
-- 🌌 Conceptos fundamentales del electromagnetismo
+- 🧲 Magnetismo
+- 🌌 Fuerza magnética
+- 🌐 Fuentes de campo magnético
 
 ### Unidad 4: Vibraciones y Ondas
 - 🌊 Propiedades de las ondas y vibraciones
+- 📈 Movimiento ondulatorio
 
 ### Unidad 5: La Luz y su Naturaleza Dual
 - 💡 Óptica y dualidad onda-partícula
