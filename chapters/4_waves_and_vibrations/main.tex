@@ -112,6 +112,26 @@ Es la velocidad con que se desplaza el frente de onda (es decir, cómo se propag
   \item Relación fundamental: la velocidad de propagación de una onda es \(v = \lambda f\)
 \end{itemize}
 
+La velocidad de propagación depende del medio en el que se propaga la onda. Por ejemplo, la velocidad de propagación de una onda sonora en el aire es de \(343\, \text{m/s}\) a temperatura ambiente. En la materia Física II se trabaja principalmente con la velociad de propagación en un alambre o cuerda fina. 
+
+La velocidad de propagación de una onda en una cuerda tensa indica con qué rapidez se traslada la perturbación (o energía) a lo largo de la cuerda. Esta velocidad depende exclusivamente de las propiedades físicas del medio, es decir, de la tensión aplicada a la cuerda y de su densidad lineal de masa.
+
+La velocidad \(v\) de propagación de una onda transversal en una cuerda idealmente elástica y tensa se calcula mediante la siguiente fórmula:
+\[
+v = \sqrt{\frac{T}{\mu}}
+\]
+donde:
+\begin{itemize}
+  \item \(T\) es la tensión en la cuerda (en newtons, N),
+  \item \(\mu\) es la densidad lineal de masa de la cuerda, es decir, la masa por unidad de longitud (en kg/m).
+\end{itemize}
+
+Cuanto mayor es la tensión \(T\) en la cuerda, más rápidamente se propaga la onda. Esto es porque la fuerza que ``restaura'' la cuerda hacia su equilibrio es mayor, lo que permite transmitir la perturbación más eficazmente.
+
+Cuanto mayor es la densidad lineal \(\mu\) (es decir, cuanto más pesada es la cuerda por unidad de longitud), más difícil es acelerar sus partículas, lo que reduce la velocidad de propagación.
+
+A nivel conceptual, se puede entender la fórmula considerando un pequeño elemento de cuerda \(\mu \, \mathrm{d}x\), este pequeño elemento de masa está sometido a fuerzas de tensión desde los extremos. Aplicando la segunda ley de Newton al análisis de estas fuerzas y a la aceleración transversal que experimenta el segmento debido a la curvatura local de la cuerda, se obtiene una ecuación de onda. Esta ecuación predice una velocidad de propagación que resulta ser \(v = \sqrt{T / \mu}\).
+
 \paragraph{Número de onda (\(k\))}
 
 Es una medida del número de ciclos por unidad de longitud, análogo espacial de la frecuencia temporal.
@@ -130,21 +150,47 @@ Es la frecuencia expresada en términos angulares (radianes por segundo).
   \item Relación: \(\omega = 2\pi f = \frac{2\pi}{T}\)
 \end{itemize}
 
-\paragraph{Fase (\(\varphi\)) y diferencia de fase}
+\paragraph{Fase (\(\vartheta\)) y diferencia de fase}
 
 La fase indica en qué punto del ciclo se encuentra la oscilación. Es el mismo concepto de fase que se encuentra en el movimiento armónico simple. Si no lo recuerdas te recomiendo que revises el capítulo \ref{sec:mas}.
-
-\begin{itemize}
-  \item Se expresa como un ángulo (en radianes).
-  \item La diferencia de fase determina si dos ondas están sincronizadas (en fase) o desfasadas.
-\end{itemize}
 
 Estas cantidades permiten construir la función de onda general de una onda armónica:
 \[
 y(x, t) = A \cos(kx - \omega t + \varphi)
 \]
+La deducción de la ecuación de onda la veremos más adelante, por ahora te recomiendo que simplemente la recuerdes y prestes atención al concepto de fase que no requiere que sepas cómo se deduce.
 
-La deducción de esta ecuación la veremos más adelante, por ahora te recomiendo que simplemente la recuerdes.
+En esta ecuación la fase \(\vartheta\) (variable theta) es el argumento del coseno, es decir \(\vartheta = kx - \omega t + \varphi\). Esta cantidad no tiene unidades, y se mide en radianes. La fase describe en qué punto del ciclo se encuentra la onda en un lugar y momento dados. Dos puntos de la onda que tengan el mismo valor de fase están en la misma etapa del ciclo: por ejemplo, ambos en una cresta o ambos en un nodo.
+
+La diferencia de fase es la distancia angular (en radianes) entre dos ondas o entre dos puntos de una misma onda. Se denota típicamente como \(\Delta \varphi\) o simplemente \(\delta\). En general hay dos contextos donde se habla de diferencia de fase:
+\begin{enumerate}
+  \item Entre dos ondas distintas
+  \item Entre dos puntos de una misma onda
+\end{enumerate}
+
+Veamos el primer caso. Supongamos dos ondas con igual frecuencia y número de onda:
+\[
+\psi_1(x,t) = A \cos(kx - \omega t) \\
+\psi_2(x,t) = A \cos(kx - \omega t + \delta)
+\]
+Entonces, la diferencia de fase entre ambas es \(\delta\). Esto determina si las ondas están en fase (cuando \(\delta = 0\) o múltiplos de \(2\pi\)) o desfasadas (por ejemplo, \(\delta = \pi\) implica interferencia destructiva).
+
+Para el segundo caso la diferencia de fase entre dos posiciones fijas \(x_1\) y \(x_2\) en un instante dado es:
+\[
+\Delta \theta = k(x_2 - x_1)
+\]
+Esto se puede expresar como:
+\[
+\Delta \theta = \frac{2\pi}{\lambda} (x_2 - x_1)
+\]
+Por lo tanto, dos puntos separados por una longitud de onda completa tienen una diferencia de fase de \(2\pi\) radianes, es decir, están en fase.
+
+Entonces, resumiendo los conceptos tendríamos:
+\begin{itemize}
+  \item Si dos ondas están en fase, sus crestas y valles coinciden, y se refuerzan al superponerse (interferencia constructiva).
+  \item Si están en oposición de fase ($\Delta \varphi = \pi$), las crestas de una coinciden con los valles de la otra (interferencia destructiva).
+  \item En sistemas oscilatorios (como masas o circuitos), la fase también indica el retraso temporal entre dos oscilaciones.
+\end{itemize}
 
 \subsubsection{Frente de ondas}
 
@@ -154,15 +200,22 @@ Por ejemplo, en una onda armónica, todos los puntos de un frente de onda alcanz
 
 El frente de onda proporciona información fundamental sobre la geometría y el comportamiento de la onda. Entre las principales características que define o influye se encuentran:
 
-\begin{enumerate}
-  \item Dirección de propagación: El frente de onda es perpendicular a la dirección en que la energía y la perturbación se propagan. Por lo tanto, la orientación de los frentes determina la dirección del avance de la onda.
-  \item Forma de la onda: La geometría del frente de onda determina la naturaleza de la propagación:
-    \begin{itemize}
-      \item Si los frentes son planos, la onda es plana, lo que implica propagación rectilínea desde una fuente lejana o colimada.
-      \item Si los frentes son esféricos, la onda se propaga en todas direcciones desde una fuente puntual.
-      \item En medios anisótropos o con obstáculos, los frentes pueden deformarse, generando fenómenos como difracción o focalización.
-    \end{itemize}
-  \item Interacción con el medio: La forma y evolución de los frentes de onda permite estudiar fenómenos como:
+\paragraph{1. Dirección de propagación}
+
+El frente de onda es \hl{perpendicular} a la dirección en que la energía y la perturbación se propagan. Por lo tanto, la orientación de los frentes determina la dirección del avance de la onda.
+
+\paragraph{2. Forma de la onda}
+
+La geometría del frente de onda determina la naturaleza de la propagación:
+\begin{itemize}
+  \item Si los frentes son planos, la onda es plana, lo que implica propagación rectilínea desde una fuente lejana o colimada. Las ondas de luz que provienen del sol pueden ser consideradas planas por ejemplo.
+  \item Si los frentes son esféricos, la onda se propaga en todas direcciones desde una fuente puntual. El sonido que proviene de un punto fijo en el aire es un ejemplo de onda esférica.
+  \item En medios anisótropos o con obstáculos, los frentes pueden deformarse, generando fenómenos como difracción o focalización.
+\end{itemize}
+
+\paragraph{3. Interacción con el medio}
+
+La forma y evolución de los frentes de onda permite estudiar fenómenos como:
     \begin{itemize}
       \item Reflexión: el frente se repliega sobre sí mismo al encontrar una barrera.
       \item Refracción: el frente cambia de dirección y velocidad al pasar a otro medio.
@@ -195,12 +248,13 @@ Analizando el gráfico vemos que pueden ocurrir dos tipos de movimiento al mismo
 \end{itemize}
 
 Si fijamos un tiempo determinado como \(t=0\), como el movimiento que describe la posición de los elementos del medio es un movimiento armónico simple, podemos describir la posición vertical de cada elemento del medio según su posición horizontal con la ecuación:
-\[
+\begin{equation}
   y(x, t=0) = A \sin(ax)
-\]
-donde \(A\) es la amplitud, \(a\), \(x\) es la posición horizontal y \(a\) es una constante a determinar. 
+  \label{eq:sin_wave}
+\end{equation}
+donde \(A\) es la amplitud, \(a\) es una constante a determinar y \(x\) es la posición horizontal. 
 
-De la ecuación entonces, se ve que \(x=0\) se ve que \(y=0\), lo que coincide con la figura \ref{fig:sin_wave} en \(t=0\). El siguiente valor de \(x\) para el que \(y\) es cero es \(x=\lambda/2\) como se ve en la figura \ref{fig:sin_wave_2}
+De la ecuación \ref{eq:sin_wave} entonces, se ve que si \(x=0\) entonces \(y=0\), lo que coincide con la figura \ref{fig:sin_wave} en \(t=0\). El siguiente valor de \(x\) para el que \(y\) es cero es \(x=\lambda/2\) como se ve en la figura \ref{fig:sin_wave_2}
 
 Por lo tanto, en base a estas observaciones, podemos escribir:
 \[
@@ -236,7 +290,11 @@ Y recordando las cantidades básicas definidas en la sección \ref{sec:waves_bas
 \begin{equation}
   \boxed{y(x,t) = A \sin(kx - \omega t + \varphi)}
 \end{equation}
-donde \(\varphi\) es la fase inicial de la onda (en caso de que no comience en \(x=0\) como en el ejemplo).
+\begin{itemize}
+  \item \(kx\) representa el cambio de fase con la posición (espacial),
+  \item \(\omega\) representa el cambio de fase con el tiempo (temporal),
+  \item \(\varphi\) es la fase inicial, que determina el estado de oscilación en el origen espacial y temporal.
+\end{itemize}
 
 \subsection{Energía asociada al movimiento ondulatorio}
 
@@ -245,7 +303,7 @@ La energía asociada al movimiento ondulatorio en ondas mecánicas proviene del 
 Vamos a continuar el análisis para una onda armónica transversal que se propaga en una cuerda (para continuar con el mismo ejemplo que venimos usando). 
 
 \begin{tcolorbox}[myconclusion]
-  Recuerda que un seno es la misma función que un coseno, pero desplazada \(\pi/2\).
+  Recuerda que la función seno es la misma que la función coseno, pero desplazada \(\pi/2\).
 \end{tcolorbox}
 
 Consideramos una onda transversal que se propaga en la dirección \(x\), con desplazamiento en la dirección \(y\), y que \(\varphi = \pi/2\):
@@ -262,7 +320,7 @@ donde:
 Cada punto de la cuerda oscila verticalmente con esta función. En base a esta ecuación, podemos calcular la energía cinética y potencial de la cuerda.
 
 \begin{tcolorbox}[myconclusion]
-  Hemos supuesto una onda desplazada \(\pi/2\) para que la velocidad tenga signo positivo (ya que se obtiene al derivar la posición).
+  Hemos supuesto una onda desplazada \(\pi/2\) para demostrar que el signo de la velocidad no influye en el resultado. En realidad, es lo mismo trabajar con coseno que con seno, solo hay que tener la precaución de respetar el desfase en la función dada. Aunque en este caso, como es un ejemplo, la función la hemos inventado.
 \end{tcolorbox}
 
 \subsubsection{Energía cinética}
@@ -307,7 +365,7 @@ Como \(\sin^2 + \cos^2 = 1\), se obtiene la energía total por unidad de longitu
 \]
 
 
-\subsubsection{Interpretación física}
+\subsubsection{Interpretación de la energía}
 
 La energía total transportada por la onda es proporcional al cuadrado de la amplitud \(A^2\), la densidad lineal \(\mu\) y al cuadrado de la frecuencia angular \(\omega^2\). Esta energía se transporta a lo largo de la dirección de propagación de la onda, sin que las partículas del medio se desplacen en esa dirección.
 
@@ -320,3 +378,52 @@ P = \frac{\mathrm{d}E}{\mathrm{d}t} = \frac{1}{2} \mu A^2 \omega^2 v
 \]
 
 donde \(v\) es la velocidad de propagación de la onda.
+
+
+\subsection{Intensidad de la onda}
+
+La \textbf{intensidad de una onda} es una magnitud física que mide la energía transportada por unidad de tiempo y por unidad de área perpendicular a la dirección de propagación. En otras palabras, indica cuánta energía atraviesa una determinada superficie en un segundo debido al paso de una onda.
+
+La intensidad \(I\) se define como:
+
+\[
+I = \frac{P}{S}
+\]
+donde:
+\begin{itemize}
+  \item \(P\) es la potencia transportada por la onda (energía por unidad de tiempo, en vatios),
+  \item \(S\) es el área perpendicular a la dirección de propagación (en m²),
+  \item \(I\) se expresa en vatios por metro cuadrado: \(\text{W/m}^2\).
+\end{itemize}
+
+Como la intensidad ``depende'' de la potencia, podemos deducir algunas características importantes. 
+
+\paragraph{1. Proporcionalidad con la amplitud cuadrada}
+
+La intensidad crece con el cuadrado de la amplitud de la onda (ya que la potencia es proporcional a la amplitud cuadrada):
+\[
+I \propto A^2
+\]
+Esto implica que una onda con el doble de amplitud transporta cuatro veces más energía por segundo y por área.
+
+\paragraph{2. Disminución con la distancia}
+
+En medios sin absorción, la intensidad de una onda esférica (como una onda sonora desde una fuente puntual) disminuye con el cuadrado de la distancia:
+\[
+I(r) = \frac{P}{4\pi r^2}
+\]
+
+Este resultado proviene del hecho de que la energía se distribuye sobre una superficie esférica que crece con \(r^2\), de ahí la ley del inverso del cuadrado.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.6\textwidth]{intensity_decrease.png}
+  \caption{Disminución de la intensidad con la distancia en una onda esférica.}
+  \label{fig:intensity_decrease}
+\end{figure}
+Como se ve en la figura \ref{fig:intensity_decrease}, la potencia emitida es constante, sin embargo, a medida que el radio aumenta el área aumenta. Esto significa que la intensidad (es decir la potencia por uniad de área) es menor.
+
+\paragraph{3. Medición directa de energía percibida}
+
+En muchas aplicaciones físicas y técnicas (como en acústica o electromagnetismo), la intensidad está directamente relacionada con la sensación física percibida, como el volumen del sonido o la brillantez de la luz.
+
+La intensidad de una onda cuantifica su capacidad de transportar energía a través del espacio. Es un parámetro fundamental cuando se estudian fenómenos como la absorción, reflexión, interferencia, o cuando se desea conocer el efecto físico de la onda en un sistema receptor.
