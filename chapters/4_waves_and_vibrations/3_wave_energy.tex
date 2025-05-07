@@ -1,0 +1,82 @@
+\subsection{Energía asociada al movimiento ondulatorio}
+
+La energía asociada al movimiento ondulatorio en ondas mecánicas proviene del hecho de que cada partícula del medio oscila en torno a su posición de equilibrio debido a la acción de una perturbación. Esta oscilación implica que hay energía almacenada en el medio, tanto en forma de energía cinética como potencial.
+
+Vamos a continuar el análisis para una onda armónica transversal que se propaga en una cuerda (para continuar con el mismo ejemplo que venimos usando). 
+
+\begin{tcolorbox}[myconclusion]
+  Recuerda que la función seno es la misma que la función coseno, pero desplazada \(\pi/2\).
+\end{tcolorbox}
+
+Consideramos una onda transversal que se propaga en la dirección \(x\), con desplazamiento en la dirección \(y\), y que \(\varphi = \pi/2\):
+\[
+y(x,t) = A \sin(kx - \omega t + \pi/2) = \boxed{A \cos(kx - \omega t)}
+\]
+donde:
+\begin{itemize}
+  \item \(A\) es la amplitud,
+  \item \(\omega\) la frecuencia angular,
+  \item \(k\) el número de onda.
+\end{itemize}
+
+Cada punto de la cuerda oscila verticalmente con esta función. En base a esta ecuación, podemos calcular la energía cinética y potencial de la cuerda.
+
+\begin{tcolorbox}[myconclusion]
+  Hemos supuesto una onda desplazada \(\pi/2\) para demostrar que el signo de la velocidad no influye en el resultado. En realidad, es lo mismo trabajar con coseno que con seno, solo hay que tener la precaución de respetar el desfase en la función dada. Aunque en este caso, como es un ejemplo, la función la hemos inventado.
+\end{tcolorbox}
+
+\subsubsection{Energía cinética}
+
+Una partícula de masa \(\mathrm{d}m\) en la cuerda tiene una velocidad vertical dada por su ecuación de M.A.S.:
+
+\[
+v_y(x,t) = \frac{\partial y}{\partial t} = -A \omega \sin(kx - \omega t)
+\]
+
+La energía cinética diferencial en un instante dado es:
+\[
+\mathrm{d}E_{\text{cin}} = \frac{1}{2} \, \mathrm{d}m \cdot v_y^2(x,t)
+\]
+
+Si la cuerda tiene densidad lineal \(\mu\) (en kg/m), entonces \(\mathrm{d}m = \mu \, \mathrm{d}x\). Por tanto:
+
+\[
+\mathrm{d}E_{\text{cin}} = \frac{1}{2} \mu \, A^2 \omega^2 \sin^2(kx - \omega t) \, \mathrm{d}x
+\]
+
+\subsubsection{Energía potencial}
+
+La energía potencial elástica proviene de la deformación de la cuerda debido a su curvatura. En una cuerda ideal, se puede demostrar que, para pequeñas oscilaciones, la energía potencial tiene la misma forma media que la energía cinética. Se obtiene:
+
+\[
+\mathrm{d}E_{\text{pot}} = \frac{1}{2} \mu \, A^2 \omega^2 \cos^2(kx - \omega t) \, \mathrm{d}x
+\]
+
+\subsubsection{Energía total por unidad de longitud}
+
+Sumando ambas contribuciones:
+
+\[
+\mathrm{d}E = \mathrm{d}E_{\text{cin}} + \mathrm{d}E_{\text{pot}} = \frac{1}{2} \mu A^2 \omega^2 \left[ \sin^2(kx - \omega t) + \cos^2(kx - \omega t) \right] \mathrm{d}x
+\]
+
+Como \(\sin^2 + \cos^2 = 1\), se obtiene la energía total por unidad de longitud:
+
+\[
+\frac{\mathrm{d}E}{\mathrm{d}x} = \mu A^2 \omega^2 \cdot \frac{1}{2}
+\]
+
+
+\subsubsection{Interpretación de la energía}
+
+La energía total transportada por la onda es proporcional al cuadrado de la amplitud \(A^2\), la densidad lineal \(\mu\) y al cuadrado de la frecuencia angular \(\omega^2\). Esta energía se transporta a lo largo de la dirección de propagación de la onda, sin que las partículas del medio se desplacen en esa dirección.
+
+\subsubsection{Potencia transportada por la onda}
+
+La potencia media (energía transportada por segundo) es:
+
+\[
+P = \frac{\mathrm{d}E}{\mathrm{d}t} = \frac{1}{2} \mu A^2 \omega^2 v
+\]
+
+donde \(v\) es la velocidad de propagación de la onda.
