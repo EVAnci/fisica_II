@@ -112,11 +112,18 @@ Sin embargo hay que tener en cuenta que existen casos especiales:
   \item \textbf{Ángulo límite y reflexión total}: si la onda pasa de un medio más denso a uno menos denso y el ángulo de incidencia supera un cierto valor (ángulo crítico), no hay refracción, sino reflexión total interna.
 \end{itemize}
 
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{newton_prism.jpg}
+  \caption{Dispersión de la luz en un prisma de Newton.}
+  \label{fig:newton_prism}
+\end{wrapfigure}
 \paragraph{Dispersion de la luz}
 
 En términos simples, la \textbf{dispersión de la luz} es el fenómeno por el cual la luz blanca se separa en sus distintos colores (como los del arcoíris) cuando pasa a través de un material, como un prisma o gotas de agua.
 
-Esto ocurre porque cada color de la luz viaja a una velocidad ligeramente diferente dentro del material, lo que provoca que se refracten en ángulos distintos. Los colores con menor longitud de onda, como el violeta o el azul, se desvían más que los de mayor longitud de onda, como el rojo.
+Esto ocurre porque cada color de la luz viaja a una velocidad ligeramente diferente dentro del material, lo que provoca que se refracten en ángulos distintos. Los colores con menor longitud de onda, como el violeta o el azul, se desvían más que los de mayor longitud de onda, como el rojo. Entonces cada color se refracta en un ángulo diferente, lo que hace que los colores se separen.
 
 \subsubsection{Interferencia}
 
@@ -175,60 +182,116 @@ Entonces, retomando la ecuación de la interferencia, para que la interferencia 
   \item Constructiva si \(\Delta L = m \lambda_0\), con \(m \in \mathbb{Z}\) (en fase (\(m\,2\pi\)))
   \item Destructiva si \(\Delta L = (m + 1/2)\lambda_0\) (en fase contraria (\(m\pi\)))
 \end{itemize}
-Algunos ejemplos típicos de interferencia son:
-\begin{enumerate}
-  \item Experimento de Young (doble rendija): produce franjas claras y oscuras por interferencia de la luz que pasa por dos rendijas muy cercanas.
-  \item Interferencia en películas delgadas: como en burbujas de jabón o manchas de aceite, donde la luz se refleja en distintas capas.
-\end{enumerate}
+
+\begin{wrapfigure}{r}{0.22\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{bubble.jpg}
+  \caption{Patrón de colores en burbujas de jabón}
+  \label{fig:burbujas_jabon}
+\end{wrapfigure}
+Un ejemplo cotidiano es el fenómeno de interferencia en películas delgadas, como en burbujas de jabón o manchas de aceite, donde la luz se refleja en distintas capas.
+
+Cuando la luz incide sobre una burbuja de jabón, parte de ella se refleja en la superficie exterior de la burbuja, mientras que otra parte se refleja en la superficie interior. Estas dos reflexiones de la luz se interfieren entre sí, produciendo un patrón de interferencia.
+
+Dependiendo del grosor de la película de jabón, las ondas reflejadas en la superficie interior y exterior se encuentran en diferentes fases, lo que da lugar a diferentes patrones de interferencia. Esto hace que la burbuja parezca brillar con diferentes colores.
+\clearpage
+
+Específicamente, cuando las ondas reflejadas se encuentran en fase, se produce una interferencia constructiva y se observan colores brillantes. Cuando las ondas se encuentran en oposición de fase, se produce una interferencia destructiva y se observan colores más oscuros.
+
+El grosor de la película de jabón varía continuamente a medida que la burbuja se expande y se contrae, lo que hace que los colores cambien constantemente. Esto crea el efecto de iridiscencia y el hermoso despliegue de colores que vemos en las burbujas de jabón.
+
+Otro ejemplo típico de interferencia es el experimento de la doble rendija. Fue realizado por primera vez por Thomas Young en 1801. En este experimento, se hace pasar un haz de luz o de partículas subatómicas a través de una pantalla con dos rendijas paralelas. Detrás de la pantalla, se coloca una segunda pantalla donde se observa un patrón de interferencia.
+
+Si la luz o las partículas se comportaran como partículas clásicas, se esperaría ver dos franjas brillantes en la segunda pantalla, correspondientes a las dos rendijas. Sin embargo, lo que se observa, como se ve en la figura \ref{fig:double_slit}, es un patrón de interferencia con franjas brillantes y oscuras, similar al patrón que se obtendría si la luz o las partículas se comportaran como ondas.
+
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.65\textwidth]{double-slit.pdf}
+  \includegraphics[width=0.75\textwidth]{double-slit.pdf}
   \caption{Interferencia de la luz por doble rendija}
   \label{fig:double_slit}
 \end{figure}
 
 \subsubsection{Difracción}
 
-La difracción es la capacidad de una onda para rodear obstáculos o atravesar rendijas y luego extenderse en la región de sombra geométrica.
+\begin{wrapfigure}{r}{0.25\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{water_difraction.jpg}
+  \caption{Fenómeno de difracción en agua}
+  \label{fig:water_difraction}
+\end{wrapfigure}
+La \textbf{difracción} es un fenómeno ondulatorio que consiste en la capacidad de una onda de desviarse de su trayectoria rectilínea al encontrarse con un obstáculo o una abertura, propagándose luego en regiones que, según la óptica geométrica, deberían estar en sombra.
 
-Factores relevantes:
+Este fenómeno es característico de todas las ondas, incluidas las ondas electromagnéticas como la luz, las microondas o las ondas de radio.
 
+Cuando una onda electromagnética incide sobre un obstáculo, parte de la onda puede rodearlo, por otro lado, si incide sobre una rendija o abertura, la onda puede expandirse desde la abertura en distintas direcciones, de la misma forma que lo hace el agua en la figura \ref{fig:water_difraction}.
+
+Esto se debe a la naturaleza ondulatoria del campo electromagnético. No es que el campo ``decida'' rodear el obstáculo, sino que la propagación del campo obedece a principios físicos descritos por las ecuaciones de Maxwell y la teoría de Huygens-Fresnel.
+
+Como vimos en la introducción, el principio de Huygens-Fresnel establece que:
+
+``Cada punto de un frente de onda se comporta como una fuente secundaria de ondas esféricas. La onda total en cualquier región del espacio es la superposición de todas estas ondas secundarias.''
+
+Entonces, cuando una onda electromagnética encuentra una rendija o el borde de un obstáculo cada punto del borde actúa como una fuente secundaria, estas ondas secundarias se interfieren, generando un nuevo frente de onda que se curva y se propaga más allá del borde.
+
+\paragraph{Condición para observar difracción significativa}
+
+La difracción es más pronunciada cuando el tamaño de la abertura u obstáculo \(a\) es comparable a la longitud de onda \(\lambda\):
+\[
+a \approx \lambda
+\]
+Por ejemplo:
 \begin{itemize}
-  \item Es más pronunciada si el tamaño de la rendija es comparable con la longitud de onda.
-  \item A mayor longitud de onda, mayor difracción.
+  \item La luz visible (con \(\lambda \sim 500 \text{ nm}\)) se difracta notablemente en rejillas o rendijas microscópicas.
+  \item Las ondas de radio (con \(\lambda \sim \text{m}\)) pueden difractarse alrededor de montañas o edificios, lo que permite su recepción en zonas sin línea de vista.
 \end{itemize}
 
-Ejemplos:
+Un ejemplo de el fenómeno de difracción es el patrón de difracción de una rendija única. Una fuente de luz monocromática pasa por una rendija estrecha y se produce un patrón de franjas por difracción e interferencia.
 
-\begin{itemize}
-  \item El sonido puede escucharse detrás de una pared aunque no haya línea de visión directa.
-  \item Las ondas del mar rodean obstáculos como pilares o muelles.
-\end{itemize}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{diffraction_150_slits.jpg}
+  \caption{Patrón de difracción de un haz de luz de 633nm por múltiples rendijas. Foto de: \href{https://commons.wikimedia.org/w/index.php?curid=6938945}{Shim'on y Slava Rybka (Wikipedia)}.}
+  \label{fig:diffraction_150_slits}
+\end{figure}
+
+En la imágen \ref{fig:diffraction_150_slits} se puede ver que hay una serie de franjas brillantes y oscuras, que son los patrones de interferencia constructiva y destructiva, respectivamente. Es importante que no confunda esto con el ejemplo de una sola rendija. Si bien se producirá el fenómeno de difracción, no se producirá interferencia constructiva, ya que no hay una segunda fuente de luz. La forma que tendríamos de detectar que se ha producido difracción es encontrar que la luz se encuentra en regiones que, según la óptica geométrica, deberían estar en sombra.
 
 \subsubsection{Polarización}
 
 La polarización es la orientación de la vibración de una onda transversal en un solo plano. Solo ocurre con ondas transversales, como la luz; no ocurre con ondas longitudinales como el sonido.
 
-Tipos de polarización:
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{polarization_observer.png}
+  \caption{Posición del observador con respecto a la onda electromagnética.}
+  \label{fig:polarization}
+\end{wrapfigure}
+Para ondas electromagnéticas en general, \textbf{polarización} es el fenómeno ondulatorio por el cual se restringe o determina la dirección de oscilación del campo eléctrico de una onda electromagnética. Recuerda que una onda electromagnética está compuesta por dos campos perpendiculares entre sí y a la dirección de propagación: el campo eléctrico \(\vec{E}\) y el campo magnético \(\vec{B}\) como se vió anteriormente. Ahora supongamos una onda electromagnética como la de la figura \ref{fig:polarization}, donde la propagación de la onda es en la dirección \(x\) y hay un observador mirando sobre el eje \(x\) hacia el origen.
 
+La \textbf{dirección de polarización} se define convencionalmente como la dirección del \hl{campo eléctrico}. Entonces, el observador de la figura \ref{fig:polarization} verá que la onda electromagnética está polarizada en la dirección \(y\). Digamos, vería un vector \(\vec{E}\) que oscila en la dirección \(y\).
+
+Las ondas electromagnéticas naturales (como la luz solar) están compuestas por muchas ondas con diferentes orientaciones de \(\vec{E}\) emitidas por los átomos de la fuente luminosa. Cada átomo produce una onda que tiene una orientación particular, por lo que se dice que están \textbf{no polarizadas}. El ojo humano no puede distinguir entre ellas, únicamente es capaz de distinguir la intensidad de la luz, por lo que el observador de la figura \ref{fig:polarization} supondremos que es capaz de distinguir la polarización de la luz.
+
+Cuando se polarizan las ondas electromagnéticas, se pueden obtener diferentes tipos de polarización.
 \begin{itemize}
-  \item Lineal: La onda vibra en un solo plano.
-  \item Circular o elíptica: La dirección de vibración gira con el tiempo.
+  \item \textbf{Polarización lineal}: el campo eléctrico oscila en una sola dirección fija perpendicular a la dirección de propagación.
+  \item \textbf{Polarización circular}: la punta del vector \(\vec{E}\) describe un círculo en el plano perpendicular a la dirección de propagación. Esto ocurre cuando dos componentes perpendiculares del campo eléctrico tienen igual amplitud y desfasaje de \(\pi/2\).
+  \item \textbf{Polarización elíptica}: generalización de la circular, donde las componentes tienen diferente amplitud y/o fase, formando una elipse.
+\end{itemize}
+Si deseas ver gráficamente los distintos tipos de polarización recomiendo ver el siguiente video: \href{https://www.youtube.com/watch?v=PMjADwpLlfs}{Polarización de la luz (Khan Academy) | YouTube}.
+
+\paragraph{¿Cómo se produce la polarización?}
+\begin{itemize}
+  \item \textbf{Por filtrado}: usando un polarizador (como un cristal de polaroide) que solo permite pasar la componente del campo eléctrico en una dirección específica.
+  \item \textbf{Por reflexión}: al reflejarse en una superficie, la luz puede quedar parcialmente o totalmente polarizada, especialmente en el ángulo de Brewster.
+  \item \textbf{Por dispersión}: como en el cielo, donde la luz solar se dispersa al interactuar con las moléculas del aire, generando polarización.
 \end{itemize}
 
-Métodos para polarizar la luz:
+\paragraph{¿Solo el campo eléctrico se ve afectado en la polarización?}
 
-\begin{itemize}
-  \item Filtros polarizadores (como en lentes de sol).
-  \item Reflexión en ciertos ángulos (ángulo de Brewster).
-  \item Dispersión (responsable del color azul del cielo).
-\end{itemize}
+Sí, en términos de definición y observación, solo el campo eléctrico se considera en la descripción de la polarización.
 
-Ejemplos:
+Esto se debe a que el campo eléctrico es el responsable de la interacción con la materia, como con sensores ópticos o el ojo humano. El campo magnético \(\vec{B}\) está siempre perpendicular al campo eléctrico y a la dirección de propagación, por lo tanto, su dirección queda automáticamente determinada una vez que se fija la del campo eléctrico.
 
-\begin{itemize}
-  \item Gafas de sol polarizadas que eliminan reflejos.
-  \item Cristales líquidos en pantallas LCD utilizan luz polarizada.
-\end{itemize}
-
+En otras palabras, al definir la polarización, no es necesario especificar el campo magnético porque este está completamente determinado por la dirección del campo eléctrico y la dirección de propagación.
