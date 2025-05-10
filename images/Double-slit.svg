@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.98"
-     inkscape:cx="300"
+     inkscape:cx="299.74747"
      inkscape:cy="150"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg80" />
+     inkscape:current-layer="switch48" />
   <defs
      id="defs7">
     <radialGradient
@@ -365,8 +365,9 @@
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:C059;-inkscape-font-specification:C059">Doble</tspan></tspan><tspan
            sodipodi:role="line"
            id="tspan84"
-           x="0"
-           y="19.331316">rendija</tspan></text>
+           x="-9.5367432e-07"
+           y="19.331316"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:C059;-inkscape-font-specification:C059">rendija</tspan></text>
     </switch>
     <switch
        transform="translate(422.75,272.16)"
