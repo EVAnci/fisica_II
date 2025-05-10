@@ -65,7 +65,11 @@ El resumen incluye los siguientes temas:
 - 📈 Movimiento ondulatorio
 
 ### Unidad 5: La Luz y su Naturaleza Dual
-- 💡 Óptica y dualidad onda-partícula
+- 💡 La historia de la luz
+- 🔆 El espectro electromagnético
+- 〽️ Los fenómenos ondulatorios aplicados a la luz
+- 🪞 Reflexión en espejos
+- 👓 Refracción en lentes
 
 ### Unidad 6: Fluidos
 - 🌫️ Introducción a los fluidos
