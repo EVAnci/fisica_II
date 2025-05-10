@@ -15,6 +15,7 @@ En general los fenómenos ondulatorios son:
 \end{itemize}
 
 \subsubsection{Reflexión}
+\label{sec:reflection}
 
 \begin{wrapfigure}{r}{0.24\textwidth}
   \centering
@@ -24,7 +25,7 @@ En general los fenómenos ondulatorios son:
 \end{wrapfigure}
 La reflexión es el cambio en la dirección de propagación de una onda cuando choca contra una superficie y retorna al medio original.
 
-Para ondas que inciden sobre una superficie lisa el ángulo de incidencia (\(\theta_i\)) es igual al ángulo de reflexión (\(\theta_r\)):
+La reflexión obedece a las siguientes reglas: el rayo incidente, el rayo reflejado y la normal a la superficie están en el mismo plano, y para ondas que inciden sobre una superficie lisa (o un diferencial de superficie considerado liso) el ángulo de incidencia (\(\theta_i\)) es igual al ángulo de reflexión (\(\theta_r\)):
 \[
   \theta_i = \theta_r
 \]
@@ -41,6 +42,8 @@ Ejemplos:
   \caption{Reflexión de un haz de luz.}
   \label{fig:reflexion}
 \end{wrapfigure}
+Podemos encontrar dos tipos de reflexión según la superficie: reflexión \textbf{difusa} y reflexión \textbf{especular}. La reflexión difusa ocurre cuando la superficie es rugosa o desglosada, y la reflexión especular ocurre cuando la superficie es lisa.
+
 En ondas mecánicas (como en cuerdas), la fase puede invertirse si la onda rebota en un medio más rígido (más denso). Se vió un ejemplo de esto con más detalle en la sección \ref{sec:waves_analisys}. 
 
 En el caso de la luz (y en general cualquier onda electromagnética) también \textbf{puede invertir su fase} al reflejarse, dependiendo de las propiedades ópticas del medio en el que ocurre la reflexión.
@@ -182,19 +185,17 @@ Entonces, retomando la ecuación de la interferencia, para que la interferencia 
   \item Constructiva si \(\Delta L = m \lambda_0\), con \(m \in \mathbb{Z}\) (en fase (\(m\,2\pi\)))
   \item Destructiva si \(\Delta L = (m + 1/2)\lambda_0\) (en fase contraria (\(m\pi\)))
 \end{itemize}
+Un ejemplo cotidiano es el fenómeno de interferencia en películas delgadas, como en burbujas de jabón o manchas de aceite, donde la luz se refleja en distintas capas.
 
-\begin{wrapfigure}{r}{0.22\textwidth}
+Cuando la luz incide sobre una burbuja de jabón, parte de ella se refleja en la superficie exterior de la burbuja, mientras que otra parte se refleja en la superficie interior. Estas dos reflexiones de la luz se interfieren entre sí, produciendo un patrón de interferencia.
+
+\begin{wrapfigure}{l}{0.24\textwidth}
   \centering
   \includegraphics[width=\linewidth]{bubble.jpg}
   \caption{Patrón de colores en burbujas de jabón}
   \label{fig:burbujas_jabon}
 \end{wrapfigure}
-Un ejemplo cotidiano es el fenómeno de interferencia en películas delgadas, como en burbujas de jabón o manchas de aceite, donde la luz se refleja en distintas capas.
-
-Cuando la luz incide sobre una burbuja de jabón, parte de ella se refleja en la superficie exterior de la burbuja, mientras que otra parte se refleja en la superficie interior. Estas dos reflexiones de la luz se interfieren entre sí, produciendo un patrón de interferencia.
-
 Dependiendo del grosor de la película de jabón, las ondas reflejadas en la superficie interior y exterior se encuentran en diferentes fases, lo que da lugar a diferentes patrones de interferencia. Esto hace que la burbuja parezca brillar con diferentes colores.
-\clearpage
 
 Específicamente, cuando las ondas reflejadas se encuentran en fase, se produce una interferencia constructiva y se observan colores brillantes. Cuando las ondas se encuentran en oposición de fase, se produce una interferencia destructiva y se observan colores más oscuros.
 
@@ -214,16 +215,16 @@ Si la luz o las partículas se comportaran como partículas clásicas, se espera
 
 \subsubsection{Difracción}
 
+La \textbf{difracción} es un fenómeno ondulatorio que consiste en la capacidad de una onda de desviarse de su trayectoria rectilínea al encontrarse con un obstáculo o una abertura, propagándose luego en regiones que, según la óptica geométrica, deberían estar en sombra.
+
+Este fenómeno es característico de todas las ondas, incluidas las ondas electromagnéticas como la luz, las microondas o las ondas de radio.
+
 \begin{wrapfigure}{r}{0.25\textwidth}
   \centering
   \includegraphics[width=\linewidth]{water_difraction.jpg}
   \caption{Fenómeno de difracción en agua}
   \label{fig:water_difraction}
 \end{wrapfigure}
-La \textbf{difracción} es un fenómeno ondulatorio que consiste en la capacidad de una onda de desviarse de su trayectoria rectilínea al encontrarse con un obstáculo o una abertura, propagándose luego en regiones que, según la óptica geométrica, deberían estar en sombra.
-
-Este fenómeno es característico de todas las ondas, incluidas las ondas electromagnéticas como la luz, las microondas o las ondas de radio.
-
 Cuando una onda electromagnética incide sobre un obstáculo, parte de la onda puede rodearlo, por otro lado, si incide sobre una rendija o abertura, la onda puede expandirse desde la abertura en distintas direcciones, de la misma forma que lo hace el agua en la figura \ref{fig:water_difraction}.
 
 Esto se debe a la naturaleza ondulatoria del campo electromagnético. No es que el campo ``decida'' rodear el obstáculo, sino que la propagación del campo obedece a principios físicos descritos por las ecuaciones de Maxwell y la teoría de Huygens-Fresnel.
@@ -255,7 +256,7 @@ Un ejemplo de el fenómeno de difracción es el patrón de difracción de una re
   \label{fig:diffraction_150_slits}
 \end{figure}
 
-En la imágen \ref{fig:diffraction_150_slits} se puede ver que hay una serie de franjas brillantes y oscuras, que son los patrones de interferencia constructiva y destructiva, respectivamente. Es importante que no confunda esto con el ejemplo de una sola rendija. Si bien se producirá el fenómeno de difracción, no se producirá interferencia constructiva, ya que no hay una segunda fuente de luz. La forma que tendríamos de detectar que se ha producido difracción es encontrar que la luz se encuentra en regiones que, según la óptica geométrica, deberían estar en sombra.
+En la imagen \ref{fig:diffraction_150_slits} se puede ver que hay una serie de franjas brillantes y oscuras, que son los patrones de interferencia constructiva y destructiva, respectivamente. Es importante que no confunda esto con el ejemplo de una sola rendija. Si bien se producirá el fenómeno de difracción, no se producirá interferencia constructiva, ya que no hay una segunda fuente de luz. La forma que tendríamos de detectar que se ha producido difracción es encontrar que la luz se encuentra en regiones que, según la óptica geométrica, deberían estar en sombra.
 
 \subsubsection{Polarización}
 
