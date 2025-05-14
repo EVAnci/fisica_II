@@ -149,3 +149,27 @@ Como para una lente también se cumple que \(1/f = 1/p + 1/q\), podemos reescrib
   \frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right) \qquad \text{(Ecuación de fabricante de lentes)}
 \end{equation}
 donde \(n\) representa el índice de refracción del material de la lente.
+
+\paragraph{Dificultad común: ¿Por qué los rayos no se trazan desde la imagen intermedia?}
+
+Un lente delgado tiene dos superficies refractantes. La deducción matemática consiste en aplicar la fórmula de refracción esférica dos veces, una por cada superficie:
+\begin{enumerate}
+  \item La primera superficie (entrada del lente).
+  \item La segunda superficie (salida del lente).
+\end{enumerate}
+
+Matemáticamente, se supone que la imagen generada por la primera superficie se convierte en el objeto para la segunda. Esto es completamente válido, pero gráficamente puede prestarse a confusión si no se traza correctamente.
+
+Entonces: ¿Por qué los rayos no se trazan desde la imagen intermedia?
+
+Esto se debe a que gráficamente, no es necesario trazar físicamente la imagen intermedia para obtener la imagen final. Lo que se hace en los esquemas gráficos es rastrear el recorrido completo de los rayos desde el objeto real hasta después de la segunda superficie, considerando ambos efectos de refracción en una sola construcción gráfica.
+
+Veámoslo conceptualmente:
+\begin{itemize}
+  \item Desde el punto de vista matemático, se calcula la posición de la imagen producida por la primera superficie, y esta se usa como objeto virtual para la segunda.
+  \item Desde el punto de vista gráfico, no se dibuja explícitamente esa imagen intermedia. En su lugar, se utilizan tres rayos principales (por ejemplo, el que pasa por el centro óptico, el paralelo al eje, y el que pasa por el foco) para trazar la imagen final directamente, teniendo en cuenta el efecto total del lente.
+\end{itemize}
+
+Esto funciona porque en un lente delgado se asume que el grosor es despreciable, y por tanto los dos centros de curvatura están muy cercanos o coinciden en un solo plano óptico. Así, se puede construir la imagen final sin tener que detenerse en la intermedia, siempre y cuando se comprendan las reglas de trazo para lentes convergentes o divergentes.
+
+En la figura \ref{fig:lens_deduction} se ha trazado el objeto intermedio (imagen de la primera superficie), y es el objeto \(P'Q'\). Sin embargo lo que no está explicado es por qué para obtener la imagen final los rayos no se trazan de \(P'Q'\) sino de \(PQ\). Realmente se ha omitido por temas de claridad del dibujo, sin embargo es importante tener en cuenta que a pesar de que los rayos se trazan de \(P'Q'\), debe tenerse en cuenta que los rayos reales vienen de \(PQ\), y por eso se puede asumir que \(-q=p'\).
