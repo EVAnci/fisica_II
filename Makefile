@@ -3,6 +3,11 @@ MAIN = main
 
 all:
 	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -draftmode $(MAIN).tex &> /dev/null
+	biber main
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error $(MAIN).tex &> /dev/null
+
+silent:
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -draftmode $(MAIN).tex &> /dev/null
 	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error $(MAIN).tex &> /dev/null
 
 three_pass:
@@ -24,12 +29,14 @@ clsbib:
 	rm main.bbl
 
 bib:
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -draftmode $(MAIN).tex &> /dev/null
 	biber main
 
 help:
 	@echo "Opciones disponibles:"
-	@echo "  make all           - Compila el documento usando pdflatex (no se genera la bibliografía, procura usar make bib antes)"
+	@echo "  make all           - Compila el documento usando pdflatex silenciosamente (opción por defecto)"
 	@echo "  make bib           - Genera las referencias para la bibliografía"
+	@echo "  make silent        - Compila el documento en modo silencioso sin generar la bibliografía"
 	@echo "  make three_pass    - Compila el documento (3 pasadas de pdflatex, genera la bibliografía automáticamente)"
 	@echo "  make once_pass     - Compila el documento (1 pasada de pdflatex sin bibliografía, se recomienda solo para recompilar rápidamente y debugear)"
 	@echo "  make clean         - Elimina archivos auxiliares de la compilación"
