@@ -1,25 +1,39 @@
 \subsubsection{Lineas de campo eléctrico}
+\label{sec:lineas_de_campo}
 
-Las líneas de campo no son más que un medio para visualizar el patrón formado por el campo eléctrico a través del trazo de líneas conocidas como \textbf{líneas de campo eléctrico}. Estas líneas relacionan el campo eléctrico con una región del espacio de la siguiente manera:
-\begin{itemize}
-    \item El vector \(\vec{E}\) del campo eléctrico es tangente a la línea del campo eléctrico en cada punto y la dirección de la linea de campo es igual a la del campo eléctrico.
-    \item El número de líneas de campo que pasan por una superficie perpendicular a dichas líneas es proporcional a la magnitud de campo.
-\end{itemize}
+\begin{wrapfigure}{l}{0.34\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{field_lines.pdf}
+  \caption{Líneas de campo eléctrico que atraviesan dos superficies}
+  \label{fig:lineas_de_campo}
+\end{wrapfigure}
+El concepto de \textbf{líneas de campo eléctrico} sirve para visualizar la acción de los campos eléctricos en el espacio. Aunque es una herramienta gráfica y no una entidad física real, permite representar de forma intuitiva la dirección y magnitud del campo eléctrico generado por distribuciones de carga.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\textwidth]{field-lines.png}
-    \caption{Líneas de campo eléctrico que atraviesan dos superficies}
-    \label{fig:lineas_de_campo}
-\end{figure}
+Una línea de campo eléctrico (también llamada línea de fuerza) es una curva imaginaria trazada en el espacio tal que en cada punto de ella, el vector campo eléctrico \(\vec{E}\) es tangente a la curva.
+
+Formalmente podemos expresar que en cada punto de una línea de campo, el vector campo eléctrico \(\vec{E}\) es tangente a la curva:
+\begin{equation*}
+\vec{E} \parallel \vec{T}
+\end{equation*}
+donde \(\vec{T}\) es el vector tangente a la línea en ese punto.
+
+Las líneas de campo eléctrico presentan las siguientes propiedades esenciales: 
+
+\textbf{Dirección}:Apuntan en el sentido en que una carga de prueba positiva se movería si se dejara libre en el campo (ya que parten del concepto de carga de prueba). Por lo tanto salen de cargas positivas y entran en cargas negativas.
+
+\textbf{Nunca se cruzan}: Si dos líneas se cruzaran, significaría que en ese punto el campo tiene dos direcciones diferentes, lo cual es físicamente imposible.
+
+\textbf{La densidad de líneas representa la magnitud del campo}: Cuanto más juntas están las líneas, mayor es la intensidad \(|\vec{E}|\) del campo en esa región (como se muestra en la figura \ref{fig:lineas_de_campo}). En otras palabras el número de líneas de campo que pasan por una superficie perpendicular a dichas líneas es proporcional a la magnitud de campo.
+
+\textbf{Las líneas comienzan y terminan en cargas}: en el caso de un campo estático, todas las líneas comienzan en cargas positivas y terminan en cargas negativas. En el infinito, pueden comenzar o terminar si hay una distribución desequilibrada de carga.
 
 Pongamos este concepto en palabras simples ¿Recuerdas el ejemplo de las tres cargas y el ``mapa de flechas''? Bueno, las líneas de campo nos ayudan a visualizar el ``mapa de flechas'' de una forma más cómoda.
 
 \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.4\textwidth]{field_lines_ex.png}
-    \caption{Ejemplo del ``mapa de flechas'' visualizado con líneas de campo}
-    \label{fig:ej_lineas_de_campo}
+  \centering
+  \includegraphics[width=0.44\textwidth]{field_lines_ex.png}
+  \caption{Ejemplo del ``mapa de flechas'' visualizado con líneas de campo}
+  \label{fig:ej_lineas_de_campo}
 \end{figure}
 
-En este caso se puede ver que las líneas de campo están más juntas cuando nos acercamos a las cargas, y se van separando cuando nos alejamos. La proximidad entre líneas de campo nos indica que el campo es intenso. Si las líneas están distantes entre sí indica que el campo es menos intenso. Esto se puede verificar con la ecuación del campo eléctrico, ya que el campo disminuye con el cuadrado de la distancia. Esto significa que según más nos alejamos de las cargas fuente, el campo disminuye.
+En este caso se puede ver que las líneas de campo salen de cargas positivas y entran en cargas negativas. Además, están más juntas cuando nos acercamos a las cargas, y se van separando cuando nos alejamos. La proximidad entre líneas de campo nos indica que el campo es intenso. Si las líneas están distantes entre sí indica que el campo es menos intenso. Esto se puede verificar con la ecuación del campo eléctrico, ya que el campo disminuye con el cuadrado de la distancia. Esto significa que según más nos alejamos de las cargas fuente, el campo disminuye.
