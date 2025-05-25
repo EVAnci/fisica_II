@@ -22,6 +22,7 @@ Estos paquetes incluyen todas las dependencias necesarias para trabajar con LaTe
 2. Ejecuta el siguiente comando para compilar el documento:
 
    ```sh
+   make bib
    make
    ```
 
