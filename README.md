@@ -1,14 +1,19 @@
-# 📘 Resumen de Física II
+# Física II
 
-Este repositorio contiene un resumen completo de la materia **Física II**, diseñado para estudiantes de ingeniería. El documento incluye explicaciones teóricas, fórmulas clave y ejemplos prácticos.
+Este repositorio contiene el código fuente del libro Física II, que puede descargar [aquí](https://github.com/EVAnci/fisica_II/releases).
+
+> [!IMPORTANT]
+> Este documento está en construcción. Los últimos capítulos aún no estan terminados y las secciones ya escritas pueden tener detalles mínimos. Cualquier detalle observado puede reportarlo en la pestaña de Issues.
 
 ---
 
-## 🚀 Compilación del Documento
+## Compilación del Documento
 
-### 🛠️ Instalación de Dependencias
+Para este documento se requiere de `texlive-full` en la mayoría de distribuciones Linux, o su equivalente en MacOS y Windows. El compilador a utilizar es `lualatex`. Instrucciones detalladas sobre comandos se dan a continuación.
 
-Para compilar el documento en **Arch Linux**, instala los siguientes paquetes:
+### Instalación de Dependencias
+
+Para compilar el documento se debe instalar la versión completa de `texlive` que soporte su distribucion. En el caso de **Arch Linux**, instala los siguientes paquetes:
 
 ```sh
 sudo pacman -S texlive texlive-fontsrecommended texlive-langspanish biber
@@ -16,35 +21,33 @@ sudo pacman -S texlive texlive-fontsrecommended texlive-langspanish biber
 
 Estos paquetes incluyen todas las dependencias necesarias para trabajar con LaTeX.
 
-### 📄 Generar el PDF
+### Generar el PDF
 
-1. Sitúate en la raíz del repositorio.
-2. Ejecuta el siguiente comando para compilar el documento:
+Situado en la raíz del repositorio, ejecuta el siguiente comando para compilar el documento:
 
-   ```sh
-   make
-   ```
+```sh
+make
+```
+Para limpiar los archivos generados durante la compilación, utiliza:
 
-3. Para limpiar los archivos generados durante la compilación, utiliza:
+```sh
+make clean
+make clsbib
+```
 
-   ```sh
-   make clean
-   make clsbib
-   ```
+Esto dejará únicamente el documento final en formato PDF.
 
-   Esto dejará únicamente el documento final en formato PDF.
+Si deseas explorar otras opciones de compilación, puedes usar:
 
-4. Si deseas explorar otras opciones de compilación, puedes usar:
-
-   ```sh
-   make help
-   ```
+```sh
+make help
+```
 
 ---
 
 ## 📑 Índice de Contenidos
 
-El resumen incluye los siguientes temas:
+El documento incluye los siguientes temas:
 
 ### Unidad 1: Electrostática
 - ⚡ Fuerza y campo eléctrico
@@ -83,14 +86,14 @@ El resumen incluye los siguientes temas:
 
 ---
 
-## 📝 Notas Adicionales
+## Notas Adicionales
 
-- Este resumen está basado en los libros de **Serway** y **Zemansky** (Física para Ciencias e Ingenierías) y adaptado para poder entender la teoría básica detras de los problemas de la asignatura _Física II_ de carreras de ingeniería en la **[Universidad de Mendoza](https://um.edu.ar/)**.
+- Este documento está basado en los libros de **Serway** y **Zemansky** (Física para Ciencias e Ingenierías) y adaptado para poder entender la teoría básica detras de los problemas de la asignatura _Física II_ de carreras de ingeniería en la **[Universidad de Mendoza](https://um.edu.ar/)**.
 - Si encuentras algún error o tienes sugerencias, no dudes en abrir un _issue_ o enviar un _pull request_.
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 - **`main.tex`**: Archivo principal del documento.
 - **`chapters/`**: Contiene los capítulos organizados por temas.
@@ -100,8 +103,7 @@ El resumen incluye los siguientes temas:
 
 ---
 
-## 🛡️ Licencia
+## Licencia
 
-Este proyecto está bajo la licencia **[MIT](LICENSE)**. Siéntete libre de usarlo, modificarlo y compartirlo.
+Este proyecto está bajo la licencia **[CC BY-SA](LICENSE)**. Siéntete libre de usarlo, modificarlo y compartirlo.
 
----

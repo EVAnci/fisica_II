@@ -1,0 +1,73 @@
+% Every document has "big" preambles. That is a little bit 
+% messy (my oppinion), so this file pretends to be the 
+% \usepackage and the config of the package "file". So 
+% I keep everything organized.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font and language configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set lang (support for lualatex)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+
+% Use unicode CMU font
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+% Licence icons
+\usepackage{ccicons} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Math environments and math fonts %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cancel}
+\usepackage{esint}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% All figure envs and configurations %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% figure and subfigure
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+
+% pgfplots and tiks
+\usepackage{tikz}
+\usepackage{pgfplots}
+% this line is recomended by the pgfplots lastes stable version
+% see https://pgfplots.sourceforge.net/pgfplots.pdf
+\pgfplotsset{compat=1.18}
+
+% Fancy tables and extra stuff
+\usepackage[most]{tcolorbox}
+\usepackage[table]{xcolor}
+
+%%%%%%%%%%%%%%%%%
+% Misc packages %
+%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks=true,
+    linkcolor=url,
+    urlcolor=soft_blue,
+    citecolor=soft_blue,
+    hypertexnames=false]{hyperref}
+\usepackage{siunitx}
+\sisetup{
+  locale = FR, 
+  separate-uncertainty = true, 
+  per-mode = symbol
+}
+\usepackage{soul}
+\usepackage{enumitem}
+
+% Bibliography
+\usepackage[backend=biber, style=authortitle]{biblatex}
+\addbibresource{references.bib}
