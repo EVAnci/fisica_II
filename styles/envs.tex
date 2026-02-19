@@ -1,0 +1,37 @@
+% This file keeps the main.tex file clean. Here is the declaration 
+% of every environment I use in the document
+
+% Config of the \newtheorem envs
+% This avoids the italic font in theorem
+% envs
+\theoremstyle{definition}
+
+% Definition environment. Follows the structure
+% Definición <chapter><section><number>
+\newtheorem{definition}{Definición}[section]
+
+% Property environment. Follows the structure
+% Propiedad <chapter><section><number>
+\newtheorem{property}{Propiedad}[section]
+
+% Theorem environment
+% Teorema <chapter><section><number>
+\newtheorem{theorem}{Teorema}[section]
+
+% Example environment. Follows the structure
+% Ejemplo <chapter><section><A,B,C,...> 
+% A,B,C requieres a new counter.
+\theoremstyle{remark}
+\newtheorem{example}{Ejemplo}[section]
+\renewcommand{\theexample}{\thesection.\Alph{example}}
+
+% Redefinir el cierre para agregar el símbolo de fin
+\let\origendexample\endexample
+\def\endexample{\hfill\diamond\origendexample}
+
+% Rename proof to Demostracion
+\addto\captionsspanish{\renewcommand{\proofname}{Demostración}}
+
+% Same as example, but with exercise
+\newtheorem{exercise}{Ejercicio}[section]
+\renewcommand{\theexercise}{\thesection.\Alph{exercise}}
