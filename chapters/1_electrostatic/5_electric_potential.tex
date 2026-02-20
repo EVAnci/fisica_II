@@ -3,7 +3,7 @@
 
 Así como el concepto de trabajo y energía mecánica hizo posible resolver con facilidad algunos problemas de mecánica, el empleo de las ideas de energía hace más fácil la solución de una variedad de problemas de electricidad.
 
-Cuando una partícula con carga se mueve por un campo eléctrico, el campo ejerce una fuerza que efectúa trabajo sobre la partícula. Este trabajo siempre se puede expresar en términos de la energía potencial eléctrica. Así como la energía potencial gravitatoria depende de la altura de una masa sobre la superficie terrestre, la energía potencial eléctrica depende de la posición que ocupa la partícula con carga en el campo eléctrico. Describiremos la energía potencial eléctrica utilizando un concepto, llamado \emph{potencial eléctrico} o simplemente potencial.
+Cuando una partícula con carga se mueve por un campo eléctrico, el campo ejerce una fuerza que efectúa trabajo sobre la partícula. Este trabajo siempre se puede expresar en términos de la energía potencial eléctrica. Así como la energía potencial gravitatoria depende de la altura de una masa sobre la superficie terrestre, la energía potencial eléctrica depende de la posición que ocupa la partícula con carga en el campo eléctrico. Describiremos la energía potencial eléctrica utilizando un concepto llamado \emph{potencial eléctrico} o simplemente potencial.
 
 A modo de revisión, el trabajo \(W_{ab}\) realizado por una fuerza \(\vec{F}\) sobre una partícula para desplazarla desde el punto \(a\) al punto \(b\) se define como 
 \[
@@ -11,7 +11,7 @@ A modo de revisión, el trabajo \(W_{ab}\) realizado por una fuerza \(\vec{F}\) 
 \]
 Por otro lado, si la fuerza \(\vec{F}\) es conservativa, entonces el trabajo se puede expresar en términos de una energía potencial \(U\). Cuando la partícula se mueve de un punto donde la energía potencial es \(U_a\) a otro donde es \(U_b\), el cambio en la energía potencial es \(\Delta U=U_b-U_a\), y el trabajo resulta
 \[
-  W_{ab}=U_a - U_b = -(U_b - U_a) = \Delta U
+  W_{ab}=U_a - U_b = -(U_b - U_a) = -\Delta U
 \]
 Cuando \(W_{ab}\) es positivo, \(U_a\) es mayor que \(U_b\), \(\Delta U\) es negativo y la energía potencial disminuye. Lo contrario sucede si \(W_{ab}\) es negativo.
 
@@ -21,30 +21,47 @@ Por último, para terminar la revisión, el teorema del trabajo y la energía es
 \]
 Es decir, la energía total (cinética más potencial) se conserva.
 
-Cuando se coloca una carga \(q\) en un campo eléctrico \(\vec{E}\), la carga experimenta una fuerza \(\vec{F}=q\vec{E}\). Esta fuerza es conservativa, lo que significa que el trabajo realizado por la fuerza al mover la carga entre dos puntos \(A\) y \(B\) no depende de la trayectoria seguida, sino solo de los puntos inicial y final.
+Cuando se coloca una carga de prueba \(q_0\) en un campo eléctrico \(\vec{E}\), la carga experimenta una fuerza \(\vec{F}=q_0\vec{E}\). Esta fuerza es conservativa, lo que significa que el trabajo realizado por la fuerza al mover la carga entre dos puntos \(A\) y \(B\) no depende de la trayectoria seguida, sino solo de los puntos inicial y final.
 
-El trabajo realizado por la fuerza al mover la carga \(q\) desde el punto \(A\) hasta el punto \(B\) se define como
+El trabajo realizado por la fuerza al mover la carga \(q_0\) desde el punto \(A\) hasta el punto \(B\) se define como
 \begin{equation*}
-  W_{AB} = \int_A^B \vec{F} \cdot d\vec{s} = \int_A^B q\vec{E} \cdot d\vec{s}
+  W_{AB} = \int_A^B \vec{F} \cdot d\vec{s} = \int_A^B q_0\vec{E} \cdot d\vec{s}
 \end{equation*}
 donde \(d\vec{s}\) es un elemento diferencial de desplazamiento a lo largo de la trayectoria. Y como la fuerza eléctrica es conservativa, podemos expresarla en términos de la energía potencial eléctrica \(U\),
 \begin{equation*}
-  W_{AB} = U_A - U_B = -\Delta U = \int_A^B q\vec{E}\cdot d\vec{s}
+  W_{AB} = U_A - U_B = -\Delta U = \int_A^B q_0\vec{E}\cdot d\vec{s}
 \end{equation*}
+Observe que la variable para el trabajo es la fuerza. Entonces, para el trabajo realizado por una fuerza eléctrica, lo que varía es el campo eléctrico, que es lo que produce la fuerza. En ambos casos la variación de fuerza ocurre en función del desplazamiento o la distancia \(r\).
+
+Como en cualquier caso la fuerza eléctrica es conservativa, entonces el trabajo no depende de la trayectoria seguida por \(q_0\), sino de la diferencia de energía potencial. A su vez, la energía potencial \(U\) depende de la distancia \(r\), que en el caso particular de un campo generado por una carga puntual \(q\), es:
+\[
+  U= Er q_0 = k_e\frac{q q_0}{r}~ [\unit{\joule}]
+\]
+donde \(r\) es la distancia de la carga de prueba \(q_0\) a la carga fuente \(q\). De donde se puede deducir que existe un punto de referencia de energía potencial cero, que dependiendo de la configuración de cargas y campo puede estar en un punto determinado, o en el infinito, como muestra la figura \ref{fig_funcion_energia_potencial}.
+
+\begin{marginfigure}
+  \centering
+  \caption{Gráfica de la energía potencial \(U\) de dos cargas puntuales contra su separación \(r\).}
+  \label{fig_funcion_energia_potencial}
+  \input{chapters/1_electrostatic/media/5_potencial.tex}
+\end{marginfigure}
 
 \subsection{Definición de potencial eléctrico}
 
-Para una posición conocida de la carga de prueba en el campo, el sistema carga-campo tiene una energía potencial \(U\) relativa a la configuración del sistema definida como \(U=0\). Al dividir la energía potencial entre la carga de prueba \(q\), obtenemos el \emph{potencial eléctrico} \(V\) en un punto \(P\) del campo eléctrico:
+\begin{definition}[Potencial Eléctrico]\label{def_potencial}
+Para una posición conocida de la carga de prueba en el campo, el sistema carga-campo tiene una energía potencial \(U\) relativa a la configuración del sistema definida como \(U=0\). Al dividir la energía potencial entre la carga de prueba \(q_0\), obtenemos el \emph{potencial eléctrico} \(V\) en un punto \(P\) del campo eléctrico:
 \begin{equation}
-  V = \frac{U}{q}
+  V = \frac{U}{q_0} ~ [\unit{\joule\per\coulomb}]
   \label{eq:potential}
 \end{equation}
+\end{definition}
 
-El potencial eléctrico es una magnitud escalar que se mide en \(\text{V}\) (voltios) y se define como la energía potencial por unidad de carga.
+El potencial eléctrico es una magnitud escalar que se mide en \unit{\volt} (voltios)\footnote{Observe el importante detalle tipográfico, el potencial eléctrico se denota con una \(V\) mayúscula itálica, mientras que la unidad voltio se denota con una \unit{\volt} mayúscula regular.} y se define como la energía potencial por unidad de carga.
+% En versiones futuras, se podría usar \(\mathcal{V}\) en vez de V, para evitar confusión.
 
-Teniendo en cuenta la definición de potencial (ecuación \eqref{eq:potential}) la diferencia de potencial \(\Delta V = V_B - V_A\) entre dos puntos \(A\) y \(B\) en un campo eléctrico se define como el cambio en energía potencial por unidad de carga al mover una carga de prueba \(q\) entre esos dos puntos
+Teniendo en cuenta la definición \ref{def_potencial} de potencial y la ecuación \eqref{eq:potential}, se define la diferencia de potencial \(\Delta V = V_B - V_A\) entre dos puntos \(A\) y \(B\) en un campo eléctrico. Esto representa el cambio de energía potencial por unidad de carga al mover una carga de prueba \(q_0\) entre esos dos puntos
 \begin{equation}
-  \Delta V = \frac{\Delta U}{q} = -\int_A^B \vec{E} \cdot d\vec{s}
+  \Delta V = \frac{\Delta U}{q_0} = -\int_A^B \vec{E} \cdot d\vec{s}
   \label{eq:potential_difference}
 \end{equation}
 
@@ -55,54 +72,69 @@ Por la ecuación \eqref{eq:potential_difference}, el trabajo realizado por un ag
 
 Es muy importante que el desplazamiento de la carga \(q\) sea a velocidad constante, ya que si no lo es, el trabajo realizado por el agente externo no será igual al trabajo realizado por la fuerza eléctrica. 
 
+\begin{tcolorbox}[myconclusion]
+  El desplazamiento debe ser a velocidad constante, ya que para que todas las fuerzas que actúen sean conservativas, el movimiento de la carga debe ser debido a su energía cinética \(K_q\) y la fuerza actuante debe ser debido a su energía potencial \(U\). Evidentemente, la velocidad relacionada al campo eléctrico tal vez no sea constante. En términos simples, como sucedía con la energía potencial gravitatoria, la fuerza provocaba que la velocidad vertical no sea constante. Sin embargo, la velocidad horizontal siempre era constante.
+\end{tcolorbox}
+
 Nótese que el concepto de potencial eléctrico se concibe de forma similar al de campo eléctrico. Se usa una carga de prueba positiva \(q\) haciendo que sólo dependa de la carga fuente \(Q\) que genera el campo eléctrico. 
 
 \subsection{Diferencia de potencial en un campo eléctrico uniforme}
 
-La ecuación \eqref{eq:potential_difference} es válida en todos los campos eléctricos, sean uniformes o no. En un campo eléctrico uniforme, la magnitud del campo \(\vec{E}\) es constante y la dirección de \(\vec{E}\) es la misma en todos los puntos del campo. En este caso, la diferencia de potencial entre dos puntos \(A\) y \(B\) separados por una distancia \(d\) en la dirección del campo eléctrico se puede expresar como:
+La ecuación \eqref{eq:potential_difference} es válida en todos los campos eléctricos, sean uniformes o no, es decir, es la fórmula general para la obtención de la diferencia de potencial. Sin embargo, en un campo eléctrico uniforme, la magnitud del campo \(\vec{E}\) es constante y la dirección de \(\vec{E}\) es la misma en todos los puntos del campo, de modo tal que se pueden simplificar los cálculos. En este caso, la diferencia de potencial entre dos puntos \(A\) y \(B\) separados por una distancia \(d\) en la dirección del campo eléctrico se puede expresar como:
 \begin{equation}
   \Delta V = -\int_A^B \vec{E} \cdot d\vec{s} = -E \, \int_A^B ds = \boxed{-Ed}
   \label{eq:potential_uniform}
 \end{equation}
 donde \(E\) es la magnitud del campo eléctrico y \(d\) es la distancia entre los puntos \(A\) y \(B\) en la dirección del campo.
+\input{chapters/1_electrostatic/media/5_e_vs_g_potencial.tex}
 
 El signo negativo indica que el potencial en el punto \(B\) es menor que el potencial en el punto \(A\) si la carga de prueba se mueve en la dirección del campo eléctrico. Esto significa que el trabajo realizado por la fuerza eléctrica es negativo, lo que implica que la energía potencial disminuye al mover la carga en la dirección del campo eléctrico.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.75\textwidth]{potential_const_field.png}
-  \caption{Comparación de la energía potencial eléctrica y gravitatoria.}
-  \label{fig:potential_uniform}
-\end{figure}
 
 \begin{tcolorbox}[mydanger]
   Atención, si la carga \(q\) es negativa, la situación se invierte. El sistema gana energía potencial al mover la carga \(q\) en la dirección del campo eléctrico, y disminuye al moverla en la dirección opuesta.    
 \end{tcolorbox}
 
-\subsection{Potencial eléctrico debido a una carga puntual}
+\subsection{Potencial eléctrico en un punto}
 
-Como se menciona en la definición, la energía potencial es relativa al punto que se ha definido como punto de potencial cero. Con el potencial eléctrico pasa lo mismo, entonces si se quiere saber el potencial en un punto \(P\) del campo eléctrico, sabe que es igual al trabajo realizado por la fuerza eléctrica al mover una carga de prueba \(q\), pero ¿Desde donde hasta donde? Bueno, se puede definir que el potencial sea cero cuando la carga \(q\) esté infinitamente alejada de la fuente. Entonces el potencial en el punto \(P\) es el trabajo requerido para mover la carga de prueba desde el infinito hasta el punto \(P\),
+Como se mencionó previamente, la energía potencial \(U\) es relativa a un punto que se ha definido como punto de potencial cero. Esto es importante ya que la definición de potencial eléctrico \(V\) parte del concepto de energía potencial, por cuanto, hereda estos comportamientos. Esto implica que si usted desea conocer el potencial en un punto \(P\) como muestra la figura \ref{fig_potencial_en_un_punto}, entonces primero debe saber cual es el punto de potencial cero. De este modo, la distancia de \(P\) a dicho punto de potencial cero, dará la diferencia de potencial de \(P\) con respecto al punto de potencial cero, y consecuentemente, el potencial de \(P\). Entonces el potencial \(V\) en el punto \(P\) es el trabajo requerido para mover la carga de prueba desde el infinito hasta el punto \(P\). Aplicando la definición de potencial, el potencial en el punto \(P\) se obtiene de la siguiente manera,
 \begin{marginfigure}
-    \centering
-    \includegraphics[width=\linewidth]{puntual_potential_1.png}
-    \caption{Potencial en el punto \(P\) debido a \(q_1\).}
-    \label{fig:potential_point_charge}
+  \centering
+  \begin{tikzpicture}[>=stealth]
+    \coordinate (P) at (0,0);
+    \shade[ball color=orange] (30:2.5) circle (.3) node[below=3mm] {$q$};
+    \draw[dashed] (P) -- node[above] {$r$} (30:2.5);
+    \filldraw (P) circle (2pt) node[above left] {$P$};
+    \node (cartel) [
+      text width=3.3cm,
+      align=left,
+      fill=yellow!40!black!14,
+      draw=yellow!40!black!46,
+      thick,
+      rounded corners=2pt,
+      inner sep=2mm
+      ]
+      at (1,3) {Existe un potencial $k_e q/r$ en el punto $P$ debido a la carga $q$.};
+    \draw[->, thick, color=yellow!40!black!46, shorten >=3pt] 
+             (cartel.south west) to[out=240, in=60] (P);
+  \end{tikzpicture}
+  \caption{Potencial en el punto \(P\) debido a \(q\).}
+  \label{fig_potencial_en_un_punto}
 \end{marginfigure}
 \begin{align*}
     V_P &= - \lim_{a \to \infty}\int_{a}^P \vec{E} \cdot d\vec{r}\\
-        &= - \lim_{a \to \infty}\int_{a}^P \frac{kq_1}{r^2} \cdot dr\\
-        &= -kq_1 \, \lim_{a \to \infty} \int_{a}^P \frac{1}{r^2} \cdot dr\\
-        &= -kq_1 \, \lim_{a \to \infty} \left[ -\frac{1}{r} \right]_{a}^P\\
-        &= -kq_1 \, \lim_{a \to \infty} \left[ -\frac{1}{P} + \frac{1}{a} \right]\\
-        &= -kq_1 \, \left[ -\frac{1}{P} + 0 \right] \\
-    V_P &= k\frac{q_1}{r_{12}} = \lVert\vec{E}\rVert \, \lVert\vec{r}_{12}\rVert \cos(0)
+        &= - \lim_{a \to \infty}\int_{a}^P \frac{kq}{r^2} \cdot dr\\
+        &= -kq \, \lim_{a \to \infty} \int_{a}^P \frac{1}{r^2} \cdot dr\\
+        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{r} \right]_{a}^P\\
+        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{P} + \frac{1}{a} \right]\\
+        &= -kq \, \left[ -\frac{1}{P} + 0 \right] \\
+    V_P &= k\frac{q}{r} = \lVert\vec{E}\rVert \, \lVert\vec{r}\rVert \cos(0)
 \end{align*}
-por ser \(\vec{E}\) y \(\vec{r}_{12}\) paralelos. Entonces el potencial eléctrico en un punto \(P\) debido a una carga puntual \(q_1\) es:
+por ser \(\vec{E}\) y \(\vec{r}\) paralelos. Entonces el potencial eléctrico en un punto \(P\) debido a una carga puntual \(q\) es:
 \begin{equation}
-    \boxed{V_P = k\frac{q_1}{r_{12}} = E \, r_{12}}
+    \boxed{V_P = k\frac{q}{r} = E \, r}
     \label{eq:potential_point_charge}
 \end{equation}
-donde \(q_1\) es la carga fuente, \(E\) el campo generado por \(q_1\) y \(r_{12}\) la distancia a un punto en el campo eléctrico.
+donde \(q\) es la carga fuente, \(E\) el campo generado por \(q\) y \(r\) la distancia a un punto en el campo eléctrico.
 
 El potencial eléctrico debido a múltiples cargas puntuales se basa en el principio de superposición, que establece que el potencial eléctrico total en un punto es igual a la suma algebraica de los potenciales individuales producidos por cada carga.
 

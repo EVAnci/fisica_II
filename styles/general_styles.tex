@@ -81,35 +81,23 @@
   }
 }
 
-% Sección resaltada para escribir conclusiones bonitas
 \tcbset{
   myconclusion/.style={
     enhanced,
-    colback=lightyellow,
-    colframe=white, % blanco hace invisible el borde
-    boxrule=0pt,    % grosor del borde: 0pt = sin borde
-    arc=6pt,        % redondeado de bordes
-    boxsep=5pt,     % separación entre texto y borde
-    left=5pt,
-    right=5pt,
-    top=5pt,
-    bottom=5pt
+    frame hidden,
+    sharp corners,
+    colback=yellow!90!black!5,
+    borderline west={3pt}{0pt}{yellow!80!black}
   }
 }
 
-% Sección resaltada para escribir conclusiones bonitas
 \tcbset{
   mydanger/.style={
     enhanced,
-    colback=lightdanger,
-    colframe=white, % blanco hace invisible el borde
-    boxrule=0pt,    % grosor del borde: 0pt = sin borde
-    arc=6pt,        % redondeado de bordes
-    boxsep=5pt,     % separación entre texto y borde
-    left=5pt,
-    right=5pt,
-    top=5pt,
-    bottom=5pt
+    frame hidden,
+    sharp corners,
+    colback=red!80!black!5,
+    borderline west={3pt}{0pt}{red}
   }
 }
 

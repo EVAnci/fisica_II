@@ -1,0 +1,62 @@
+\begin{tikzpicture}[>=stealth]
+  \begin{axis}[
+      axis lines = middle, 
+      xlabel={$r$},
+      ylabel={$U$},
+      ymin=-0.5, ymax=6.5,
+      xmin=-0.5, xmax=6.5,
+      xtick=\empty,
+      ytick=\empty,
+      domain=0.17:5.5, 
+      samples=100,
+      grid=none,
+      width=\marginparwidth,
+      height=\marginparwidth,
+      axis line style={gray}
+    ]
+    \addplot[teal, very thick] {1/x};
+  \end{axis}
+  \shade[ball color=orange] (1,2) circle (.15) node[above=1mm] {\scriptsize$q$};
+  \shade[ball color=orange] (2,2) circle (.15) node[above=1mm] {\scriptsize$q_0$};
+  \draw[thin] (1,1.8) -- (1,1.6);
+  \draw[thin] (2,1.8) -- (2,1.6);
+  \draw[thin,<->] (1,1.7) -- node[below] {$r$} (2,1.7);
+  \shade[ball color=blue!40] (1,2.7) circle (.15) node[above=1mm] {\scriptsize$q$};
+  \shade[ball color=blue!40] (2,2.7) circle (.15) node[above=1mm] {\scriptsize$q_0$};
+\end{tikzpicture}
+\vspace{1cm}
+\begin{tikzpicture}[>=stealth]
+  \begin{axis}[
+      axis lines = middle, 
+      xlabel={$r$},
+      ymin=-6.5, ymax=0.5,
+      xmin=-0.5, xmax=6.5,
+      xtick=\empty,
+      ytick=\empty,
+      domain=0.17:5.5, 
+      samples=100,
+      grid=none,
+      width=\marginparwidth,
+      height=\marginparwidth,
+      axis line style={gray}
+    ]
+    \addplot[teal, very thick] {-1/x};
+  \end{axis}
+  \shade[ball color=blue!40] (1,1) circle (.15) node[above=1mm] {\scriptsize$q$};
+  \shade[ball color=orange] (2,1) circle (.15) node[above=1mm] {\scriptsize$q_0$};
+  \draw[thin] (1,0.8) -- (1,0.6);
+  \draw[thin] (2,0.8) -- (2,0.6);
+  \draw[thin,<->] (1,0.7) -- node[below] {$r$} (2,0.7);
+  \shade[ball color=orange] (1,1.7) circle (.15) node[above=1mm] {\scriptsize$q$};
+  \shade[ball color=blue!40] (2,1.7) circle (.15) node[above=1mm] {\scriptsize$q_0$};
+  \node (cartel) [
+    text width=3cm,
+    align=left,
+    fill=yellow!40!black!14,
+    draw=yellow!40!black!46,
+    thick,
+    rounded corners=2pt,
+    inner sep=2mm
+    ]
+    at (1.35,-2) {\footnotesize{Cuando las cargas son iguales, el potencial es mayor si la distancia es menor. Lo contrario ocurre cuando son distintas.}};
+\end{tikzpicture}
