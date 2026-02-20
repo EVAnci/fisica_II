@@ -170,7 +170,7 @@ La densidad de carga es una \emph{medida de cuánta carga eléctrica hay distrib
 
 Se usa cuando la carga está distribuida a lo largo de una línea (como un alambre).
 \[
-  \lambda = \frac{Q}{l} \quad \Rightarrow \quad dq = \lambda dl
+  \lambda = \frac{Q}{\ell} \quad \Rightarrow \quad dq = \lambda d\ell
 \]
 \begin{itemize}
   \item \( \lambda \): densidad lineal, medida en Coulomb por metro (\unit{\coulomb\per\meter}),
@@ -194,7 +194,7 @@ Se usa para cargas sobre una superficie (como una lámina metálica cargada).
   \sigma = \frac{Q}{A} \quad \Rightarrow \quad dq = \sigma dA
 \]
 \begin{itemize}
-  \item \( \sigma \): densidad superficial, medida en Coulomb por metro cuadrado (\unit{\coulomb\per\squared\meter}),
+  \item \( \sigma \): densidad superficial, medida en Coulomb por metro cuadrado (\unit{\coulomb\per\meter\squared}),
   \item \( Q \): carga sobre unidad de área,
   \item \( A \): área considerada.
 \end{itemize}
@@ -218,21 +218,83 @@ Este caso también es análogo a los dos anteriores, pero aplicado a un volumen.
 Para concluir sobre el razonamiento detrás de la idea de cuerpo continuo y su densidad de carga, se presenta un ejemplo.
 
 \begin{example}
-  Calcular la fuerza que ejerce una varilla de longitud \(\ell\), cargada con una densidad lineal de carga \(\lambda\), sobre una partícula cargada \(Q\) situada en la misma línea de la varilla y una distancia \(a\) de su extremo. La figura \ref{fig_cargas_barra_consigna} representa un esquema del enunciado.
+  Calcular la fuerza que ejerce una varilla de longitud \(\ell\), cargada con una densidad lineal de carga \(\lambda\), sobre una partícula cargada \(Q\) situada en la misma línea de la varilla a una distancia \(a\) de su extremo. La figura \ref{fig_cargas_barra_consigna} representa un esquema del enunciado.
   \begin{figure}[!ht]
     \centering
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
+      \draw[very thick,green!60!black,->] (0,0) -- (1,0) node[right] {$F_{qQ}$};
       \shade[ball color=orange] (0,0) circle (.2) node[above=2mm] {$q$};
-      \draw[thin,fill=orange!20] (2.8,-.18) rectangle (8.2,.18);
+      \draw[thin,color=orange!60!black,fill=orange!10] (-2.8,-.18) rectangle (-8.2,.18);
       \foreach \x in {3,3.5,4,...,8} {
-        \shade[ball color=orange] (\x,0) circle (.15);
-      };
-      \draw[thin,<->] (.21,0) -- node[above] {$a$} (2.79,0);
-      \draw[thin] (2.8,.3) -- (2.8,.7);
-      \draw[thin] (8.2,.3) -- (8.2,.7);
-      \draw[thin,<->] (2.8,.5) -- node[above] {$\ell$} (8.2,.5);
+        \shade[ball color=orange] (-\x,0) circle (.15);
+      }
+      \draw[thin,<->] (-.21,0) -- node[above] {$a$} (-2.79,0);
+      \draw[thin] (-2.8,.3) -- (-2.8,.7);
+      \draw[thin] (-8.2,.3) -- (-8.2,.7);
+      \draw[thin,<->] (-2.8,.5) -- node[above] {$\ell$} (-8.2,.5);
     \end{tikzpicture}
     \caption{}
     \label{fig_cargas_barra_consigna}
   \end{figure}
+
+  \textit{Solución}: La varilla tiene una densidad de carga \(\lambda\), de modo tal que la carga total es \(Q=\lambda \ell\). A partir de la ley de Coulomb, 
+  \[
+    \vec{F}_{12}=k_e \frac{q_1 q_2}{r^2}\hat{r}
+  \]
+  puede plantear las distancias de una porción pequeña de varilla \(d\ell\) a la carga \(q\). A cada \(d\ell\) le corresponderá una cantidad de carga \(dQ\) dada por la carga misma de la varilla. Como la densidad de carga es lineal y su valor es \(\lambda\) puede escribir la fuerza entre \(dQ\) y \(q\) como 
+  \[
+    F=k_e\frac{dQ \, q}{r^2} \quad \text{y} \quad dQ=\lambda d\ell
+  \]
+  de modo que puede escribirse la fuerza en términos de \(\lambda\),
+  \begin{equation}\label{eq_ej_fuerza_varilla}
+    F=k_e \frac{\lambda d\ell \, q}{r^2}
+  \end{equation}
+  Ahora, basta con encontrar una forma de representar la distancia \(r\). Se sabe que \(r\) depende de \(\ell\), pero \(r\) representa la distancia de cada \(dQ\) a \(q\). Haga lo siguiente: coloque un sistema de referencia con origen en \(q\), de modo que resulte tal y como se observa en la figura \ref{fig_cargas_barra_sistema_de_referencia}.
+  \begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[>=stealth]
+      \draw[thin,->] (-9,0) -- (2,0) node[right] {$x$};
+      \draw[thin,->] (0,-1) -- (0,1.5) node[above right] {$y$};
+      \draw[very thick,green!60!black,->] (0,0) -- (1,0) node[below right] {$F_{qQ}$};
+      \shade[ball color=orange] (0,0) circle (.2) node[above right=1mm] {$q$};
+      \draw[thin,color=orange!60!black,fill=orange!10] (-2.8,-.18) rectangle (-8.2,.18);
+      \foreach \x in {3,3.5,4,...,8} {
+        \shade[ball color=orange] (-\x,0) circle (.15);
+      }
+      \draw[thin,<->] (0,.5) -- node[above] {$a$} (-2.8,.5);
+      \draw[thin] (-2.8,.3) -- (-2.8,.7);
+      \draw[thin] (-8.2,.3) -- (-8.2,.7);
+      \draw[thin,<->] (-2.8,.5) -- node[above] {$\ell$} (-8.2,.5);
+    \end{tikzpicture}
+    \caption{}
+    \label{fig_cargas_barra_sistema_de_referencia}
+  \end{figure}
+
+  Ahora, una distancia arbitraria \(x\) sobre la barra será 
+  \[
+    r=a+x \quad \text{con } x<a ~ \text{y} ~ x>\ell
+  \]
+  Reemplazando esta última expresión en la ecuación \eqref{eq_ej_fuerza_varilla}, resulta 
+  \[
+    F=k_e \frac{\lambda d\ell \, q}{(x+a)^2}
+  \]
+  Pero como la variable de longitud que se ha elegido es \(x\), entonces un \(d\ell=dx\), de modo que se puede sustituir en la expresión final, 
+  \[
+    F=k_e \frac{\lambda dx\, q}{(x+a)^2}
+  \]
+  Como se quiere sumar cada pequeña contribución de cada porción de carga de la varilla, entonces integramos respecto de \(x\),
+  \begin{gather*}
+    F_{qQ}=\int_{\ell+a}^a k_e\frac{\lambda dx \, q}{(x+a)^2} \\ 
+    F_{qQ}=k_e q \lambda \int_{\ell+a}^a \frac{1}{(x+a)^2}dx
+  \end{gather*}
+  Esta integral puede resolverse por sustitución, donde el resultado es 
+  \begin{gather*}
+    F_{qQ} = k_e q \lambda \left( -\frac{1}{2a}+\frac{1}{\ell+2a} \right) \\ 
+    F_{qQ} = -k_e\frac{\ell \lambda q}{2a(\ell+2a)}
+  \end{gather*}
+  Como se ha realizado el cálculo empleando el lado negativo del eje de abscisas, entonces la última expresión espera valores de \(\ell\) negativos. En general, esta expresión se presentará para colocar valores de \(\ell\) positivos (ya que en general una distancia no se considera negativa). De esta manera, puede alternar el signo resultante para obtener la expresión final, donde
+  \[
+    \boxed{F_{qQ} = k_e\frac{\ell \lambda q}{2a(\ell+2a)}}
+  \]
+  no presenta signo negativo, ya que \(\ell\) será positivo.
 \end{example}

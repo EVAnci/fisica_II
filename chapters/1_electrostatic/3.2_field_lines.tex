@@ -1,13 +1,7 @@
-\subsubsection{Lineas de campo eléctrico}
+\subsection{Lineas de campo eléctrico}
 \label{sec:lineas_de_campo}
 
-\begin{wrapfigure}{l}{0.34\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{field_lines.pdf}
-  \caption{Líneas de campo eléctrico que atraviesan dos superficies}
-  \label{fig:lineas_de_campo}
-\end{wrapfigure}
-El concepto de \textbf{líneas de campo eléctrico} sirve para visualizar la acción de los campos eléctricos en el espacio. Aunque es una herramienta gráfica y no una entidad física real, permite representar de forma intuitiva la dirección y magnitud del campo eléctrico generado por distribuciones de carga.
+El concepto de líneas de campo eléctrico sirve para visualizar la acción de los campos eléctricos en el espacio. Aunque es una herramienta gráfica y no una entidad física real, permite representar de forma intuitiva la dirección y magnitud del campo eléctrico generado por distribuciones de carga.
 
 Una línea de campo eléctrico (también llamada línea de fuerza) es una curva imaginaria trazada en el espacio tal que en cada punto de ella, el vector campo eléctrico \(\vec{E}\) es tangente a la curva.
 
@@ -19,15 +13,26 @@ donde \(\vec{T}\) es el vector tangente a la línea en ese punto.
 
 Las líneas de campo eléctrico presentan las siguientes propiedades esenciales: 
 
-\textbf{Dirección}:Apuntan en el sentido en que una carga de prueba positiva se movería si se dejara libre en el campo (ya que parten del concepto de carga de prueba). Por lo tanto salen de cargas positivas y entran en cargas negativas.
+\begin{property}[Dirección]
+Apuntan en el sentido en que una carga de prueba positiva se movería si se dejara libre en el campo (ya que parten del concepto de carga de prueba). Por lo tanto salen de cargas positivas y entran en cargas negativas. De esta propiedad generalmente las cargas positivas adoptan el nombre de ``generadores'' y las cargas negativas ``sumideros''.
+\end{property}
 
-\textbf{Nunca se cruzan}: Si dos líneas se cruzaran, significaría que en ese punto el campo tiene dos direcciones diferentes, lo cual es físicamente imposible.
+\begin{property}[Disjuntas]
+Las líneas nunca se cruzan, si dos líneas se cruzaran, significaría que en ese punto el campo tiene dos direcciones diferentes, lo cual es físicamente imposible.
+\end{property}
 
-\textbf{La densidad de líneas representa la magnitud del campo}: Cuanto más juntas están las líneas, mayor es la intensidad \(|\vec{E}|\) del campo en esa región (como se muestra en la figura \ref{fig:lineas_de_campo}). En otras palabras el número de líneas de campo que pasan por una superficie perpendicular a dichas líneas es proporcional a la magnitud de campo.
+\begin{property}[Inicio y fin]
+Las líneas comienzan y terminan en cargas, en el caso de un campo estático, todas las líneas comienzan en cargas positivas y terminan en cargas negativas. En el infinito, pueden comenzar o terminar si hay una distribución desequilibrada de carga.
+\end{property}
 
-\textbf{Las líneas comienzan y terminan en cargas}: en el caso de un campo estático, todas las líneas comienzan en cargas positivas y terminan en cargas negativas. En el infinito, pueden comenzar o terminar si hay una distribución desequilibrada de carga.
+\begin{marginfigure}
+  \includegraphics[width=\linewidth]{field_lines.pdf}
+  \caption{Líneas de campo eléctrico que atraviesan dos superficies}
+  \label{fig:lineas_de_campo}
+\end{marginfigure}
+Adicionalmente, además de las propiedades, la densidad de líneas representa la magnitud del campo. Cuanto más juntas están las líneas, mayor es la intensidad \(|\vec{E}|\) del campo en esa región (como se muestra en la figura \ref{fig:lineas_de_campo}). En otras palabras el número de líneas de campo que pasan por una superficie perpendicular a dichas líneas es proporcional a la magnitud de campo.
 
-Pongamos este concepto en palabras simples ¿Recuerdas el ejemplo de las tres cargas y el ``mapa de flechas''? Bueno, las líneas de campo nos ayudan a visualizar el ``mapa de flechas'' de una forma más cómoda.
+En términos simples este concepto es sencillo ¿Recuerda el ``mapa de flechas''? Las lineas de campo representan exactamente ese mapa de una forma más práctica. Vea, la figura \ref{fig:ej_lineas_de_campo} representa el mismo diagrama de tres cargas pero empleando líneas de campo en vez de calcular el campo en múltiples puntos.
 
 \begin{figure}[ht]
   \centering
@@ -36,4 +41,4 @@ Pongamos este concepto en palabras simples ¿Recuerdas el ejemplo de las tres ca
   \label{fig:ej_lineas_de_campo}
 \end{figure}
 
-En este caso se puede ver que las líneas de campo salen de cargas positivas y entran en cargas negativas. Además, están más juntas cuando nos acercamos a las cargas, y se van separando cuando nos alejamos. La proximidad entre líneas de campo nos indica que el campo es intenso. Si las líneas están distantes entre sí indica que el campo es menos intenso. Esto se puede verificar con la ecuación del campo eléctrico, ya que el campo disminuye con el cuadrado de la distancia. Esto significa que según más nos alejamos de las cargas fuente, el campo disminuye.
+En este caso puede ver que las líneas de campo salen de cargas positivas y entran en cargas negativas. Además, están más juntas en las proximidades de las cargas, y se van separando al alejarse. La proximidad entre líneas de campo indica que el campo es intenso. Si las líneas están distantes entre sí indica que el campo es menos intenso. Esto se puede verificar con la ecuación del campo eléctrico, ya que el campo disminuye con el cuadrado de la distancia. 
