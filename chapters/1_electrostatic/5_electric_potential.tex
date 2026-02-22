@@ -5,23 +5,25 @@ Así como el concepto de trabajo y energía hizo posible resolver con facilidad 
 
 Cuando una partícula con carga se mueve por un campo eléctrico, el campo ejerce una fuerza que efectúa trabajo sobre la partícula. Este trabajo siempre se puede expresar en términos de la energía potencial eléctrica. Así como la energía potencial gravitatoria depende de la altura de una masa sobre la superficie terrestre, la energía potencial eléctrica depende de la posición que ocupa la partícula con carga en el campo eléctrico. Describiremos la energía potencial eléctrica utilizando un concepto llamado \emph{potencial eléctrico} o simplemente potencial.
 
-A modo de recordatorio, el trabajo \(W_{ab}\) realizado por una fuerza \(\vec{F}\) sobre una partícula para desplazarla desde el punto \(a\) al punto \(b\) se define como 
-\[
-  W_{ab}=\int_a^b \vec{F}\cdot d\vec{s}
-\]
-Donde la fuerza \(\vec{F}(s)\) es una función con respecto a la posición, y por lo tanto depende del desplazamiento \(d\vec{s}\).
+\begin{tcolorbox}[interesting_data]
+  A modo de recordatorio, el trabajo \(W_{ab}\) realizado por una fuerza \(\vec{F}\) sobre una partícula para desplazarla desde el punto \(a\) al punto \(b\) se define como 
+  \[
+    W_{ab}=\int_a^b \vec{F}\cdot d\vec{s}
+  \]
+  Donde la fuerza \(\vec{F}(s)\) es una función con respecto a la posición, y por lo tanto depende del desplazamiento \(d\vec{s}\).
 
-Por otro lado, si la fuerza \(\vec{F}\) resultaba ser conservativa, entonces el trabajo se podía expresar en términos de una energía potencial \(U\). Para que la partícula experimente una fuerza, debía existir un cambio en su velocidad (es decir, una aceleración). Si este cambio era debido a la fuerza peso, resultaba ser que había un cambio en su energía potencial que podía expresarse como \(\Delta U=U_b-U_a\), y el trabajo resulta
-\[
-  W_{ab}=U_a - U_b = -(U_b - U_a) = -\Delta U
-\]
-De esta última expresión se puede concluir que si el trabajo resulta positivo entonces la energía potencial en \(a\) es mayor que en \(b\), y significa que el campo realizó un trabajo sobre la partícula, es decir, \(\Delta U\) es negativo porque se perdió energía potencial y se ganó energía cinética. Ocurre lo contrario si el trabajo resulta negativo.
+  Por otro lado, si la fuerza \(\vec{F}\) resultaba ser conservativa, entonces el trabajo se podía expresar en términos de una energía potencial \(U\). Para que la partícula experimente una fuerza, debía existir un cambio en su velocidad (es decir, una aceleración). Si este cambio era debido a la fuerza peso, resultaba ser que había un cambio en su energía potencial que podía expresarse como \(\Delta U=U_b-U_a\), y el trabajo resulta
+  \[
+    W_{ab}=U_a - U_b = -(U_b - U_a) = -\Delta U
+  \]
+  De esta última expresión se puede concluir que si el trabajo resulta positivo entonces la energía potencial en \(a\) es mayor que en \(b\), y significa que el campo realizó un trabajo sobre la partícula, es decir, \(\Delta U\) es negativo porque se perdió energía potencial y se ganó energía cinética. Ocurre lo contrario si el trabajo resulta negativo.
 
-Por último, para terminar la revisión, el teorema del trabajo y la energía establece que el \emph{cambio} en la energía cinética \(\Delta K\) durante cualquier desplazamiento es igual al trabajo total realizado sobre la partícula. Si el único trabajo efectuado sobre la partícula lo realizan fuerzas conservativas, entonces 
-\[
-  \Delta K = - \Delta U \qquad \Rightarrow \qquad K_a + U_a = K_b + U_b
-\]
-Es decir, la energía total (cinética más potencial) se conserva.
+  Por último, para terminar la revisión, el teorema del trabajo y la energía establece que el \emph{cambio} en la energía cinética \(\Delta K\) durante cualquier desplazamiento es igual al trabajo total realizado sobre la partícula. Si el único trabajo efectuado sobre la partícula lo realizan fuerzas conservativas, entonces 
+  \[
+    \Delta K = - \Delta U \qquad \Rightarrow \qquad K_a + U_a = K_b + U_b
+  \]
+  Es decir, la energía total (cinética más potencial) se conserva.
+\end{tcolorbox}
 
 Volviendo con electrostática, cuando se coloca una carga de prueba \(q_0\) en un campo eléctrico \(\vec{E}\), la carga experimenta una fuerza eléctrica \(\vec{F_e}=q_0\vec{E}\). Esta fuerza es conservativa, lo que significa que el trabajo realizado por la fuerza al mover la carga entre dos puntos \(A\) y \(B\) no depende de la trayectoria seguida, sino solo de los puntos inicial y final.
 
@@ -107,92 +109,62 @@ El signo negativo indica que el potencial en el punto \(B\) es menor que el pote
 
 \subsection{Potencial eléctrico en un punto}
 
-El potencial en un punto es simplemente un caso especial de la diferencia de potencial, donde el punto de partida (usualmente el infinito para cargas puntuales) tiene un potencial de \qty{0}{\volt}. Al requerir calcular el trabajo desde el infinito hasta el punto \(P\)
+\input{chapters/1_electrostatic/media/5_carga_puntual.tex}
 
-Como se mencionó previamente, la energía potencial \(U\) es relativa a un punto que se ha definido como punto de potencial cero. Esto es importante ya que la definición de potencial eléctrico \(V\) parte del concepto de energía potencial, por cuanto, hereda estos comportamientos. Esto implica que si usted desea conocer el potencial en un punto \(P\) como muestra la figura \ref{fig_potencial_en_un_punto}, entonces primero debe saber cual es el punto de potencial cero. De este modo, la distancia de \(P\) a dicho punto de potencial cero, dará la diferencia de potencial de \(P\) con respecto al punto de potencial cero, y consecuentemente, el potencial de \(P\). Entonces el potencial \(V\) en el punto \(P\) es el trabajo requerido para mover la carga de prueba desde el infinito hasta el punto \(P\). Aplicando la definición de potencial, el potencial en el punto \(P\) se obtiene de la siguiente manera,
-\begin{marginfigure}
-  \centering
-  \begin{tikzpicture}[>=stealth]
-    \coordinate (P) at (0,0);
-    \shade[ball color=orange] (30:2.5) circle (.3) node[below=3mm] {$q$};
-    \draw[dashed] (P) -- node[above] {$r$} (30:2.5);
-    \filldraw (P) circle (2pt) node[above left] {$P$};
-    \node (cartel) [
-      text width=3.3cm,
-      align=left,
-      fill=yellow!40!black!14,
-      draw=yellow!40!black!46,
-      thick,
-      rounded corners=2pt,
-      inner sep=2mm
-      ]
-      at (1,3) {Existe un potencial $k_e q/r$ en el punto $P$ debido a la carga $q$.};
-    \draw[->, thick, color=yellow!40!black!46, shorten >=3pt] 
-             (cartel.south west) to[out=240, in=60] (P);
-  \end{tikzpicture}
-  \caption{Potencial en el punto \(P\) debido a \(q\).}
-  \label{fig_potencial_en_un_punto}
-\end{marginfigure}
+Como se mencionó previamente, la energía potencial \(U\) es relativa a un punto que se ha definido como punto de potencial cero. Esto es importante ya que la definición de potencial eléctrico \(V\) parte del concepto de energía potencial, por cuanto, hereda estos comportamientos. Esto implica que si usted desea conocer el potencial en un punto \(P\) como muestra la figura \ref{fig_potencial_en_un_punto}, entonces primero debe saber cual es el punto de potencial cero\footnote{El potencial en un punto es simplemente un caso especial de la diferencia de potencial, donde el punto de partida (usualmente el infinito para cargas puntuales) tiene un potencial de \qty{0}{\volt}.}. De este modo, la distancia de \(P\) a dicho punto de potencial cero, dará la diferencia de potencial de \(P\) con respecto al punto de potencial cero, y consecuentemente, el potencial de \(P\). Entonces el potencial \(V\) en el punto \(P\) es el trabajo requerido para mover la carga de prueba desde el infinito hasta el punto \(P\). Aplicando la definición de potencial, el potencial en el punto \(P\) se obtiene de la siguiente manera,
 \begin{align*}
-    V_P &= - \lim_{a \to \infty}\int_{a}^P \vec{E} \cdot d\vec{r}\\
-        &= - \lim_{a \to \infty}\int_{a}^P \frac{kq}{r^2} \cdot dr\\
-        &= -kq \, \lim_{a \to \infty} \int_{a}^P \frac{1}{r^2} \cdot dr\\
-        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{r} \right]_{a}^P\\ \displaybreak
-        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{P} + \frac{1}{a} \right]\\
-        &= -kq \, \left[ -\frac{1}{P} + 0 \right] \\
-    V_P &= k\frac{q}{r} = \lVert\vec{E}\rVert \, \lVert\vec{r}\rVert \cos(0)
+    V_P &= - \lim_{a \to \infty}\int_{a}^d \vec{E} \cdot d\vec{r}\\
+        &= - \lim_{a \to \infty}\int_{a}^d \frac{kq}{r^2} \cdot dr\\
+        &= -kq \, \lim_{a \to \infty} \int_{a}^d \frac{1}{r^2} \cdot dr\\
+        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{r} \right]_{a}^d\\
+        &= -kq \, \lim_{a \to \infty} \left[ -\frac{1}{d} + \frac{1}{a} \right]\\
+        &= -kq \, \left[ -\frac{1}{d} + 0 \right] \\
+    V_P &= k\frac{q}{d} = \lVert\vec{E}\rVert \, \lVert\vec{r}\rVert \cos(0)
 \end{align*}
-por ser \(\vec{E}\) y \(\vec{r}\) paralelos. Entonces el potencial eléctrico en un punto \(P\) debido a una carga puntual \(q\) es:
+siendo \(\lVert \vec{r}\rVert\) el radiovector de módulo \(d\) que apunta a \(P\). Por ser \(\vec{E}\) y \(\vec{r}\) paralelos. Entonces el potencial eléctrico en un punto \(P\) debido a una carga puntual \(q\) es:
 \begin{equation}
-    \boxed{V_P = k\frac{q}{r} = E \, r}
+    \boxed{V_P = k\frac{q}{d} = E \, d}
     \label{eq:potential_point_charge}
 \end{equation}
-donde \(q\) es la carga fuente, \(E\) el campo generado por \(q\) y \(r\) la distancia a un punto en el campo eléctrico.
+donde \(q\) es la carga fuente, \(E\) el campo generado por \(q\) y \(d\) la distancia al punto \(P\).
 
 El potencial eléctrico debido a múltiples cargas puntuales se basa en el principio de superposición, que establece que el potencial eléctrico total en un punto es igual a la suma algebraica de los potenciales individuales producidos por cada carga.
-
 \begin{equation}
-    V_{total} = \sum_{i=1}^{n} V_i = k \sum_{i=1}^{n} \frac{q_i}{r_i}
+    V_\text{total} = \sum_{i=1}^{n} V_i = k \sum_{i=1}^{n} \frac{q_i}{d_i}
 \end{equation}
 
 \subsection{Obtención de \texorpdfstring{\(\vec{E}\)}{E} a partir de \texorpdfstring{\(V\)}{V}}
 
-El campo eléctrico \(\vec{E}\) y el potencial eléctrico \(V\) están relacionados, como se muestra en la ecuación \eqref{eq:potential_point_charge}, que se usa para encontrar \(V\) en un punto cuando se conoce \(\vec{E}\). Sin embargo, también podemos encontrar \(\vec{E}\) a partir de \(V\) usando la relación:
-
+El campo eléctrico \(\vec{E}\) y el potencial eléctrico \(V\) están relacionados, como se muestra en la ecuación \eqref{eq:potential_point_charge}, que se usa para encontrar \(V\) en un punto cuando se conoce \(\vec{E}\). Aunque, también podemos encontrar \(\vec{E}\) a partir de \(V\) usando la relación:
 \begin{equation}
-    dV = -\vec{E} \cdot d\vec{s}
-    \label{eq:field_from_potential_differential}
+  dV = -\vec{E} \cdot d\vec{s}
+  \label{eq:field_from_potential_differential}
 \end{equation}
-y si estamos trabajando con una única coordenada podemos escribir la ecuación \eqref{eq:field_from_potential_differential} como:
-
+y si estamos trabajando con una única coordenada (por ejemplo, un movimiento rectilíneo) podemos escribir la ecuación \eqref{eq:field_from_potential_differential} como:
 \[
-    dV = -E \, ds \quad \Rightarrow \quad E = -\frac{dV}{ds}
+  dV = -E \, ds \quad \Rightarrow \quad E = -\frac{dV}{ds}
 \]
 
 Sin embargo, en general, el potencial eléctrico es una función de las tres coordenadas espaciales. Si \(V(r)\) se da en coordenadas cartesianas, las componentes \((E_x, E_y, E_z)\) del campo eléctrico pueden ser determinadas fácilmente a partir de \(V(x, y, z)\) como derivadas parciales
-
 \begin{equation}
+  \boxed{
     \vec{E} = -\nabla V
-    \label{eq:field_from_potential}
+  }
 \end{equation}
-donde \(\nabla\) es el operador nabla, que representa el \hl{gradiente del potencial eléctrico}. Esta relación indica que el campo eléctrico es igual al negativo del gradiente del potencial eléctrico. En otras palabras, el campo eléctrico apunta en la dirección de mayor disminución del potencial eléctrico.
+donde \(\nabla\) es el operador nabla, que representa el gradiente del potencial eléctrico. Esta relación indica que el campo eléctrico es igual al negativo del gradiente del potencial eléctrico. En otras palabras, el campo eléctrico apunta en la dirección de mayor disminución del potencial eléctrico.
 
-\paragraph{Recordatorio: operador nabla}
-
-El operador \textbf{nabla} (\(\nabla\)), también conocido como \textbf{operador del gradiente}, es una herramienta matemática usada en cálculo vectorial y análisis multivariable. Se utiliza para representar derivadas en múltiples dimensiones.
+\begin{tcolorbox}[interesting_data,title=Recordatorio]
+El operador nabla \(\nabla\) (u operador del gradiente) es una herramienta matemática usada en cálculo vectorial y análisis multivariable. Se utiliza para representar derivadas en múltiples dimensiones.
 
 Formalmente, el operador nabla se define como:
-
 \[
 \nabla = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)
 \]
-
 Es un operador vectorial que, aplicado a diferentes tipos de funciones, da lugar a distintos conceptos. En nuestro caso solo vamos a repasar el concepto de gradiente.
 
-Cuando se aplica el operador nabla a una función escalar \( f(x, y, z) \), produce un \textbf{campo vectorial} que apunta en la dirección de mayor incremento de la función. Se expresa como:
-
+Cuando se aplica el operador nabla a una función escalar \( f(x, y, z) \), produce un campo vectorial que apunta en la dirección de mayor incremento de la función. Se expresa como:
 \[
 \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right)
 \]
-
 Este vector resultante indica la dirección en la que la función crece más rápidamente y su magnitud corresponde a la tasa de cambio máxima. En el caso de \(\vec{E}\) y \(V\), \(\vec{E}\) es el gradiente de \(V\) representa una función vectorial que apunta en la dirección de mayor aumento del potencial eléctrico.
+\end{tcolorbox}

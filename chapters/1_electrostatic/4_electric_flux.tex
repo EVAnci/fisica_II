@@ -1,7 +1,15 @@
 \section{Flujo eléctrico}
 \label{sec:flujo_electrico}
 
-El flujo eléctrico es una medida de la cantidad de campo eléctrico que atraviesa una superficie dada. Se define matemáticamente como el producto de la magnitud del campo eléctrico (\(E\)) y el área (\(A\)) de la superficie a través de la cual se mide el flujo, así como el coseno del ángulo (\(\theta\)) entre la dirección del campo eléctrico y la normal (perpendicular) a la superficie. 
+El flujo eléctrico es una medida de la cantidad de campo eléctrico que atraviesa una superficie dada. 
+
+\begin{definition}[Flujo eléctrico]
+  El flujo eléctrico \(\Phi_E\) se define como
+  \[
+  \Phi_E = E \cdot A \cdot \cos(\theta)  \quad \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
+  \]
+  donde \(E\) es la magnitud del campo eléctrico, \(A\) el área de la superficie considerada y \(\theta\) el ángulo entre la dirección del campo eléctrico y la normal de la superficie.
+\end{definition}
 
 \begin{figure}[ht]
   \centering
@@ -18,18 +26,6 @@ El flujo eléctrico es una medida de la cantidad de campo eléctrico que atravie
   \end{subfigure}
   \caption{Flujo eléctrico}
 \end{figure}
-
-La fórmula para calcular el flujo eléctrico (\(\Phi_E\)) es:
-\[
-\Phi_E = E \cdot A \cdot \cos(\theta)  \quad \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
-\]
-Donde:
-\begin{itemize}
-  \item \(\Phi_E\) es el flujo eléctrico.
-  \item \(E\) es la magnitud del campo eléctrico.
-  \item \(A\) es el área de la superficie.
-  \item \(\theta\) es el ángulo entre la dirección del campo eléctrico y la normal a la superficie.
-\end{itemize}
 
 Otra forma más general de escribir el flujo eléctrico es usando el producto escalar. Para poder usar el producto escalar, se necesitan dos vectores, y en este caso solo se tiene el vector de campo eléctrico \(\vec{E}\). Entonces se define un vector normal a la superficie con igual magnitud al área de la superficie. En definitiva, el producto escalar entre el vector campo eléctrico \(\vec{E}\) y el vector normal al área \(\vec{A}\) es:
 \begin{equation}
@@ -69,9 +65,9 @@ aquí se tiene que \(E=kq/r^2\) donde \(r\) es conocido y vale el radio de la es
 
 Este resultado dice muchas cosas:
 \begin{itemize}
-  \item \textbf{Primero}: el flujo eléctrico \(\Phi_E\) no depende del radio de la superficie esférica.
-  \item \textbf{Segundo}: el flujo es directamente proporcional a la carga encerrada en el interior de la superficie gaussiana.
-  \item \textbf{Tercero}: el flujo es inversamente proporcional al valor de \(\varepsilon\), en el ejemplo se trabajó con vacío, pero puede ser cualquier material no conductor con otro valor de \(\varepsilon\).
+  \item \textit{Primero}: el flujo eléctrico \(\Phi_E\) no depende del radio de la superficie esférica.
+  \item \textit{Segundo}: el flujo es directamente proporcional a la carga encerrada en el interior de la superficie gaussiana.
+  \item \textit{Tercero}: el flujo es inversamente proporcional al valor de \(\varepsilon\), en el ejemplo se trabajó con vacío, pero puede ser cualquier material no conductor con otro valor de \(\varepsilon\).
 \end{itemize}
 
 En base a esto se puede sacar una conclusión, suponga que la superficie no es esférica ¿Cómo será el flujo? El flujo, sorprendentemente, será el mismo que el de la esfera, pero ¿Por qué? Piense en la definición de flujo, sea cualquier superficie que rodea la esfera, el flujo será igual a el \(\vec{E}\cdot d\vec{A}\). Como se vio anteriormente esto representa la cantidad de líneas de campo que pasan por una superficie determinada. Como la superficie encierra la misma carga entonces saldrán la misma cantidad de líneas de campo por la superficie.
