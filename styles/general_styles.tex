@@ -79,6 +79,7 @@
     sharp corners,
     colback=chamoisee!5,
     borderline west={3pt}{0pt}{applegreen!75!black},
+    titlerule=0pt, bottomrule=0pt, toprule=0pt, rightrule=0pt,
     breakable,
     coltitle=applegreen!60!black
   }
@@ -101,6 +102,18 @@
     sharp corners,
     colback=red!80!black!5,
     borderline west={3pt}{0pt}{red}
+  }
+}
+
+\tcbset{
+  sidenote/.style={
+    enhanced,
+    sharp corners,
+    frame hidden,
+    colback=gray!20,
+    colbacktitle=gray,
+    titlerule=0pt, bottomrule=0pt, toprule=0pt, rightrule=0pt, leftrule=0pt,
+    title=\footnotesize Prevención de Riesgos
   }
 }
 
