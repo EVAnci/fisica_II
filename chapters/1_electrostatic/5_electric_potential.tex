@@ -10,19 +10,28 @@ Cuando una partícula con carga se mueve por un campo eléctrico, el campo ejerc
   \[
     W_{ab}=\int_a^b \vec{F}\cdot d\vec{s}
   \]
-  Donde la fuerza \(\vec{F}(s)\) es una función con respecto a la posición, y por lo tanto depende del desplazamiento \(d\vec{s}\).
+  Donde la fuerza \(\vec{F}:\mathbb{R}^3 \mapsto \mathbb{R}^3\) es una función vectorial o un campo vectorial que tiene como valores de entrada puntos. Es usual usar la notación \(\vec{F}(\vec{r})\) para indicar que \(\vec{F}\) depende del vector posición \(\vec{r}\), mientras que el desplazamiento \(d\vec{s}\) es el vector tangente de un diferencial de posición  del camino de integración. La fuerza y el vector desplazamiento se multiplican con el producto escalar, ya que la fuerza que actúa perpendicular respecto del desplazamiento no realiza trabajo. En definitiva, solo se toma la componente paralela de la fuerza al desplazamiento.
 
-  Por otro lado, si la fuerza \(\vec{F}\) resultaba ser conservativa, entonces el trabajo se podía expresar en términos de una energía potencial \(U\). Para que la partícula experimente una fuerza, debía existir un cambio en su velocidad (es decir, una aceleración). Si este cambio era debido a la fuerza peso, resultaba ser que había un cambio en su energía potencial que podía expresarse como \(\Delta U=U_b-U_a\), y el trabajo resulta
+  Un campo, como puede ser el campo gravitatorio \(\vec{g}\) o el campo eléctrico \(\vec{E}\) se denominan campos conservativos. Un campo es conservativo si su rotacional es cero y cumple con el Teorema de Stokes (su dominio sea simplemente conexo). Esta afirmación no se demostrará pero es importante tenerla presente, ya que de a partir de esto puede demostrarse que 
+  \begin{itemize}
+    \item el trabajo realizado por una fuerza conservativa es independiente de la trayectoria,
+    \item el trabajo es nulo si la trayectoria es cerrada (\(a=b\)), y
+    \item siempre puede encontrarse una función potencial \(U\) tal que \(\vec{F}=-\nabla U\).
+  \end{itemize}
+
+  Si la fuerza \(\vec{F}\) es producida por un campo conservativo significa que la energía invertida en realizar un trabajo es almacenada en dicho campo. Aunque es conveniente aclarar que la energía no es únicamente del campo, más bien corresponde al sistema partícula-campo. A esta energía se la denomina energía potencial \(U\). Por ejemplo, si eleva una pelota, usted está realizando un trabajo sobre la misma, sin embargo si la suelta cae. Esto se debe a que parte de la energía fue almacenada en el sistema pelota-campo gravitatorio como energía potencial gravitatoria.
+
+  Si usted desplaza la pelota a \textbf{velocidad constante} (sin aceleración) del punto \(a\) al punto \(b\), entonces el trabajo total \(W_{ab}=0\) ya que \(F_\text{aplicada}=-F_\text{peso}\) y \(\sum F_i = 0\), sin embargo su trabajo individual \(W_\text{ext}\) será igual pero opuesto al que realiza el campo \(-W_\text{int}\). En otras palabras, el cambio en la energía potencial almacenada por el campo gravitatorio será igual al trabajo que usted realizó que a su vez será igual (en magnitud) al trabajo que realizó el campo. A este trabajo que realiza el campo se le denomina \(W_\text{int}\), y puede calcularse como
   \[
-    W_{ab}=U_a - U_b = -(U_b - U_a) = -\Delta U
+    W_\text{int}= -\Delta U \quad \text{y, en consecuencia} \quad W_\text{ext}= \Delta U.
   \]
-  De esta última expresión se puede concluir que si el trabajo resulta positivo entonces la energía potencial en \(a\) es mayor que en \(b\), y significa que el campo realizó un trabajo sobre la partícula, es decir, \(\Delta U\) es negativo porque se perdió energía potencial y se ganó energía cinética. Ocurre lo contrario si el trabajo resulta negativo.
+  De donde se puede concluir que si el trabajo \(W_\text{int}\) resulta positivo entonces la energía potencial en \(a\) es mayor que en \(b\). Es decir si mueve la pelota a velocidad constante hacia abajo (a favor del campo) la pelota pierde energía potencial, significa que la capacidad del campo para realizar trabajo en \(b\) es menor que en \(a\). En definitiva, la energía potencial del sistema disminuye y esa disminución es igual al trabajo positivo realizado por el campo.
 
-  Por último, para terminar la revisión, el teorema del trabajo y la energía establece que el \emph{cambio} en la energía cinética \(\Delta K\) durante cualquier desplazamiento es igual al trabajo total realizado sobre la partícula. Si el único trabajo efectuado sobre la partícula lo realizan fuerzas conservativas, entonces 
+  Por último, para terminar la revisión, recuerde el teorema del trabajo y la energía, que establece que el \emph{cambio} en la energía cinética \(\Delta K\) durante cualquier desplazamiento es igual al trabajo total realizado sobre la partícula. Si el único trabajo efectuado sobre la partícula lo realizan fuerzas conservativas, entonces 
   \[
     \Delta K = - \Delta U \qquad \Rightarrow \qquad K_a + U_a = K_b + U_b
   \]
-  Es decir, la energía total (cinética más potencial) se conserva.
+  Es decir, la energía total inicial es igual a la energía total final. O en otras palabras, la energía mecánica total \(E_\text{mecánica} = K + U\) se conserva. Es decir todo trabajo de fuerzas conservativas es un intercambio de energía cinética y potencial.
 \end{tcolorbox}
 
 Volviendo con electrostática, cuando se coloca una carga de prueba \(q_0\) en un campo eléctrico \(\vec{E}\), la carga experimenta una fuerza eléctrica \(\vec{F_e}=q_0\vec{E}\). Esta fuerza es conservativa, lo que significa que el trabajo realizado por la fuerza al mover la carga entre dos puntos \(A\) y \(B\) no depende de la trayectoria seguida, sino solo de los puntos inicial y final.

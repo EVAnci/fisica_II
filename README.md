@@ -107,3 +107,8 @@ El documento incluye los siguientes temas:
 
 Este proyecto está bajo la licencia **[CC BY-SA](LICENSE)**. Siéntete libre de usarlo, modificarlo y compartirlo.
 
+## Notas asociadas al documento
+
+Este documento no está excento de errores. De hecho, está en un proceso de revisión continuo. En este momento se está reorganizando y escribiendo de forma más clara el capítulo 1. Hay algunos capítulos más ordenados que otros. Pero hay capítulos en los que no se ha profundizado bien sobre aspectos fundamentales.
+
+El tratamiento del campo eléctrico y el potencial es simplemente un tema que abarca muchas cosas del cálculo. En este documento han sido expuestos como simples temas. Esto debe corregirse y dar un fundamento lo más completo posible para entender las limitaciones del modelo matemático que lo respalda.
