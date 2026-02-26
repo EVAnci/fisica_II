@@ -1,8 +1,8 @@
 \graphicspath{ {./images/2_direct_current/} }
 
-\section{Corriente Continua}
+\chapter{Corriente Continua}
 
-\subsection{Corriente Eléctrica}
+\section{Corriente Eléctrica}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
     \centering
@@ -15,7 +15,7 @@ La corriente eléctrica es el flujo de carga eléctrica a través de un conducto
 
 Cuando hablamos de \textbf{flujo de carga} nos referimos a la cantidad de carga que se mueve a través de una sección transversal del conductor en un tiempo determinado.
 
-\subsubsection{Definición}
+\subsection{Definición}
 
 Para definir la corriente con mayor precisión, suponga que las cargas tienen un movimiento perpendicular a una superficie \(A\), según se observa en la figura \ref{fig:current}. La \textbf{corriente} se define como la tasa a la cual circula la carga a través de la superficie. Si \(\Delta Q\) es la carga que pasa a través de la superficie \(A\) en un intervalo de tiempo \(\Delta t\), la corriente promedio \(I_{prom}\) se define como:
 
@@ -32,7 +32,7 @@ Si la tasa a la que pasan las cargas varía en el tiempo, la corriente instantá
     \textbf{Cuidado:} la corriente es una magnitud \textit{escalar}. Por lo general describiremos la dirección de la corriente ya sea con palabras (por ejemplo, ``la corriente fluye por el circuito en el sentido horario'') o eligiendo una corriente como positiva si fluye en un sentido a lo largo de un conductor, y negativa si fluye en sentido contrario.
 \end{tcolorbox}
 
-\subsubsection{Movimiento de las cargas}
+\subsection{Movimiento de las cargas}
 \label{sec:movimiento_de_cargas}
 
 Para que exista un movimiento de cargas, es necesario que exista una fuerza que actúe sobre ellas. Esta fuerza es la fuerza eléctrica (ley de Coulomb: \ref{eq:ley_coulomb}) que actúa sobre las cargas libres (electrones) debido a la presencia de un campo eléctrico \(E\). Es decir, para que haya corriente eléctrica, debe existir un campo eléctrico que actúe sobre las cargas libres en el conductor. Este campo eléctrico puede ser generado por una diferencia de potencial entre dos puntos del conductor, como en el caso de una batería o una fuente de alimentación.
@@ -83,7 +83,7 @@ Si dividimos ambos lados de la ecuación por \(\Delta t\), obtenemos la corrient
 
 La figura \ref{fig:flujo_de_cargas} presenta segmentos de material conductor. En la figura \ref{fig:flujo_de_cargas_positivas}, las cargas en movimiento son positivas, la fuerza eléctrica ocurre en la misma dirección que \(E\), y la velocidad de deriva \(v_d\) es de izquierda a derecha. En la figura \ref{fig:flujo_de_cargas_negativas} las cargas son negativas, la fuerza eléctrica es opuesta a \(E\), y la velocidad de deriva \(v_d\) es de derecha a izquierda. Definimos que la corriente, denotada por \(I\), va en la dirección en la que hay un flujo de carga positiva. Por ello, las corrientes se describen como si consistieran por completo en un flujo de cargas positivas, aun en los casos en que se sabe que la corriente real se debe a electrones. Así, en las figuras \ref{fig:flujo_de_cargas_positivas} y \ref{fig:flujo_de_cargas_negativas} la corriente es hacia la derecha. Esta convención sobre la dirección del flujo de la corriente se llama \textbf{corriente convencional}. Aunque la dirección de la corriente convencional no es necesariamente la misma en que se desplazan en realidad las partículas con carga, veremos que el signo de las cargas en movimiento tiene poca importancia en el análisis de los circuitos eléctricos.
 
-\subsubsection{Densidad de corriente}
+\subsection{Densidad de corriente}
 
 La densidad de corriente \(\vec{J}\) se define como la corriente por unidad de área transversal:
 \[
@@ -98,9 +98,9 @@ Dado que la corriente \(I\) se puede expresar como \(n \, A\, v_d\, q\), la dens
 
 Es importante notar que la densidad de corriente es un vector, pero la corriente \(I\) no lo es. La diferencia está en que la densidad de corriente \(\vec{J}\) describe como fluyen las cargas en cierto punto, mientras que la corriente \(I\) describe la forma en la que fluyen las cargas a través de un objeto extendido. 
 
-\subsection{Ley de Ohm}
+\section{Ley de Ohm}
 
-\subsubsection{Resistividad}
+\subsection{Resistividad}
 
 La \textbf{resistividad} \(\rho\) de un material se define como la razón de las magnitudes del campo eléctrico y la densidad de corriente:
 \begin{equation}
@@ -121,7 +121,7 @@ donde la constante de proporcionalidad \(\sigma\) es la \textbf{conductividad} d
 
 La relación de la ecuación \ref{eq:forma_local_de_la_ley_de_ohm} describe cómo un campo eléctrico induce una corriente en un medio conductor. Los materiales que obedecen dicha relación siguen la \textbf{ley de Ohm}.
 
-\subsubsection{Formulando la ley de Ohm}
+\subsection{Formulando la ley de Ohm}
 
 En estado estacionario, el campo eléctrico dentro de un conductor es constante en el tiempo. De la electrostática sabemos que:
 
@@ -143,7 +143,7 @@ De aquí se deduce la ley de Ohm macroscópica:
     \label{eq:ley_de_ohm}    
 \end{equation}
 
-\subsubsection{Resistencia}
+\subsection{Resistencia}
 
 La resistencia eléctrica se define como:
 \[
@@ -157,9 +157,9 @@ La inversa de la conductividad es la resistividad \( \rho \), por lo tanto:
     \label{eq:resistencia}
 \end{equation}
 
-\subsection{Aplicación de la ley de Ohm a circuitos}
+\section{Aplicación de la ley de Ohm a circuitos}
 
-\subsubsection{Circuitos en Serie}
+\subsection{Circuitos en Serie}
 
 Antes de comenzar es importante tener en cuenta que en un circuito en serie la corriente \( I \) es la misma en todos los elementos debido a que no hay bifurcaciones. Esto es debido a la conservación de la carga eléctrica y a la naturaleza de la conexión en serie.
 
@@ -207,7 +207,7 @@ Si se aplica una diferencia de potencial de \( V = 20 \, \text{V} \), entonces:
 I = \frac{V}{R_{\text{eq}}} = \frac{20}{10} = 2 \, \text{A}
 \]
 
-\subsubsection{Circuitos en Paralelo}
+\subsection{Circuitos en Paralelo}
 
 Al igual que en la sección anterior, vamos a partir con algunos supuestos físicos:
 \begin{itemize}
@@ -252,11 +252,11 @@ Tres resistencias: \( R_1 = 4 \, \Omega \), \( R_2 = 6 \, \Omega \), \( R_3 = 12
 \Rightarrow R_{\text{eq}} = 2 \, \Omega
 \]
 
-\subsection{Energía y Potencia eléctrica}
+\section{Energía y Potencia eléctrica}
 
 Ahora abordaremos las expresiones teóricas de energía y potencia eléctrica en un circuito de corriente continua, partiendo de principios fundamentales. Estas magnitudes están directamente relacionadas con el trabajo que realiza el campo eléctrico sobre las cargas en movimiento. 
 
-\subsubsection{Trabajo eléctrico}
+\subsection{Trabajo eléctrico}
 
 Recordando lo que vimos en la unidad de electrostática, cuando una carga eléctrica \( q \) se desplaza entre dos puntos con diferencia de potencial \( \Delta V \), el trabajo realizado por el campo eléctrico es:
 
@@ -279,7 +279,7 @@ Entonces, el trabajo realizado en ese intervalo de tiempo es:
     \label{eq:trabajo_electrico}    
 \end{equation}
 
-\subsubsection{Potencia eléctrica}
+\subsection{Potencia eléctrica}
 
 La potencia es el trabajo realizado en un intervalo de tiempo, entonces la tasa de transferencia de energía (o trabajo realizado) por unidad de tiempo es:
 
@@ -318,7 +318,7 @@ Estas tres expresiones son equivalentes:
 y se usan dependiendo de qué variables sean conocidas en un circuito dado.
 
 
-\subsubsection{Energía disipada en el tiempo}
+\subsection{Energía disipada en el tiempo}
 
 Integrando la potencia en el tiempo se obtiene la energía total disipada o entregada:
 
@@ -348,5 +348,5 @@ Un resistor de \( R = 10 \, \Omega \) conectado a una batería de \( V = 12 \, \
     \item Energía disipada: \( W = P \Delta t = 14.4 \cdot 30 = 432 \, \text{J} \)
 \end{itemize}
 
-\subsection{Resumen}
+\section{Resumen}
 \input{chapters/2_direct_current/summary.tex}

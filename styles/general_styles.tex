@@ -59,7 +59,14 @@
 \newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}} % Derivada parcial
 
 % Tile para resúmenes
-\tcbset{colback=blue!5!white, colframe=airforceblue!75!black, fonttitle=\bfseries}
+\tcbset{
+  resumen/.style={
+    colback=blue!5!white,
+    colframe=airforceblue!75!black,
+    fonttitle=\bfseries,
+    breakable
+  }
+}
 
 % Tile para cuadros de recordatorio
 \tcbset{
