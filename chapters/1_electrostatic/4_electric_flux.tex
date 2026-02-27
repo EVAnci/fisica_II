@@ -42,9 +42,9 @@ Hay que tener muy presente que \(\Phi_E\) es un valor escalar, no un vector. Ade
 \label{sec:ley_de_gauss}
 
 El flujo eléctrico es importante en el estudio del electromagnetismo porque está relacionado con la ley de Gauss, que establece que el flujo eléctrico a través de una superficie cerrada (con frecuencia llamada \textit{superficie gaussiana}) es proporcional a la carga eléctrica total encerrada dentro de esa superficie. Suponga una carga puntual positiva \(q\) ubicada en el centro de una esfera de radio \(r\) como se observa en la figura \ref{fig:superficie_gaussiana}.
-De la ecuación de campo eléctrico, se sabe que la magnitud del campo eléctrico sobre todos los puntos de la superficie (\(S\)) de la esfera es \(\vec{E} = k q/r^2\).
+De la ecuación de campo eléctrico, se sabe que la magnitud del campo eléctrico sobre todos los puntos de la superficie \(S\) de la esfera es \(\vec{E} = k q/r^2\).
 
-\begin{marginfigure}[2mm]
+\begin{marginfigure}[-2cm]
   \includegraphics[width=\marginparwidth]{gauss_surface.pdf}
   \caption{Superficie gaussiana esférica de radio \(r\) que rodea una carga puntual \(q\).}
   \label{fig:superficie_gaussiana}
@@ -70,11 +70,11 @@ Este resultado dice muchas cosas:
   \item \textit{Tercero}: el flujo es inversamente proporcional al valor de \(\varepsilon\), en el ejemplo se trabajó con vacío, pero puede ser cualquier material no conductor con otro valor de \(\varepsilon\).
 \end{itemize}
 
-En base a esto se puede sacar una conclusión, suponga que la superficie no es esférica ¿Cómo será el flujo? El flujo, sorprendentemente, será el mismo que el de la esfera, pero ¿Por qué? Piense en la definición de flujo, sea cualquier superficie que rodea la esfera, el flujo será igual a el \(\vec{E}\cdot d\vec{A}\). Como se vio anteriormente esto representa la cantidad de líneas de campo que pasan por una superficie determinada. Como la superficie encierra la misma carga entonces saldrán la misma cantidad de líneas de campo por la superficie.
+En base a esto se puede sacar una conclusión, suponga que la superficie no es esférica ¿Cómo será el flujo? El flujo, sorprendentemente, será el mismo que el de la esfera, pero ¿Por qué? La definición de flujo eléctrico \(\Phi_E\) establece una relación entre el concepto de líneas de campo eléctrico y una superficie. Así cualquier superficie \(S'\) que envuelve a la esfera tendrá un flujo resultante \(\Phi_E=\vec{E}\cdot d\vec{A}\). Como la superficie \(S'\) encierra la misma carga entonces saldrán la misma cantidad de líneas de campo por la superficie.
 
-En este punto tal vez se pregunte ¿Cómo puede ser que no dependa del radio de la esfera, o mejor, del tamaño de la superficie arbitraria cerrada? Es sencillo, si el tamaño de la superficie cerrada aumenta, entonces la distancia a la carga encerrada también aumentará, esto significa que la intensidad del campo disminuirá, entonces pasarán menos líneas de campo por cada \(dA\), pero como la superficie total a aumentado, entonces compensará la pérdida de intensidad del campo. 
+En este punto tal vez se pregunte ¿Cómo puede ser que no dependa del radio de la esfera, o mejor, del tamaño de la superficie arbitraria cerrada? Es sencillo, si el tamaño de la superficie cerrada aumenta, entonces la distancia a la carga encerrada también aumentará, esto significa que la intensidad del campo \(E\) disminuirá, entonces pasarán menos líneas de campo por cada \(dA\), pero como la superficie total ha aumentado, entonces compensará la pérdida de intensidad del campo. 
 
-Como conclusión, el flujo neto a través de \textit{cualquier} superficie cerrada que rodea a una carga puntual \(q\) está dado por \(q/\varepsilon_0\) y es independiente de la forma de la superficie. Entonces, a modo de ejemplo, si supone múltiples superficies, llámese cada una \(S1\), \(S2\) y \(S3\) y estas superficies rodean a la carga \(q\) (ver figura \ref{fig:superficie_gaussiana_arbitraria} del lado izquierdo), entonces todas estas superficies tienen el mismo flujo eléctrico \(\Phi_E\), ya que todas encierran la misma carga \(q\). 
+Como conclusión, el flujo neto a través de \textit{cualquier} superficie cerrada que rodea a una carga puntual \(q\) está dado por \(q/\varepsilon_0\) y es independiente de la forma de la superficie. Entonces, a modo de ejemplo, si supone múltiples superficies, llámese cada una \(S_1\), \(S_2\) y \(S_3\) y estas superficies rodean a la carga \(q\) (ver figura \ref{fig:superficie_gaussiana_arbitraria} del lado izquierdo), entonces todas estas superficies tienen el mismo flujo eléctrico \(\Phi_E\), ya que todas encierran la misma carga \(q\). 
 
 \begin{figure}[ht]
   \centering
@@ -89,10 +89,10 @@ La forma matemática de ley de Gauss, es una generalización de lo anterior y es
 \begin{equation}
   \Phi_E = \oint_{S} \vec{E} \cdot d\vec{A} = \frac{q_\text{int}}{\varepsilon_0} \quad \left[\frac{\si{\newton \meter \squared}}{\si{\coulomb}}\right]
 \end{equation}
-donde \( \Phi_E \) es el flujo de campo eléctrico a través de una superficie cerrada, \(E\) es el campo eléctrico en cada punto de esa superficie, \(dA\) es un vector diferencial de área que apunta hacia afuera de la superficie, \(q_\text{int}\) es la carga total encerrada dentro de la superficie y \(\varepsilon_0\) es la permitividad del vacío, una constante del medio.
+Lo importante de esta expresión es que se puede ver de forma clara que se está analizando el flujo eléctrico para una superficie \emph{cerrada}, no cualquier superficie. Esto es de especial importancia, ya que si la superficie no es cerrada no se pueden aplicar los resultados obtenidos, se debe calcular la integral para la superficie volviendo a la definición original de flujo eléctrico. Otro detalle considerable es que \(\varepsilon_0\) es la permitividad eléctrica del vacío, lo que implica que si \(q_\text{int}\) está en un medio distinto al vacío debe utilizarse el valor de permitividad \(\varepsilon\) del material.
 
 \begin{tcolorbox}[mydanger]
-  Atención, \(\vec{E}\) representa el campo eléctrico total que incluye contribuciones de ambas cargas, tanto del interior, como del exterior de la superficie.    
+  Atención, \(\vec{E}\) representa el campo eléctrico total que incluye contribuciones de todas las cargas, tanto del interior, como del exterior de la superficie.    
 \end{tcolorbox}
 
 La ley de Gauss establece un resultado para superficies cerradas. Conceptualmente, establece que si hay carga en el interior de una superficie cerrada el campo eléctrico ``sale'' (o ``entra'') por esa superficie, generando un flujo distinto de cero. Si no hay carga neta dentro, el flujo eléctrico total es cero, aunque el campo pueda no ser nulo en todos los puntos. Este resultado se aplica indistintamente de la forma de la superficie, la distribución del campo eléctrico y el tipo de carga encerrada.

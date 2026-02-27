@@ -101,10 +101,10 @@ La energía \( U \) no está en la carga como tal, sino en el sistema carga-camp
 El dieléctrico es un material aislante que se coloca entre las placas de un capacitor. Su función principal es modificar el campo eléctrico dentro del capacitor y, como consecuencia, aumentar su capacitancia sin necesidad de cambiar su geometría.
 
 \begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{capacitor_dielectric.png}
-    \caption{Polarización de un dieléctrico en un capacitor.}
-    \label{fig_polarizacion_dielectrico}
+  \centering
+  \includegraphics[width=0.8\textwidth]{capacitor_dielectric.png}
+  \caption{Polarización de un dieléctrico en un capacitor.}
+  \label{fig_polarizacion_dielectrico}
 \end{figure}
 Cuando se introduce un dieléctrico entre las placas de un capacitor este se polariza, lo que significa que las moléculas del dieléctrico se alinean parcialmente con el campo eléctrico como se muestra en la figura \ref{fig_polarizacion_dielectrico}, creando campos eléctricos internos opuestos al campo aplicado. Esto reduce el campo eléctrico efectivo entre las placas, por tanto, para una misma cantidad de carga \( Q \), la diferencia de potencial \( V \) disminuye. Como \( C = Q/V \), un menor \( V \) implica una mayor capacitancia.
 
@@ -133,16 +133,16 @@ Esto significa que la capacitancia aumenta en un factor \( \mathcal{K} \), que t
 
 Experimentar con placas paralelas y diferentes dieléctricos permite evidenciar que no solo cambia su capacidad sino que la energía también cambia dependiendo de cómo se conecta el capacitor. Suponiendo un par de placas paralelas y vacío entre ellas, que no es más que un dieléctrico cuyo valor de permitividad es \(\varepsilon_0\), tomaremos otro material dieléctrico de valor \(\varepsilon\neq\varepsilon_0\) tal que su permitividad relativa es \(\mathcal{K}\) veces mayor que \(\varepsilon_0\).
 
-\marginnote{
-  \begin{tcolorbox}[sidenote]\small
-    Cuidado, si se introduce un dieléctrico y \(C\) aumenta, es tentador pensar que \(U=1/2 ~ CV^2\) siempre aumenta al ver la expresión. Sin embargo recuerde que si no hay f.e.m conetada, \(V\) disminuye y la fórmula de la energía tiene un factor de potencial cuadrático. Consecuentemente como \(C\) es proporcional a \(V\) resulta que \(U<U_0\) lo cual es consistente con el experimento.
-  \end{tcolorbox}
-}
 Considerando la situación entonces, si el capacitor está desconectado de la fuente con alguna cantidad de carga \(Q\) y se inserta el dieléctrico, entonces \( Q \) se mantiene constante, ya que esta desconectado de la fuente y no hay f.e.m que desplace cargas, por otro lado, \( V \) disminuye por que se reorientan los dipolos, y por tanto se forma un campo eléctrico opuesto en el dieléctrico y, por último, \( C \) aumenta, debido a la relación entre variables dada por la definición de capacidad (ecuación \ref{eq_definicion_capacidad}). Un importante detalle adicional es que la energía disminuye ya parte de la energía se transfiere al dieléctrico como trabajo de polarización.
 \[
 U = \frac{1}{2} \frac{Q^2}{C} \quad \text{(disminuye porque } C \text{ aumenta)}
 \]
 
+\marginnote{
+  \begin{tcolorbox}[sidenote]\small
+    Cuidado, si se introduce un dieléctrico y \(C\) aumenta, es tentador pensar que \(U=1/2 ~ CV^2\) siempre aumenta al ver la expresión. Sin embargo recuerde que si no hay f.e.m conetada, \(V\) disminuye y la fórmula de la energía tiene un factor de potencial cuadrático. Consecuentemente como \(C\) es proporcional a \(V\) resulta que \(U<U_0\) lo cual es consistente con el experimento.
+  \end{tcolorbox}
+}
 Otro escenario posible consiste en conectar el capacitor a una fuente de \( V \) constante y luego modificar su dieléctrico. Al insertar el dieléctrico, debido a las características de la fuente, \( V \) se mantiene constante, esto provoca que \( Q \) aumente, ya que la fuente desplaza nuevas cargas para mantener la diferencia de potencial entre las placas. Y al igual que en el caso anterior, \( C \) aumenta, pero en contraste, la energía almacenada aumenta, y esta energía adicional proviene de la fuente de tensión.
 \[
 U = \frac{1}{2} C V^2 \quad \text{(aumenta porque } C \text{ aumenta)}

@@ -176,7 +176,7 @@ Se usa cuando la carga está distribuida a lo largo de una línea (como un alamb
 \]
 \begin{itemize}
   \item \( \lambda \): densidad lineal, medida en Coulomb por metro (\unit{\coulomb\per\meter}),
-  \item \( Q \): cantidad de carga por unidad de longitud,
+  \item \( Q \): carga total del cuerpo lineal,
   \item \( \ell \): longitud del alambre.
 \end{itemize}
 
@@ -197,7 +197,7 @@ Se usa para cargas sobre una superficie (como una lámina metálica cargada).
 \]
 \begin{itemize}
   \item \( \sigma \): densidad superficial, medida en Coulomb por metro cuadrado (\unit{\coulomb\per\meter\squared}),
-  \item \( Q \): carga sobre unidad de área,
+  \item \( Q \): carga de la superficie completa,
   \item \( A \): área considerada.
 \end{itemize}
 
@@ -211,7 +211,7 @@ Se usa cuando la carga ocupa un volumen (como una nube de plasma).
 \]
 \begin{itemize}
   \item \( \rho \): densidad volumétrica, medido en Coulomb por metro cúbico (\unit{\coulomb\per\cubic\meter}),
-  \item \( Q \): carga dentro de una unidad de volumen,
+  \item \( Q \): carga del volumen total,
   \item \( V \): volumen correspondiente.
 \end{itemize}
 
@@ -294,9 +294,9 @@ Para concluir sobre el razonamiento detrás de la idea de cuerpo continuo y su d
     F_{qQ} = k_e q \lambda \left( -\frac{1}{2a}+\frac{1}{\ell+2a} \right) \\ 
     F_{qQ} = -k_e\frac{\ell \lambda q}{2a(\ell+2a)}
   \end{gather*}
-  Como se ha realizado el cálculo empleando el lado negativo del eje de abscisas, entonces la última expresión espera valores de \(\ell\) negativos. En general, esta expresión se presentará para colocar valores de \(\ell\) positivos (ya que en general una distancia no se considera negativa). De esta manera, puede alternar el signo resultante para obtener la expresión final, donde
+  Como se ha realizado el cálculo empleando el lado negativo del eje de abscisas, entonces la última expresión espera valores de \(\ell\) y \(a\) negativos. En general, esta expresión se presentará para colocar valores de \(\ell\) y \(a\) positivos (ya que en general una distancia no se considera negativa). De esta manera, puede alternar el signo resultante para obtener la expresión final, donde resulta
   \[
     \boxed{F_{qQ} = k_e\frac{\ell \lambda q}{2a(\ell+2a)}}
   \]
-  no presenta signo negativo, ya que \(\ell\) será positivo.
+  Esta manipulación de signos se debe a que solo se ha trabajado con cantidades escalares, y el carácter vectorial se ha impuesto.
 \end{example}
