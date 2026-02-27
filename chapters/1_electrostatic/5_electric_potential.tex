@@ -49,18 +49,18 @@ Entonces, para el trabajo realizado por una fuerza eléctrica, lo que importa es
 
 La energía potencial eléctrica \(U\) del sistema depende de la configuración espacial de las cargas. Para deducir su valor absoluto, es necesario establecer un punto de referencia donde la energía potencial sea cero. En el caso de un campo generado por una carga puntual \(q\), es conveniente establecer este nivel cero en el infinito, donde las cargas están tan alejadas que no interactúan. 
 
-\begin{marginfigure}
-  \centering
-  \caption{Gráfica de la energía potencial \(U\) contra la separación \(r\).}
-  \label{fig_funcion_energia_potencial}
-  \input{chapters/1_electrostatic/media/5_potencial.tex}
-\end{marginfigure}
 De esta forma, la energía potencial \(U\) del sistema formado por una carga fuente \(q\) y una carga de prueba \(q_0\) separadas por una distancia \(r\), equivale al trabajo realizado por un agente externo para traer la carga de prueba desde el infinito hasta dicha distancia \(r\) sin aceleración:
 \[
   U = k_e\frac{q q_0}{r}~ [\unit{\joule}]
 \]
 donde \(r\) es la distancia entre la carga de prueba \(q_0\) y la carga fuente \(q\).
 
+\begin{marginfigure}[-2cm]
+  \centering
+  \caption{Gráfica de la energía potencial \(U\) contra la separación \(r\).}
+  \label{fig_funcion_energia_potencial}
+  \input{chapters/1_electrostatic/media/5_potencial.tex}
+\end{marginfigure}
 Como se puede intuir, este punto de referencia de energía potencial cero depende de la configuración de cargas y del campo; si bien suele fijarse en el infinito para cargas puntuales (como muestra la figura \ref{fig_funcion_energia_potencial}), en otros sistemas prácticos puede convenir fijarlo en otro lugar, como en la superficie de un conductor o en la ``tierra''.
 
 \subsection{Definición de potencial eléctrico}
@@ -103,6 +103,7 @@ Nótese que el concepto de potencial eléctrico se concibe de forma similar al d
 
 \subsection{Diferencia de potencial en un campo eléctrico uniforme}
 
+\input{chapters/1_electrostatic/media/5_e_vs_g_potencial.tex}
 La ecuación \eqref{eq:potential_difference} es válida en todos los campos eléctricos, sean uniformes o no, es decir, es la fórmula general para la obtención de la diferencia de potencial. Sin embargo, en un campo eléctrico uniforme como el que se muestra en la figura \ref{fig_potential_uniform}, la magnitud del campo \(\vec{E}\) es constante y la dirección de \(\vec{E}\) es la misma en todos los puntos del espacio, de modo tal que se pueden simplificar los cálculos. En este caso, la diferencia de potencial entre dos puntos \(A\) y \(B\) separados por una distancia \(d\) en la dirección del campo eléctrico se puede expresar como:
 \begin{equation}
   \Delta V = -\int_A^B \vec{E} \cdot d\vec{s} = -E \, \int_A^B ds = \boxed{-Ed}
@@ -111,8 +112,6 @@ La ecuación \eqref{eq:potential_difference} es válida en todos los campos elé
 donde \(E\) es la magnitud del campo eléctrico y \(d\) es la distancia entre los puntos \(A\) y \(B\) en la dirección del campo.
 
 El signo negativo indica que el potencial en el punto \(B\) es menor que el potencial en el punto \(A\). Por ejemplo si una carga de prueba se mueve del punto \(A\) al punto \(B\), entonces pierde energía potencial \(U\) ya que se desplaza en el mismo sentido que el campo eléctrico. Esto es evidente cuando observa que el potencial \(V\) depende de la energía potencial \(U\) en un punto como lo expresa la ecuación \eqref{eq:potential} de la definición de potencial.
-
-\input{chapters/1_electrostatic/media/5_e_vs_g_potencial.tex}
 
 \begin{tcolorbox}[mydanger]
   Atención, si la carga \(q\) es negativa, la situación se invierte. El sistema gana energía potencial al mover la carga \(q\) en la dirección del campo eléctrico, y disminuye al moverla en la dirección opuesta.    

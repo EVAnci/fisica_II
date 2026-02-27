@@ -26,37 +26,6 @@
 \definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
 
 \sethlcolor{highlight}
-% Cambiar el color de los títulos
-\titleformat{\section}
-  {\color{dark_blue}\normalfont\Large\bfseries} % Estilo del título de sección
-  {\thesection}{1em}{} % Numeración y espacio
-
-\titleformat{\subsection}
-  {\color{dark_red}\normalfont\large\bfseries} % Estilo del título de subsection
-  {\thesubsection}{1em}{}
-
-\titleformat{\subsubsection}
-  {\color{soft_green}\normalfont\normalsize\bfseries} % Estilo del título de subsubsection
-  {\thesubsubsection}{1em}{}
-
-\renewcommand{\paragraph}[1]{%
-  \noindent\textcolor{orange!70!black}{\textbf{#1}}%
-  \hspace{1.2em}%
-}
-
-\renewcommand{\subparagraph}[1]{%
-  \noindent{\textbf{#1}}%
-  \hspace{1.2em}%
-}
-
-% Configuración de las listas
-\setlist[itemize]{label=\textbullet} % Cambiar el símbolo de las listas itemize
-\setlist{topsep=3pt,parsep=0pt} % Eliminar espacio entre la lista y el texto
-
-% Definir comandos personalizados
-\newcommand{\vect}[1]{\mathbf{#1}} % Vectores en negrita
-\newcommand{\diff}[2]{\frac{d#1}{d#2}} % Derivada
-\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}} % Derivada parcial
 
 % Tile para resúmenes
 \tcbset{

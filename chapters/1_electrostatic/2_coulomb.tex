@@ -28,21 +28,21 @@ donde \( \vec{F}_e \) es el vector fuerza eléctrica entre dos cargas puntuales 
 \begin{example}
   \label{ej_ley_de_coulomb}
   Para el caso de dos cargas \(q_1\) y \(q_2\) cualesquiera, entonces la fuerza que siente la carga \(q_2\) debido a \(q_1\) puede calcularse usando la ecuación \eqref{eq:ley_coulomb_vectorial}, y gráficamente se obtiene un resultado semejante al que se muestra en la figura \ref{fig_ej_cargas_vectoriales}.
-  \begin{figure}[!ht]
+  \begin{marginfigure}
     \centering
     \begin{tikzpicture}[scale=0.7,>=stealth]
-      \shade[ball color=orange] (0,0) circle (.3) node[below=3mm] {$q_1$};
-      \shade[ball color=orange] (3,2) circle (.3) node[above=3mm] {$q_2$};
-      \draw[dotted] (0,0) -- (3,2);
-      \draw[thick,cyan!80!black] (3,2) circle (1pt);
-      \draw[thick,cyan!80!black,->] (3,2) -- (4,2.67) node[above right] {$\vec{F}_{21}$}; 
+      \def\l{2}
+      \def\ang{15}
+      \shade[ball color=orange] (0,0) circle (.2) node[left=2mm] {$q_1$};
+      \shade[ball color=orange] (\ang:\l) circle (.2) node[above=2mm] {$q_2$};
+      \draw[dashed,gray] (0,0) -- (\ang:\l);
+      \draw[thick,cyan!45!blue] (\ang:\l) circle (1pt);
+      \draw[thick,cyan!45!blue,->] (\ang:\l) -- (\ang:\l+1) node[above right] {$\vec{F}_{21}$}; 
     \end{tikzpicture}
-    \caption{}
+    \caption{La fuerza eléctrica}
     \label{fig_ej_cargas_vectoriales}
-  \end{figure}
+  \end{marginfigure}
 \end{example}
-
-
 Esto es importante tenerlo en cuenta ya que si se quiere saber la fuerza total sobre una carga \( q \) debido a varias cargas, se debe sumar vectorialmente las fuerzas individuales. La fuerza total sobre una carga \( q \) debido a un conjunto de cargas \( Q_i \) es:
 
 \begin{equation}
@@ -51,7 +51,7 @@ Esto es importante tenerlo en cuenta ya que si se quiere saber la fuerza total s
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.7\textwidth]{coulomb_force.pdf}
+  \input{chapters/1_electrostatic/media/2_fuerza_coulomb.tex}
   \caption{Determinación de la dirección y sentido de la fuerza eléctrica entre dos cargas puntuales.}
   \label{fig:coulomb}
 \end{figure}

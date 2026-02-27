@@ -2,15 +2,15 @@
 
 El campo eléctrico, a diferencia de la fuerza eléctrica, es un concepto abstracto. El concepto de campo eléctrico se basa en la interacción entre cargas ya vista, es decir la Ley de Coulomb, sin embargo no solo da una idea representativa de esta interacción entre cargas, además, permite entender que cada carga individual perturba el espacio a su alrededor, creando así este llamado campo eléctrico.
 
-Suponga que tiene una carga positiva \(q\), y la coloca en un punto dentro de su sistema de referencia inercial, tal y como muestra la figura \ref{fig_ejemplo_campo}. Luego, cerca de la carga, coloca dos placas metálicas cargadas, una positiva y otra negativa. De esta forma, la carga sentirá una fuerza debido a la placa positiva (de repulsión) y una fuerza debido a la placa negativa (de atracción), donde el efecto final será una fuerza como se muestra en la figura.
 \begin{figure}[!ht]
   \centering
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
     \begin{tikzpicture}[>=stealth]
+      \def\l{2}
       \draw[->,thin] (-.2,0) -- (4,0) node[right] {$x$};
-      \draw[->,thin] (0,-.2) -- (0,4) node[left] {$y$};
-      \shade[ball color=orange] (2,2) circle (.2) node[above=2mm] {$q$};
+      \draw[->,thin] (0,-.2) -- (0,\l) node[left] {$y$};
+      \shade[ball color=orange] (2,\l/2) circle (.2) node[above=2mm] {$q$};
     \end{tikzpicture}
     \caption{Carga de prueba.}
   \end{subfigure}
@@ -18,23 +18,25 @@ Suponga que tiene una carga positiva \(q\), y la coloca en un punto dentro de su
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
     \begin{tikzpicture}[>=stealth]
+      \def\l{2}
       \draw[->,thin] (-.2,0) -- (4,0) node[right] {$x$};
-      \draw[->,thin] (0,-.2) -- (0,4) node[left] {$y$};
-      \draw[very thick,->] (2,2) -- (3,2) node[right] {$F_e$};
-      \shade[ball color=orange] (2,2) circle (.2) node[above=2mm] {$q$};
-      \draw[red,fill=red!50] (0.1,0.1) rectangle (.2,3.9);
-      \draw[blue!80,fill=blue!40] (3.8,0.1) rectangle (3.9,3.9);
+      \draw[->,thin] (0,-.2) -- (0,\l) node[left] {$y$};
+      \draw[very thick,->] (2,\l/2) -- (3,\l/2) node[right] {$F_e$};
+      \shade[ball color=orange] (2,\l/2) circle (.2) node[above=2mm] {$q$};
+      \shade[inner color=white,outer color=red!70!black!70] (0.1,0.1) rectangle (.3,\l-.1);
+      \shade[inner color=white,outer color=blue!60!black!60] (3.7,0.1) rectangle (3.9,\l-.1);
     \end{tikzpicture}
     \caption{Campo eléctrico.}
   \end{subfigure}
   \caption{}
   \label{fig_ejemplo_campo}
 \end{figure}
+Suponga que tiene una carga positiva \(q\), y la coloca en un punto dentro de su sistema de referencia inercial, tal y como muestra la figura \ref{fig_ejemplo_campo}. Luego, cerca de la carga, coloca dos placas metálicas cargadas, una positiva y otra negativa. De esta forma, la carga sentirá una fuerza debido a la placa positiva (de repulsión) y una fuerza debido a la placa negativa (de atracción), donde el efecto final será una fuerza como se muestra en la figura.
 
 Si quitamos esa carga llamada $q$ del lugar, entonces ¿Qué sucede en ese punto que provocaba una fuerza en la carga? Lo que sucede en ese punto es que, en su cercanía, hay dos placas cargadas que influyen en cualquier carga que ahí se coloque. Como las placas metálicas las ha fijado a un lugar específico, entonces no pueden moverse. 
 
 En la figura \ref{fig:concepto_campo_electrico} se muestra un experimento que evidencia este fenómeno entre placas.
-\begin{figure}[ht]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.6\textwidth]{field_concept.jpg}
   \caption{Se visualiza la perturbación del espacio al generar un campo eléctrico como movimiento de cargas.}
@@ -46,16 +48,16 @@ De esta forma, se puede ver que la fuerza que provocan las placas, en cualquier 
 \subsection{Deducción del campo eléctrico}
 
 Suponga que tiene una carga positiva y quiere que se quede totalmente quieta. La carga, pues tiene masa, por cuanto siente una fuerza peso provocada por el campo gravitatorio. Entonces, el equilibrio que busca, puede conseguirlo sencillamente. Obtenga alguna carga \( Q \) que a una distancia \( r \) haga que las fuerzas que interactúan con la carga \( q \) se anulen. La figura \ref{fig_campo_g_vs_campo_e} representa esta situación.
-\begin{figure}[!ht]
+\begin{marginfigure}
   \centering
   \begin{tikzpicture}[>=stealth]
     \draw[very thick,->] (0,0) -- (0,-1) node[below] {$w=mg$};
     \draw[very thick,->] (0,0) -- (0,1) node[above] {$F_e=Eq=mg$};
     \shade[ball color=orange] (0,0) circle (.3) node[right=3mm] {$q$};
   \end{tikzpicture}
-  \caption{Representación de la condición de equilibrio.}
+  \caption{Diagrama de cuerpo libre con la condición de equilibrio.}
   \label{fig_campo_g_vs_campo_e}
-\end{figure}
+\end{marginfigure}
 
 En definitiva, tendría que encontrar cualquier combinación de \( Q \) y \( r \) que cumpla lo siguiente
 \[
@@ -254,7 +256,7 @@ Para concluir sobre el razonamiento detrás de la idea de cuerpo continuo y su d
     \centering
     \begin{tikzpicture}[>=stealth]
       \draw[thin,->] (-9,0) -- (2,0) node[right] {$x$};
-      \draw[thin,->] (0,-1) -- (0,1.5) node[above right] {$y$};
+      \draw[thin,->] (0,-.5) -- (0,1.5) node[above right] {$y$};
       \draw[very thick,green!60!black,->] (0,0) -- (1,0) node[below right] {$F_{qQ}$};
       \shade[ball color=orange] (0,0) circle (.2) node[above right=1mm] {$q$};
       \draw[thin,color=orange!60!black,fill=orange!10] (-2.8,-.18) rectangle (-8.2,.18);
