@@ -6,7 +6,7 @@
 
 Para comprender conceptualmente la corriente eléctrica o el flujo de cargas eléctricas es conveniente usar analogías. El movimiento de cargas en un conductor puede verse como un flujo de agua, es decir, partículas de agua atravesando una tubería. Manteniendo este carácter análogo, la cantidad de agua que fluye en un tubo se representa como caudal de agua. El caudal de agua se mide en unidad de volumen sobre unidad de tiempo, por ejemplo \unit{\cubic\metre\per\second}. Esto representa de una forma aproximada la cantidad de moléculas de \(\text{H}_2\text{O}\) que atraviesan una sección de tubo, ya que en un volumen dado, se puede determinar la cantidad de moléculas de agua para una cierta temperatura. Es evidente que \qty{1}{\cubic\metre} de agua contiene una cantidad enorme de moléculas, sin embargo, en términos simples, se cuantifica la \emph{cantidad de agua} que fluye por unidad de tiempo.
 
-La idea para la corriente eléctrica es análoga a la corriente de agua. Se puede determinar la cantidad de cargas eléctricas libres que circulan por un conductor en un tiempo determinado. Así, se podría definir de forma intuitiva, que la corriente eléctrica o flujo de cargas eléctricas es la cantidad de cargas elementales que circulan por unidad de tiempo. Como la carga elemental tiene unidades de Coulomb, entonces las unidades de corriente deberían ser representadas en cantidad de Coulomb por segundo (\unit{\coulomb\per\second}). A continuación realizará un análisis del movimiento de cargas en un conductor para verificar esta premisa.
+La idea para la corriente eléctrica es análoga a la corriente de agua. Se puede determinar la cantidad de cargas eléctricas libres que circulan por un conductor en un tiempo determinado. Así, se podría definir de forma intuitiva, que la corriente eléctrica o flujo de cargas eléctricas es la cantidad de cargas elementales que circulan por unidad de tiempo. Como la carga elemental tiene unidades de Coulomb, entonces las unidades de corriente deberían ser representadas en cantidad de Coulomb por segundo (\unit{\coulomb\per\second}). A continuación se realizará un análisis del movimiento de cargas en un conductor para verificar esta premisa.
 
 \subsection{Movimiento de las cargas}
 \label{sec:movimiento_de_cargas}
@@ -19,7 +19,7 @@ Para cualquier tipo de material conductor en condiciones normales y sin ningún 
   \caption{Cargas en movimiento a través de un área \(A\).}
   \label{fig:current}
 \end{marginfigure}
-Cuando se aplica un campo eléctrico estos electrones adquieren una velocidad. Cuando se habla de velocidad, si se analiza una única partícula, se mide como cambia su posición con respecto al tiempo \(\vec{v}(t)=dx/dt\). Pero en un conductor no hay una sola partícula, sino miles de millones de electrones en movimiento. Para entender la corriente eléctrica observamos el desplazamiento de todo un ``bloque'' o volumen de carga. Las cargas en movimiento se analizan usando la velocidad de arrastre o velocidad de deriva \(v_d\) en la dirección del campo eléctrico. La velocidad de deriva es la velocidad promedio de las cargas. En un pequeño intervalo de tiempo \(dt\) las cargas avanzan una pequeña distancia \(dx\) en el conductor, y como \(v_d=dx/dt\) por definición de diferencial, se puede decir que la distancia que avanzan es 
+Cuando se aplica un campo eléctrico las cargas adquieren una velocidad como se muestra en la figura \ref{fig_cargas_libres}. Cuando se habla de velocidad, si se analiza una única partícula, se mide como cambia su posición con respecto al tiempo \(\vec{v}(t)=dx/dt\). Pero en un conductor no hay una sola partícula, sino miles de millones de electrones en movimiento. Para entender la corriente eléctrica observamos el desplazamiento de todo un ``bloque'' o volumen de carga. Las cargas en movimiento se analizan usando la velocidad de arrastre o velocidad de deriva \(v_d\) en la dirección del campo eléctrico. La velocidad de deriva es la velocidad promedio de las cargas. En un pequeño intervalo de tiempo \(dt\) las cargas avanzan una pequeña distancia \(dx\) en el conductor, y como \(v_d=dx/dt\) por definición de diferencial, se puede decir que la distancia que avanzan es 
 \begin{equation}\label{eq_distancia_de_avance}
   dx=v_d\cdot dt
 \end{equation}
@@ -28,8 +28,16 @@ Cuando se aplica un campo eléctrico estos electrones adquieren una velocidad. C
   La corriente se estudia a partir de la velocidad promedio \(v_d\) de las cargas debido a que una única carga aislada es difícil de estudiar. Al igual que sucede con las moléculas de agua al estudiar el caudal, se representa la velocidad de un volumen de agua mediante la velocidad promedio de las partículas que componen un volumen.
 \end{tcolorbox}
 
-Como se muestra en la figura \ref{fig:movimiento_de_cargas_en_un_conductor} las cargas en un conductor tienen una velocidad de deriva \(v_d\) y como se demostró en la expresión \eqref{eq_distancia_de_avance} la porción de distancia \(\Delta x\) que avanzan las cargas es \(v_d \cdot \Delta t\), que al ser pequeñas pueden considerarse diferenciales.
+Como se muestra en la figura \ref{fig_cargas_libres} las cargas en un conductor tienen una velocidad de deriva \(v_d\) y como se demostró en la expresión \eqref{eq_distancia_de_avance} la porción de distancia \(\Delta x\) que avanzan las cargas es \(v_d \cdot \Delta t\), que al ser pequeñas pueden considerarse diferenciales.
 
+\marginnote{
+  \begin{tcolorbox}[sidenote]\footnotesize{
+      En este texto se ha usado \(\rho_c\) como la densidad volumétrica de cargas. No confunda esto con la resistividad \(\rho\). 
+
+      En muchos casos se utiliza \(\rho_c=nq\) donde \(n\) es la cantidad de cargas libres y \(q\) es la carga eléctrica de cada carga libre. Ambas expresiones representan lo mismo.
+    }
+  \end{tcolorbox}
+}
 Al avanzar esa distancia \(dx\), todo ese ``bloque'' de electrones atraviesa el área transversal \(A\). El volumen de ese cilindro que acaba de cruzar la frontera es el área por la distancia 
 \[
   dV=A \cdot dx
@@ -41,18 +49,18 @@ Sustituyendo \(dx\) con la expresión \eqref{eq_distancia_de_avance}, resulta
 
 \begin{figure}[!ht]
   \centering
-  \input{chapters/2_direct_current/media/movimiento_de_cargas.tex}
+  \input{chapters/2_direct_current/media/1_movimiento_de_cargas.tex}
   \caption{Movimiento de cargas en un conductor.}
-  \label{fig:movimiento_de_cargas_en_un_conductor}
+  \label{fig_cargas_libres}
 \end{figure}
 
-Si se sabe que la cantidad de carga que hay por unidad de volumen, es decir, la densidad volumétrica de carga \(\rho\) del conductor, la cantidad total de carga \(dQ\) contenida en ese pequeño volumen \(dV\) que acaba de cruzar será:
+Si se sabe que la cantidad de carga que hay por unidad de volumen, es decir, la densidad volumétrica de carga \(\rho_c\) del conductor, la cantidad total de carga \(dQ\) contenida en ese pequeño volumen \(dV\) que acaba de cruzar será:
 \[
-  dQ=\rho\cdot dV
+  dQ=\rho_c\cdot dV
 \]
-Si sustituye \(dV\) con la expresión \eqref{eq_volumen_de_cargas} obtiene
+Si se sustituye \(dV\) con la expresión \eqref{eq_volumen_de_cargas} obtiene
 \[
-  dQ = \rho \cdot A \cdot v_d \cdot dt
+  dQ = \rho_c \cdot A \cdot v_d \cdot dt
 \]
 
 \marginnote{
@@ -61,10 +69,10 @@ Si sustituye \(dV\) con la expresión \eqref{eq_volumen_de_cargas} obtiene
     }
   \end{tcolorbox}
 }
-Si toma esta última ecuación y aplica la definición de diferencial, obtiene exactamente la definición de corriente 
+Si se toma esta última ecuación y se aplica la definición de diferencial, obtiene exactamente la definición de corriente 
 \begin{equation}
   \boxed{
-    I=\frac{dQ}{dt}=\rho\cdot A\cdot v_d
+    I=\frac{dQ}{dt}=\rho_c\cdot A\cdot v_d
   }
 \end{equation}
 Así, puede ver que la corriente es directamente proporcional a la velocidad promedio a la que se desplazan las cargas, medido en Coulomb por segundo, tal y como se había anunciado al principio.
@@ -79,104 +87,132 @@ En el sistema internacional de unidades, se define la unidad de corriente como e
 
 La figura \ref{fig_corriente_convencional} presenta segmentos de material conductor. En la figura \ref{fig:flujo_de_cargas_positivas}, las cargas en movimiento son positivas, la fuerza eléctrica ocurre en la misma dirección que \(\vec{E}\), y la velocidad de deriva \(v_d\) es de izquierda a derecha. En la figura \ref{fig:flujo_de_cargas_negativas} las cargas son negativas, la fuerza eléctrica es opuesta a \(E\), y la velocidad de deriva \(v_d\) es de derecha a izquierda. Definimos que la corriente, denotada por \(I\), va en la dirección en la que hay un flujo de carga positiva. Por ello, las corrientes se describen como si consistieran por completo en un flujo de cargas positivas, aun en los casos en que se sabe que la corriente real se debe a electrones. Así, en las figuras \ref{fig:flujo_de_cargas_positivas} y \ref{fig:flujo_de_cargas_negativas} la corriente es hacia la derecha. Esta convención sobre la dirección del flujo de la corriente se llama \emph{corriente convencional}. Aunque la dirección de la corriente convencional no es necesariamente la misma en que se desplazan en realidad las partículas con carga, veremos que el signo de las cargas en movimiento tiene poca importancia en el análisis de los circuitos eléctricos.
 
-\input{chapters/2_direct_current/media/corriente_convencional.tex}
+\input{chapters/2_direct_current/media/1_corriente_convencional.tex}
 
 A pesar de que en este apartado se habla de ``dirección de corriente'' siempre recuerde que la corriente es una magnitud \emph{escalar}. Por lo general describiremos la dirección de la corriente ya sea con palabras (por ejemplo, ``la corriente fluye por el circuito en el sentido horario'') o eligiendo una corriente como positiva si fluye en un sentido a lo largo de un conductor, y negativa si fluye en sentido contrario.
 
 \subsection{Densidad de corriente}
 
-Tal y como ocurre con el caudal de agua, la corriente eléctrica nada dice sobre la dirección o sentido del vector velocidad de las cargas. Si bien se puede otorgar una ``dirección'' verbalmente, matemáticamente hablando, la corriente es un escalar, y por tanto en una ecuación será un escalar. Esto puede limitar el estudio de la dinámica de las cargas en cierto punto. En un cable recto, la dirección es muy fácil de determinar, el signo del escalar será suficiente. Pero ¿qué sucedería si la corriente fluye a través de un material tridimensional con forma irregular, como una placa de metal o el océano? Para estudiar este tipo de fenómenos se requiere un campo vectorial. Debido a esto, se define el concepto de densidad de corriente y se denota con la letra \(\vec{J}\).
+Tal y como ocurre con el caudal de agua, la corriente eléctrica nada dice sobre la dirección o sentido del vector velocidad de las cargas. Si bien se puede otorgar una ``dirección'' verbalmente, matemáticamente hablando, la corriente es un escalar, y por tanto en una ecuación será un escalar. Esto puede limitar el estudio de la dinámica de las cargas en cierto punto. En un cable recto, la dirección es muy fácil de determinar, el signo del escalar será suficiente. Pero ¿qué sucedería si la corriente fluye a través de un material tridimensional con forma irregular, como una placa de metal o el océano? Para estudiar este tipo de fenómenos se requiere un campo vectorial. Para solucionar esto, en lugar de medir la corriente total a través de la superficie \(A\), se introduce una propiedad local y puntual que no depende de la geometría del cable. Así se busca describir lo que sucede con las cargas en un punto dado. 
 
-Para solucionar esto, en lugar de observar toda la superficie \(A\) como un ``bloque'', analice una pequeña porción de esta superficie, es decir, un \(dA\). De la sección anterior sabe que la corriente para un área perpendicular al flujo de cargas es 
+De la sección anterior se sabe que la corriente para un área perpendicular al flujo de cargas es 
 \[
-  I=\rho \cdot A \cdot v_d
+  I=\rho_c \cdot A \cdot v_d
 \]
-Divida ambos miembros por el área \(A\), obteniendo así la cantidad de corriente por unidad de área:
+Dividiendo ambos miembros por el área \(A\), se obtiene así la cantidad de corriente por unidad de área:
 \[
-  \frac{I}{A} = \rho \cdot v_d = J
+  \frac{I}{A} = \rho_c \cdot v_d = J
 \]
 A esta magnitud se le denomina \emph{densidad de corriente}. Observe que en el miembro derecho, se tiene la velocidad de deriva \(v_d\) que tiene un carácter vectorial. En este caso \(J\) heredará ese carácter vectorial (\(I\) solo toma el módulo de \(v_d\)). Entonces, así ha definido formalmente el vector densidad de corriente 
-\begin{equation}
-  \vec{J}=\rho \vec{v}_d
+\begin{equation}\label{eq_densidad_de_corriente}
+  \vec{J}=\rho_c \vec{v}_d
 \end{equation}
+La densidad de corriente, en el sistema internacional, tiene unidades de \unit{\coulomb\per\second\per\metre\squared} o bien \unit{\ampere\per\metre\squared}. Es decir, el análisis dimensional sugiere que se está midiendo la cantidad de cargas que atraviesan una superficie de un metro cuadrado en un segundo. 
 
 \begin{tcolorbox}[myconclusion]
   Observe que aquí toma sentido el hecho de que \(dQ\) no es la carga del cable, sino la carga que fluye a través de el. Esto, se puede deducir de la siguiente manera: La densidad de corriente \(\vec{J}\) no establece ninguna relación con la carga del conductor, sino 
   \[
-    \vec{J}=\rho \vec{v}_d = \rho\frac{d\vec{r}}{dt}
+    \vec{J}=\rho_c \vec{v}_d = \rho_c\frac{d\vec{r}}{dt}
   \]
-  una relación con la tasa de cambio de la posición \(\vec{r}\) de una densidad de carga \(\rho\) en el tiempo. Es decir, es la velocidad multiplicada por la densidad volumétrica de carga del material.
+  una relación con la tasa de cambio de la posición \(\vec{r}\) de una densidad de carga \(\rho_c\) en el tiempo. Es decir, es la velocidad multiplicada por la densidad volumétrica de carga del material.
 \end{tcolorbox}
 
-La densidad de corriente \(\vec{J}\) se define como la corriente por unidad de área transversal:
-\[
-  \vec{J} = \frac{I}{A} \vec{u}
-\]
-donde \( I \) es la corriente, \( A \) es el área y \( \vec{u} \) es un vector unitario en la dirección del flujo de corriente.
+En este momento, si ha sido perspicaz al leer la deducción de la densidad de corriente, tal vez le resulte un poco extraño el hecho de que a pesar de que \(\vec{J}\) es una cantidad vectorial, no parece dar mucha información del comportamiento interno en el conductor, es decir, del movimiento de cargas. Es más, al introducir este tópico, se menciona justamente que esta es la herramienta que nos permite analizar el comportamiento de la corriente eléctrica con carácter vectorial en situaciones donde la cantidad \(I\) no es suficiente.
 
-Dado que la corriente \(I\) se puede expresar como \(n \, A\, v_d\, q\), la densidad de corriente se puede expresar como:
+En la deducción de la densidad de corriente, cuando divide por el área total \(A\), lo que realmente se busca es pasar de una propiedad macroscópica a una microscópica. Al dividir \(I\) entre \(A\), asumiendo que la corriente se distribuye uniformemente por todo el cable, se está encontrando una propiedad de cada partícula individual, ya que el área puede tomarse tan pequeña como se quiera. Es decir, puede utilizar diferenciales de área \(dA\) para analizar pequeñas partes del flujo de cargas. Esto resulta en 
 \[
-  \vec{J} = n q \vec{v}_d
+  dI = \vec{J}\cdot d\vec{A}
 \]
-
-Es importante notar que la densidad de corriente es un vector, pero la corriente \(I\) no lo es. La diferencia está en que la densidad de corriente \(\vec{J}\) describe como fluyen las cargas en cierto punto, mientras que la corriente \(I\) describe la forma en la que fluyen las cargas a través de un objeto extendido. 
+Y de este diferencial se puede obtener el comportamiento individual de cada carga en movimiento. Como \(J\) y \(A\) son vectores y \(I\) es un escalar se usa el producto escalar. Esto implica que para cada diferencial de área, se tiene en cuenta el ángulo con el que las cargas atraviesan cualquier superficie. Realizando una integral sobre una superficie \(S\) de la densidad de corriente \(\vec{J}\) con respecto a un diferencial de área,
+\[
+  I = \iint_S \vec{J}\cdot d\vec{A}
+\]
+se logra obtener la corriente incluso para casos donde la corriente no se distribuye de forma uniforme. El gran beneficio de esto es que \(\vec{J}\) permite recuperar la corriente porque conoce el comportamiento de cada carga.
 
 \section{Ley de Ohm}
 
-\subsection{Resistividad}
+El físico alemán George Simon Ohm descubrió empíricamente la relación que existe entre la corriente eléctrica, la diferencia de potencial y la resistencia del material. 
 
-La resistividad \(\rho\) de un material se define como la razón de las magnitudes del campo eléctrico y la densidad de corriente:
-\begin{equation}
-  \rho = \frac{E}{J} \quad [\Omega \cdot m]
+En la época de George Ohm aún no se conocía la existencia del electrón. Ohm experimentaba con termopares, donde al mantener una diferencia de temperatura en los extremos de dos metales distintos, se generaba una diferencia de potencial. Conectó cables de diferentes longitudes y grosores a su circuito y midió la fuerza magnética generada por la corriente. Al graficar sus datos, se dio cuenta de que la corriente era inversamente proporcional a la longitud del cable y directamente proporcional a la sección transversal. Descubrió experimentalmente la resistencia y formuló la relación macroscópica que hoy conocemos.
+
+En nuestro estudio, podemos realizar experimentos para comprobar la validez de esta ley, sin embargo, la ventaja de el análisis matemático es que se puede modelar este fenómeno y llegar a la ley de Ohm de una forma puramente analítica. En este contexto se utilizará el llamado modelo de Drude para encontrar la ley de Ohm.
+
+\subsection{Modelo de Drude}
+
+El modelo de Drude, propuesto en 1900, asume que los electrones rebotan contra los átomos del material, como si fueran bolas en una máquina de pinball. 
+
+Cuando se aplica un campo eléctrico \(E\), una carga libre \(q\) experimenta una fuerza eléctrica,
+\[
+  F=qE
+\]
+Por la segunda ley de Newton, esta fuerza produce una aceleración:
+\[
+  a=\frac{qE}{m}
+\]
+donde \(m\) es la masa del portador de carga.
+
+Si los electrones solo aceleran, su velocidad tendería a infinito. Pero en la realidad, chocan constantemente con la red cristalina del material. Se define \(\tau\) (tau) como el \emph{tiempo de relajación} que es el tiempo promedio entre colisiones.
+
+Después de cada colisión, el electrón pierde su velocidad dirigida, y vuelve a ser acelerado por el campo. Por lo tanto, la velocidad promedio \(v_d\) que alcanzan es la aceleración multiplicada por este tiempo de relajación:
+\begin{equation}\label{eq_vd_tiempo_de_relajacion}
+  v_d = a\tau = \frac{qE\tau}{m}
 \end{equation}
 
-El recíproco de la resistividad es la conductividad \(\sigma\). Sus unidades son \((\unit{\ohm\metre})^{-1}\).
+Ahora, partiendo de la densidad de carga \(J\), 
+\[
+  J=\rho_c v_d
+\]
+se puede sustituir \(v_d\) con la expresión de la ecuación \eqref{eq_vd_tiempo_de_relajacion} resultando 
+\[
+  J=\rho_c \frac{qE\tau}{m}
+\]
+Como \(\rho_c=nq\), donde \(n\) es la cantidad de cargas libres del material y \(q\) la carga de cada portador libre, entonces esta última expresión se puede escribir agrupando términos,
+\[
+  J=\left(\frac{nq^2 \tau}{m}\right) E
+\]
+
+Toda la expresión entre paréntesis está compuesta por propiedades intrínsecas del material (la densidad de carga, la carga del electrón, el tiempo entre colisiones y la masa del electrón). A todo este bloque se le denomina \emph{conductividad eléctrica} \(\sigma\):
+\[
+  \sigma = \frac{nq^2\tau}{m}
+\]
+Entonces la expresión de la densidad de corriente eléctrica puede reescribirse usando la conductividad, resultando en la Ley de Ohm:
+\begin{equation}\label{eq_ley_de_ohm}
+  J=\sigma E
+\end{equation}
+
+\subsection{Ley de Ohm macroscópica}
+
+En base a la ecuación \eqref{eq_ley_de_ohm} se puede obtener una relación de parámetros macroscópicos en un circuito. Para ello se van a establecer las condiciones de un circuito ideal para poder modelarlo. Imagine un hilo conductor cilíndrico que tiene una longitud \(\ell\) y un área de sección transversal \(A\). La densidad de corriente \(J\) es la cantidad de corriente que atraviesa una unidad de área. Si se asume que la corriente se distribuye uniformemente por toda la sección transversal del cable, la corriente total \(I\) es simplemente el producto de la densidad de corriente por el área:
+\[
+  I=JA \quad \text{entonces} \quad J=\frac{I}{A}
+\]
+
+Por otro lado, si se asume un campo eléctrico uniforme en el hilo conductor, la diferencia de potencial \(\Delta V\) entre los extremos del cable está relacionada con el campo eléctrico y la distancia 
+\[
+  \Delta V = E\ell \quad \text{entonces} \quad E = \frac{\Delta V}{\ell}
+\]
+
+Con estas dos relaciones, se puede tomar la expresión \eqref{eq_ley_de_ohm} y sustituir la densidad de corriente y el campo eléctrico por las respectivas cantidades,
+\[
+  J=\sigma E \quad \rightarrow \quad \frac{I}{A}=\sigma \frac{\Delta V}{\ell}
+\]
+Operando algebráicamente,
+\[
+  \Delta V = I \left(\frac{\ell}{\sigma A}\right)
+\]
+Donde se define la expresión entre paréntesis como resistencia del material, y se denota con la letra \(R\). Así, la ley de Ohm macroscópica resulta ser 
+\[
+  \Delta V = IR
+\]
 \begin{tcolorbox}[myconclusion]
-  Tanto la resistividad como la conductividad dependen del material y de factores como la temperatura.
+  En la practica se suele denotar a la diferencia de potencial \(\Delta V\) simplemente como \(V\).
+
+  Además, en vez de utilizarse la conductividad \(\sigma\), suele emplearse la resistividad \(\rho\) del material, que es el inverso de la conductividad:
+  \[
+    \rho = \frac{1}{\sigma}
+  \]
+  ya que experimentalmente es más conveniente determinar la resistividad que la conductividad.
 \end{tcolorbox}
-
-Tan pronto como se mantiene una diferencia de potencial a través del conductor se establece una densidad de corriente y un campo eléctrico. En algunos materiales, la densidad de corriente es proporcional al campo eléctrico:
-\begin{equation}
-  \vec{J} = \sigma \vec{E} \qquad \leftrightarrow \qquad \vec{E} = \rho \vec{J}
-  \label{eq:forma_local_de_la_ley_de_ohm}
-\end{equation}
-donde la constante de proporcionalidad \(\sigma\) es la conductividad del conductor (\(1/\rho\)).
-
-La relación de la ecuación \ref{eq:forma_local_de_la_ley_de_ohm} describe cómo un campo eléctrico induce una corriente en un medio conductor. Los materiales que obedecen dicha relación siguen la ley de Ohm.
-
-\subsection{Formulando la ley de Ohm}
-
-En estado estacionario, el campo eléctrico dentro de un conductor es constante en el tiempo. De la electrostática sabemos que:
-\[
-  \Delta V = E \, d
-\]
-En un conductor rectilíneo y uniforme de longitud \( L \), la diferencia de potencial \( \Delta V \) entre sus extremos genera un campo uniforme, y despejando el campo en la ecuación anterior resulta:
-\[
-  E = \frac{\Delta V}{L}
-\]
-Si el conductor tiene un área de sección transversal constante \( A \), y utilizando \( \vec{J} = \sigma \vec{E} \), la corriente total se deduce integrando la densidad de corriente sobre el área:
-\[
-  I = \int_A \vec{J} \cdot d\vec{A} = J A = \sigma E A = \sigma \frac{\Delta V}{L} A
-\]
-De aquí se deduce la ley de Ohm macroscópica:
-\begin{equation}
-  \boxed{I = \frac{\sigma A}{L} \Delta V}
-  \label{eq:ley_de_ohm}    
-\end{equation}
-
-\subsection{Resistencia}
-
-La resistencia eléctrica se define como:
-\[
-  R = \frac{\Delta V}{I} = \frac{L}{\sigma A}
-\]
-
-La inversa de la conductividad es la resistividad \( \rho \), por lo tanto:
-
-\begin{equation}
-  \boxed{R = \rho \frac{L}{A}}
-  \label{eq:resistencia}
-\end{equation}
 
 \section{Aplicación de la ley de Ohm a circuitos}
 
