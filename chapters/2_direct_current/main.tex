@@ -196,6 +196,15 @@ En base a la ecuación \eqref{eq_ley_de_ohm} se puede obtener una relación de p
 \[
   I=JA \quad \text{entonces} \quad J=\frac{I}{A}
 \]
+\marginnote{
+  \begin{tcolorbox}[sidenote]\footnotesize{
+      Se asume el campo eléctrico como constante por conveniencia, sin embargo, recuerde que \(\vec{E}=-\nabla V\). En otras palabras, 
+      \[
+        \vec{E}=\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\frac{\partial V}{\partial z}\right)
+      \]
+    }
+  \end{tcolorbox}
+}
 
 Por otro lado, si se asume un campo eléctrico uniforme en el hilo conductor, la diferencia de potencial \(\Delta V\) entre los extremos del cable está relacionada con el campo eléctrico y la distancia 
 \[
@@ -223,6 +232,49 @@ Donde se define la expresión entre paréntesis como resistencia del material, y
   \]
   ya que experimentalmente es más conveniente determinar la resistividad que la conductividad.
 \end{tcolorbox}
+
+\subsubsection{Detalles sobre la resistividad}
+
+La resistividad \(\rho\) se define a partir de la conductividad \(\sigma\) que depende del material. Consecuentemente, \(\rho\) hereda estas propiedades y también depende del material. De hecho es una característica de cada material y es un valor muy utilizado en instalaciones eléctricas y algunos dispositivos como las estufas eléctricas. El valor de resistencia de un material puede calcularse de la siguiente manera
+\[
+  R=\rho\frac{\ell}{A}
+\]
+
+El valor de resistividad \(\rho\) de un material no solo depende de las características intrínsecas del material mismo, también depende de características dinámicas como la temperatura, que puede variar durante su operación. Un claro ejemplo de esto son los focos incandescentes o de filamento, que al aumentar su temperatura aumentan su resistencia eléctrica. Generalmente se obtienen valores de \(\rho\) de un material a \qty{20}{\degreeCelsius} y luego se obtiene un valor \(\alpha\) que permite determinar el valor \(\rho(T)\) para una temperatura \(T\) de la siguiente manera:
+\[
+  \rho(T)=\rho_0 (1+\alpha\Delta T)
+\]
+donde \(\rho_0\) es el valor de \(\rho(\qty{20}{\degreeCelsius})\) y \(\Delta T = (T-20)\unit{\degreeCelsius}\). 
+
+\begin{table}[htpb]
+\centering
+\begin{tabular}{l|c|c}
+  \textbf{Material} & \textbf{Resistividad $\rho$ (\unit{\ohm\metre}) a \qty{20}{\degreeCelsius}} & \textbf{Coeficiente $\alpha$} \\
+\hline
+Plata & $1,59 \times 10^{-8}$ & $0.0061$ \\
+Cobre & $1.724 \times 10^{-8}$ & $0.0068$ \\
+Aluminio & $2.65 \times 10^{-8}$ & $0.00429$ \\
+Vidrio & $1^{10} - 10^{14}$ & -- \\
+Papel seco & $\sim 10^{12}$ & -- \\
+PVC & $10^{14} - 10^{16}$ & -- \\
+\end{tabular}
+\caption{Valores típicos de resistividad eléctrica de diversos materiales a 20°C, ordenados de mayor a menor conductividad.}
+\label{tab:resistividad}
+\end{table}
+
+La tabla \ref{tab:resistividad} muestra valores de \(\rho\) y \(\alpha\) de materiales típicos. Muchas veces se presentará que la resistividad \(\rho\) se da en unidades \unit{\ohm \milli\metre\squared\per\metre}, lo cual puede ser un poco confuso. Sin embargo esta triquiñuela se hace por comodidad. Generalmente en la industria se comercializan cables cuya sección transversal \(A\) es del orden de los milímetros, por ejemplo \(A=\qty{1}{\milli\metre\squared}\) para el más pequeño y \(A=\qty{2.5}{\milli\metre\squared}\) para cables usados en instalaciones eléctricas de hogares. Así, si se tiene un cable de cobre, el valor de \(\rho_\text{Cu}=\qty{0.01724}{\ohm\milli\metre\squared\per\metre}\), que equivale a 
+\[
+  \rho = \qty{0.01724}{\ohm\milli\metre\squared\per\metre} = \qty{0.01724e-6}{\metre\squared}\unit{\ohm\per\metre}= \qty{1.724e-8}{\ohm\metre}
+\]
+que es el valor indicado en la tabla. 
+
+Adicionalmente, el valor de \(\rho_\text{Cu}\) para una temperatura distinta de \qty{20}{\degreeCelsius} puede obtenerse de la siguiente manera 
+\[
+  \rho_\text{Cu}(T) = \qty{1.724}{\ohm\metre}(1+\qty{0.0068}{\per\degreeCelsius}(T-\qty{20}{\degreeCelsius}))
+\]
+De esta manera, si \(T=\qty{20}{\degreeCelsius}\) se recupera el valor original, y si \(T\neq\qty{20}{\degreeCelsius}\), se obtiene el valor de resistividad correspondiente.
+
+En la realidad, los materiales no aumentan su resistencia de forma lineal cuando cambia su temperatura, sin embargo, este modelo de aproximación es conveniente por su simplicidad y proximidad al valor de resistencia real.
 
 \section{Aplicación de la ley de Ohm a circuitos}
 
