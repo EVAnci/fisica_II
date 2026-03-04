@@ -278,6 +278,35 @@ En la realidad, los materiales no aumentan su resistencia de forma lineal cuando
 
 \section{Aplicación de la ley de Ohm a circuitos}
 
+\subsection{Circuito eléctrico}
+
+Un circuito eléctrico es un conjunto de elementos interconectados que forman un camino cerrado por el cual puede fluir la corriente eléctrica. Su función principal es transformar energía o utilizar la energía eléctrica para cumplir alguna función. Por ejemplo una bombilla transforma la energía eléctrica en lumínica.
+
+Para que la corriente fluya, el circuito debe estar cerrado. Si existe alguna interrupción en el camino, las cargas no pueden circular.
+
+Todo circuito básico consta de, al menos, cuatro elementos esenciales: generadores, conductores, receptores y elementos de control.
+
+Para empezar con el primer elemento se verá lo que se denomina generador, también llamado fuente, que su función es impulsar a las cargas. Un generador es una f.e.m. lo que significa que transforma algún tipo de energía (como la energía química en una batería) en energía eléctrica. 
+
+Como segundo componente se tienen los conductores, que son los materiales utilizados para conducir las cargas eléctricas de un componente a otro. En la vida real los conductores tienen resistencia, mientras que en circuitos ideales los conductores se asumen sin resistencia. A pesar de que los conductores ideales no tienen resistencia, se pueden modelar conductores reales usando una resistencia equivalente en algún punto del conductor ideal que represente toda la resistencia del conductor real, por ejemplo, si se tiene un conductor real de \qty{100}{\metre} con una resistencia total de \qty{0.8}{\ohm}, entonces puede usar un conductor ideal con un resistor de \qty{0.8}{\ohm}.
+
+Por otro lado, como tercer componente, se tienen los receptores. Estos son los dispositivos que aprovechan la energía eléctrica para realizar una tarea. Se tienen muchos tipos de receptores. Se pueden listar algunos de ellos: resistores, inductores, capacitores, transistores, entre otros. En este apartado, el estudio se limitará a los resistores. Un resistor es un elemento que tiene un valor de resistencia determinado.
+
+Como último elemento se tienen los elementos de control, que consisten en dispositivos que permiten abrir o cerrar el paso de la corriente, como los interruptores.
+
+Los circuitos que se analizan en esta sección corresponden a circuitos compuestos por fuentes, conductores y resistores, cuya simbología se representa en la figura \ref{fig_referencia_circuito}. Una fuente se simboliza utilizando el símbolo etiquetado como \(\varepsilon\), donde la línea más larga representa el borne positivo (hacia donde empuja corriente eléctrica) y el lado más corto representa el borne negativo. La flecha etiquetada como \(I_s\) sobre la línea horizontal superior indica el sentido de circulación de la corriente eléctrica, que en este ejemplo es sentido horario. Las lineas que forman un cuadrado representan los conductores eléctricos. La línea en zig-zag etiquetada como \(R_1\) representa un resistor. Por último, en el conductor del lado inferior se tiene un bloque con forma de peine. Esto es denominado \emph{tierra} y es el punto de referencia de potencial cero: \(V=0\). Esto es importante ya que las diferencias de potencial del circuito tendrán como punto de potencial cero a este valor de potencial. De este modo existirán circuitos que tengan potencial negativo respecto a la tierra.
+
+\begin{figure}[ht]
+  \centering
+  \begin{circuitikz} 
+    \draw (0,0) to[battery2,l=$\varepsilon$,invert] (0,3) 
+    to[short,i=$I_s$] (3,3) 
+    to[R=$R_1$](3,0) -- (0,0) node[eground,below right]{};
+  \end{circuitikz}
+  \caption{Ejemplo de circuito simple.}
+  \label{fig_referencia_circuito}
+\end{figure}
+
 \subsection{Circuitos en Serie}
 
 Antes de comenzar es importante tener en cuenta que en un circuito en serie la corriente \( I \) es la misma en todos los elementos debido a que no hay bifurcaciones. Esto es debido a la conservación de la carga eléctrica y a la naturaleza de la conexión en serie.
@@ -308,8 +337,7 @@ Definiendo la resistencia equivalente \( R_{\text{eq}} \) del sistema:
   \boxed{R_{\text{eq}} = R_1 + R_2 + \cdots + R_n}
 \]
 
-\paragraph{Ejemplo sencillo:}
-
+\begin{example}
 Tres resistencias: \( R_1 = 2 \, \Omega \), \( R_2 = 3 \, \Omega \), \( R_3 = 5 \, \Omega \)
 \[
   R_{\text{eq}} = 2 + 3 + 5 = 10 \, \Omega
@@ -318,6 +346,7 @@ Si se aplica una diferencia de potencial de \( V = 20 \, \text{V} \), entonces:
 \[
   I = \frac{V}{R_{\text{eq}}} = \frac{20}{10} = 2 \, \text{A}
 \]
+\end{example}
 
 \subsection{Circuitos en Paralelo}
 
@@ -348,61 +377,49 @@ Definimos \( R_{\text{eq}} \) como la resistencia que satisface \( I = \frac{V}{
   \Rightarrow \boxed{\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}}
 \]
 
-\paragraph{Ejemplo sencillo:}
-
+\begin{example}
 Tres resistencias: \( R_1 = 4 \, \Omega \), \( R_2 = 6 \, \Omega \), \( R_3 = 12 \, \Omega \)
 
 \[
   \frac{1}{R_{\text{eq}}} = \frac{1}{4} + \frac{1}{6} + \frac{1}{12} = \frac{3 + 2 + 1}{12} = \frac{6}{12} = \frac{1}{2}
   \Rightarrow R_{\text{eq}} = 2 \, \Omega
 \]
+\end{example}
 
 \section{Energía y Potencia eléctrica}
 
-Ahora abordaremos las expresiones teóricas de energía y potencia eléctrica en un circuito de corriente continua, partiendo de principios fundamentales. Estas magnitudes están directamente relacionadas con el trabajo que realiza el campo eléctrico sobre las cargas en movimiento. 
-
 \subsection{Trabajo eléctrico}
 
-Recordando lo que vimos en la unidad de electrostática, cuando una carga eléctrica \( q \) se desplaza entre dos puntos con diferencia de potencial \( \Delta V \), el trabajo realizado por el campo eléctrico es:
+El potencial eléctrico está íntimamente relacionado con la capacidad de realizar trabajo. De hecho, la definición \ref{def_potencial} que es la definición de potencial en este documento establece que 
 \[
-  W = q \Delta V
+  V=\frac{U}{q}=\frac{W}{q}
 \]
-
-Este trabajo es la energía transferida al sistema. Si en lugar de una sola carga \(q\) consideramos una corriente continua \( I \), que representa el flujo de carga por unidad de tiempo podríamos calcular el trabajo realizado por la corriente de cargas, entonces partir de la definición de corriente operamos para obtener una expresión para \(q\):
-
-\begin{align*}
-  I &= \frac{\Delta q}{\Delta t} \\
-  I \Delta t &= \Delta q \\
-  \Delta q &= I \Delta t
-\end{align*}
-
-Entonces, el trabajo realizado en ese intervalo de tiempo es:
-
-\begin{equation}
-  W = I \Delta V \, \Delta t
-  \label{eq:trabajo_electrico}    
+de forma que, para un diferencial de trabajo, puede escribirse 
+\begin{equation}\label{eq_deduccion_de_potencia_electrica}
+  dW=Vdq
 \end{equation}
 
-\subsection{Potencia eléctrica}
+Por otro lado, en este capítulo, en la sección \ref{sec:movimiento_de_cargas} se vio que la corriente no es más que la cantidad de carga que fluye en un conductor por unidad de tiempo. Es decir,
+\[
+  I=\frac{dq}{dt} \quad \rightarrow \quad dq=Idt
+\]
+Esta última expresión permite reemplazar \(dq\) en la expresión \eqref{eq_deduccion_de_potencia_electrica} por la equivalente con la corriente, en definitiva:
+\begin{equation}\label{eq_trabajo_electrico}
+  dW=Vdq \quad \rightarrow \quad dW=VIdt
+\end{equation}
+Esta última ecuación \eqref{eq_trabajo_electrico} es la expresión del trabajo realizado por el campo eléctrico. A partir de esta ecuación, obtener la potencia es sencillo.
 
-La potencia es el trabajo realizado en un intervalo de tiempo, entonces la tasa de transferencia de energía (o trabajo realizado) por unidad de tiempo es:
+La potencia es el trabajo realizado en un intervalo de tiempo, es decir:
 \[
   P = \frac{dW}{dt}
 \]
-Sustituyendo la expresión anterior para \( W \), obtenemos:
-\begin{align}
-  P &= \frac{d}{dt}(I \Delta V \, \Delta t) = I \Delta V \notag \\
-  P &= IV
-\end{align}
-Esta expresión nos indica la potencia disipada (si \( V \) e \( I \) tienen el mismo signo) o suministrada (si tienen signos opuestos) en un componente del circuito.
-
-Aplicando la ley de Ohm (\( V = IR \)) a la ecuación de potencia podemos encontrar la potencia disipada en una resistencia:
+Entonces, a partir de la ecuación \eqref{eq_trabajo_electrico}, se obtiene la potencia usando la definición de diferencial:
 \[
-  P = VI = (IR)I = \boxed{P = I^2 R}
+  \frac{dW}{dt} = VI \quad \rightarrow \quad \boxed{P=IV}
 \]
-Alternativamente, despejando la corriente de la ley de Ohm:
+Mediante la Ley de Ohm, se pueden obtener las variantes de esta última expresión, que resultan útiles para encontrar la potencia cuando no se dispone del potencial eléctrico o la corriente:
 \[
-  I = \frac{V}{R} \Rightarrow P = V \left( \frac{V}{R} \right) = \boxed{P = \frac{V^2}{R}}
+  P=I^2R \qquad P=\frac{V^2}{R}
 \]
 Estas tres expresiones son equivalentes:
 \begin{equation}
@@ -426,14 +443,14 @@ Si la resistencia es la única componente significativa, entonces:
   W = I^2 R \Delta t = \frac{V^2}{R} \Delta t
 \]
 
-\paragraph{Ejemplo sencillo}
-
-Un resistor de \( R = 10 \, \Omega \) conectado a una batería de \( V = 12 \, \text{V} \), durante \( \Delta t = 30 \, \text{s} \).
-\begin{itemize}
-  \item Corriente: \( I = \frac{V}{R} = \frac{12}{10} = 1.2 \, \text{A} \)
-  \item Potencia disipada: \( P = I^2 R = (1.2)^2 \cdot 10 = 14.4 \, \text{W} \)
-  \item Energía disipada: \( W = P \Delta t = 14.4 \cdot 30 = 432 \, \text{J} \)
-\end{itemize}
+\begin{example}
+  Un resistor de \( R = 10 \, \Omega \) conectado a una batería de \( V = 12 \, \text{V} \), durante \( \Delta t = 30 \, \text{s} \).
+  \begin{itemize}
+    \item Corriente: \( I = \frac{V}{R} = \frac{12}{10} = 1.2 \, \text{A} \)
+    \item Potencia disipada: \( P = I^2 R = (1.2)^2 \cdot 10 = 14.4 \, \text{W} \)
+    \item Energía disipada: \( W = P \Delta t = 14.4 \cdot 30 = 432 \, \text{J} \)
+  \end{itemize}
+\end{example}
 
 \section{Resumen}
 \input{chapters/2_direct_current/summary.tex}
