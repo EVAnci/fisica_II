@@ -386,6 +386,37 @@ Tres resistencias: \( R_1 = 4 \, \Omega \), \( R_2 = 6 \, \Omega \), \( R_3 = 12
 \]
 \end{example}
 
+\subsection{Leyes de Kirchhoff}
+
+Se mencionó en la sección anterior que es posible simplificar y explicar combinaciones de resistores aplicando la expresión \(V=IR\) y las reglas para combinaciones en serie y en paralelo de los resistores. Muy a menudo, sin embargo, no es posible simplificar un circuito en una sola espira utilizando estas reglas. El procedimiento para analizar los circuitos más complejos se hace posible si se utilizan dos principios conocidos como leyes de Kirchoff.
+
+\begin{marginfigure}
+  \centering
+  \begin{tikzpicture}[>=stealth]
+    \draw (-1,0) -- (0,0) -- (45:1);
+    \draw (0,0) -- (-45:1);
+    \filldraw (0,0) circle (2pt) node[below left] {$A$};
+    \draw[->,color=red] (-.8,.2) -- node[above] {$I_1$} (-.2,.2);
+    \draw[->,color=red] (0,.2) ++(45:.2) -- +(45:.6) node[above] {$I_2$} ;
+    \draw[->,color=red] (0,-.2)  ++(-45:.2) -- +(-45:.6) node[below] {$I_3$};
+  \end{tikzpicture}
+  \caption{El punto \(A\) es un nodo de un circuito.}
+  \label{fig_1_kirchoff}
+\end{marginfigure}
+\paragraph{1. Ley de nodos} En cualquier nodo, la suma de las corrientes que entran en ese nodo es igual a la suma de las corrientes que salen. De forma equivalente, la suma de las corrientes debe ser igual a cero:
+\[
+  \sum_{k=1}^n I_k = I_1 + I_2 + \cdots + I_n = 0
+\]
+
+Esta ley se basa en el principio de conservación de la carga. Por definición un nodo (o nudo) es un punto de un circuito en el cual convergen tres o más conductores, como se muestra en la figura \ref{fig_1_kirchoff}. En el caso del ejemplo ilustrado en la figura \ref{fig_1_kirchoff} se tiene que \(I_1=I_2+I_3\) o lo que es equivalente \(I_1-I_2-I_3=0\).
+
+\paragraph{2. Ley de la espira} En un circuito cerrado, la suma de todas las caídas de tensión es igual a la tensión total suministrada. De forma equivalente, la suma algebraica de las diferencias de potencial eléctrico a través de todos los elementos alrededor de cualquier espira de un circuito cerrado debe ser igual a cero:
+\[
+  \sum_{k=1}^n V_k = V_1 + V_2 + \cdots + V_n = 0
+\]
+
+Esta ley es una consecuencia directa de la naturaleza conservativa del campo electrostático. Dado que el trabajo neto realizado por este campo sobre una carga a lo largo de una trayectoria cerrada es nulo, la suma algebraica de las diferencias de potencial eléctrico en cualquier lazo cerrado de un circuito es exactamente cero.
+
 \section{Energía y Potencia eléctrica}
 
 \subsection{Trabajo eléctrico}
